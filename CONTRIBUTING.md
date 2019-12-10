@@ -9,4 +9,4 @@ Persons who are not TC members are invited to open issues and provide comments u
 
 **Cloning and forking.** This repository may be cloned and forked for use by any party. 
 
-Please see [README](https://github.com/oasis-tcs/vel/blob/master/README.md) for general description of this repository, and the [LICENSE](https://github.com/oasis-tcs/vel/blob/master/LICENSE.md) for licensing.
+Please see [README](https://github.com/oasis-tcs/vel/blob/master/README.md) for general description of this repository, and [LICENSE](https://github.com/oasis-tcs/vel/blob/master/LICENSE.md) for licensing information.
