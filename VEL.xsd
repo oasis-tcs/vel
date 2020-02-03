@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by Michael Himsolt (Daimler AG) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!-- ========== TOP LEVEL ELEMENTS  ==========-->
+	<xs:element name="variability-exchange-models" type="variability-exchange-models-type"/>
+	<!-- ========== VARIABILITY EXCHANGE MODEL(S) ========== -->
+	<xs:complexType name="variability-exchange-models-type">
+		<xs:complexContent>
+			<xs:extension base="identifiable-type">
+				<xs:sequence>
+					<xs:element name="version" type="xs:unsignedInt"/>
+					<xs:element name="capability" type="capability-type"/>
+					<xs:element name="variability-exchange-model" type="variability-exchange-model-type" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="capability-type">
+		<xs:sequence>
+			<xs:element name="import-variability-exchange-model" type="xs:boolean"/>
+			<xs:element name="export-variability-exchange-model" type="xs:boolean"/>
+			<xs:element name="get-configuration" type="xs:boolean"/>
+			<xs:element name="set-configuration" type="xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="variability-exchange-model-type">
+		<xs:complexContent>
+			<xs:extension base="identifiable-type">
+				<xs:sequence>
+					<xs:group ref="variationpoint-group" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:attribute name="type" type="variability-api-enum" use="required"/>
+				<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========== VARIATIONPOINT ========== -->
+	<xs:complexType name="variationpoint-type" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="identifiable-type">
+				<xs:sequence>
+					<xs:element name="bindingtime" type="bindingtime-type" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="corresponding-variable-artifact-element" type="artifact-element-type" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:group name="variationpoint-group">
+		<xs:choice>
+			<xs:group ref="structural-variationpoint-group"/>
+			<xs:group ref="parameter-variationpoint-group"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="structural-variationpoint-group">
+		<xs:choice>
+			<xs:element name="optional-structural-variationpoint" type="optional-structural-variationpoint-type"/>
+			<xs:element name="osvp" type="optional-structural-variationpoint-type"/>
+			<xs:element name="xor-structural-variationpoint" type="xor-structural-variationpoint-type"/>
+		</xs:choice>
+	</xs:group>
+
+	<xs:group name="parameter-variationpoint-group">
+		<xs:choice>
+			<xs:element name="calculated-parameter-variationpoint" type="calculated-parameter-variationpoint-type"/>
+			<xs:element name="xor-parameter-variationpoint" type="xor-parameter-variationpoint-type"/>
+		</xs:choice>
+	</xs:group>
+	<xs:complexType name="bindingtime-type">
+		<xs:sequence>
+			<xs:element name="name" type="bindingtime-enum"/>
+			<xs:element name="condition" type="expression-type" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="selected" type="xs:boolean" use="optional"/>
+	</xs:complexType>
+	<!--Individual variation points-->
+	<xs:complexType name="optional-structural-variationpoint-type">
+		<xs:complexContent>
+			<xs:extension base="variationpoint-type">
+				<xs:sequence>
+					<xs:element name="variation" type="optional-variation-type" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="xor-structural-variationpoint-type">
+		<xs:complexContent>
+			<xs:extension base="variationpoint-type">
+				<xs:sequence>
+					<xs:element name="variation" type="xor-variation-type" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="calculated-parameter-variationpoint-type">
+		<xs:complexContent>
+			<xs:extension base="variationpoint-type">
+				<xs:sequence>
+					<xs:element name="variation" type="calculated-variation-type"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="xor-parameter-variationpoint-type">
+		<xs:complexContent>
+			<xs:extension base="variationpoint-type">
+				<xs:sequence>
+					<xs:element name="variation" type="value-variation-type" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========== VARIATION ========== -->
+	<xs:complexType name="variation-type" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="identifiable-type">
+				<xs:sequence>
+					<xs:element name="hierarchy" type="variationpoint-hierarchy-type" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="depencency" type="variation-dependency-type" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="corresponding-variable-artifact-element" type="artifact-element-type" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:attribute name="selected" type="xs:boolean" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="variationpoint-hierarchy-type">
+		<xs:complexContent>
+			<xs:extension base="identifiable-type">
+				<xs:sequence>
+					<xs:element name="variationpoint" minOccurs="1" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:attribute name="ref" type="xs:IDREF" use="required"/>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="variation-dependency-type">
+		<xs:complexContent>
+			<xs:extension base="identifiable-type">
+				<xs:sequence>
+					<xs:element name="variation" minOccurs="1" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:attribute name="ref" type="xs:IDREF" use="required"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="condition" type="expression-type" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+				<xs:attribute name="type" type="variation-dependency-enum" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--Individual variations-->
+	<xs:complexType name="optional-variation-type">
+		<xs:complexContent>
+			<xs:extension base="variation-type">
+				<xs:sequence>
+					<xs:element name="condition" type="expression-type" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="xor-variation-type">
+		<xs:complexContent>
+			<xs:extension base="variation-type">
+				<xs:sequence>
+					<xs:element name="condition" type="expression-type" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="calculated-variation-type">
+		<xs:complexContent>
+			<xs:extension base="variation-type">
+				<xs:sequence>
+					<xs:element name="expression" type="expression-type" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="value-variation-type">
+		<xs:complexContent>
+			<xs:extension base="variation-type">
+				<xs:sequence>
+					<xs:element name="condition" type="expression-type" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="value" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========== EXPRESSIONS ========== -->
+	<xs:complexType name="expression-type">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="type" type="expression-enum" use="required"/>
+				<xs:attribute name="datatype" type="xs:string" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!--=========== Special Data ============-->
+	<xs:complexType name="special-data-type">
+		<xs:sequence>
+			<xs:element name="data" type="key-value-pair-type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="key-value-pair-type">
+		<xs:sequence>
+			<xs:element name="key">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="type" type="xs:string" use="optional"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========== ENUMERATIONS ========== -->
+	<xs:simpleType name="bindingtime-enum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="requirements-time"/>
+			<xs:enumeration value="blueprint-derivation-time"/>
+			<xs:enumeration value="model-construction-time"/>
+			<xs:enumeration value="model-simulation-time"/>
+			<xs:enumeration value="code-generation-time"/>
+			<xs:enumeration value="preprocessor-time"/>
+			<xs:enumeration value="compile-time"/>
+			<xs:enumeration value="link-time"/>
+			<xs:enumeration value="flash-time"/>
+			<xs:enumeration value="post-build"/>
+			<xs:enumeration value="post-build-loadable-time"/>
+			<xs:enumeration value="post-build-selectable-time"/>
+			<xs:enumeration value="run-time"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="variability-api-enum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="variationpoint-description"/>
+			<xs:enumeration value="variationpoint-configuration"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="variation-dependency-enum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="requires"/>
+			<xs:enumeration value="conflicts"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="expression-enum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="single-feature-condition"/>
+			<xs:enumeration value="and-feature-condition"/>
+			<xs:enumeration value="or-feature-condition"/>
+			<xs:enumeration value="pvscl-expression"/>
+			<xs:enumeration value="ocl-expression"/>
+			<xs:enumeration value="autosar-expression"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ========== AUXILIARY DATA TYPES ========== -->
+	<xs:complexType name="identifiable-type" abstract="true">
+		<xs:sequence>
+			<xs:element name="special-data" type="special-data-type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="id" type="xs:ID" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="artifact-element-type">
+		<xs:sequence>
+			<xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="type" type="xs:string" use="optional"/>
+		<xs:attribute name="uri" type="xs:anyURI" use="optional"/>
+	</xs:complexType>
+</xs:schema>
