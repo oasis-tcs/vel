@@ -29,10 +29,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 <?xml-stylesheet type="text/xsl" 
       href="../htmlruntime/spec-0.8/stylesheets/oasis-note-html-offline.xsl"?>
 <?oasis-spec-base-uri ../htmlruntime/spec-0.8/?>
-<!DOCTYPE article
- PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" 
-        "../htmlruntime/spec-0.8/docbook/docbookx.dtd" 
-[
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"../htmlruntime/spec-0.8/docbook/docbookx.dtd" [
 <!--the document properties-->
 <!ENTITY dir "VEL">
 <!ENTITY name "&dir;-v&version;">
@@ -41,308 +39,562 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 <!ENTITY stage "csprd01">
 <!ENTITY title "Variability Exchange Language Version &version;">
 <!ENTITY standard "Committee Specification Draft 01 / Public Review Draft 01">
-<!ENTITY this-loc   "https://docs.oasis-open.org/vel/&dir;/v&version;/&stage;">
+<!ENTITY this-loc "https://docs.oasis-open.org/vel/&dir;/v&version;/&stage;">
 <!ENTITY previous-loc "https://docs.oasis-open.org/vel/&dir;/v&version;/&pstage;">
-<!ENTITY latest-loc   "https://docs.oasis-open.org/vel/&dir;/v&version;">
-<!ENTITY pubdate "13 November 2019">
+<!ENTITY latest-loc "https://docs.oasis-open.org/vel/&dir;/v&version;">
+<!ENTITY pubdate "13 November 2020">
+<!ENTITY % MATHML.prefixed "INCLUDE">
+<!ENTITY % MATHML.prefix "mml">
+<!ENTITY % equation.content "(alt?, (graphic+|mediaobject+|mml:math))">
+<!ENTITY % inlineequation.content "(alt?, (inlinegraphic+|inlinemediaobject+|mml:math))">
+<!ENTITY % mathml PUBLIC "-//W3C//DTD MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/mathml2.dtd">
 ]>
-<article status="&standard;">
+<article status="Committee Specification Draft 01 / Public Review Draft 01">
   <articleinfo>
     <productname>&name;</productname>
+
     <productnumber>&stage;</productnumber>
+
     <releaseinfo role="track">Standards Track</releaseinfo>
-    <releaseinfo role="OASIS-specification-this-authoritative">&this-loc;/&name;-&stage;.html</releaseinfo>
-    <releaseinfo role="OASIS-specification-this">&this-loc;/&name;-&stage;.pdf</releaseinfo>
-    <releaseinfo role="OASIS-specification-this">&this-loc;/&name;-&stage;.xml</releaseinfo>
-<!--
+
+    <releaseinfo
+    role="OASIS-specification-this-authoritative">&this-loc;/&name;-&stage;.html</releaseinfo>
+
+    <releaseinfo
+    role="OASIS-specification-this">&this-loc;/&name;-&stage;.pdf</releaseinfo>
+
+    <releaseinfo
+    role="OASIS-specification-this">&this-loc;/&name;-&stage;.xml</releaseinfo>
+
+    <!--
     <releaseinfo role="OASIS-specification-previous-authoritative">&previous-loc;/&name;-&pstage;.html</releaseinfo>
     <releaseinfo role="OASIS-specification-previous">&previous-loc;/&name;-&pstage;.pdf</releaseinfo>
     <releaseinfo role="OASIS-specification-previous">&previous-loc;/&name;-&pstage;.xml</releaseinfo>
 -->
-    <releaseinfo role="OASIS-specification-latest-authoritative">&latest-loc;/&name;.html</releaseinfo>
-    <releaseinfo role="OASIS-specification-latest">&latest-loc;/&name;.pdf</releaseinfo>
-    <releaseinfo role="OASIS-specification-latest">&latest-loc;/&name;.xml</releaseinfo>
-    <releaseinfo role="committee"><ulink url="https://www.oasis-open.org/committees/vel" conformance="skip">OASIS Variability Exchange Language (VEL) TC</ulink></releaseinfo>
+
+    <releaseinfo
+    role="OASIS-specification-latest-authoritative">&latest-loc;/&name;.html</releaseinfo>
+
+    <releaseinfo
+    role="OASIS-specification-latest">&latest-loc;/&name;.pdf</releaseinfo>
+
+    <releaseinfo
+    role="OASIS-specification-latest">&latest-loc;/&name;.xml</releaseinfo>
+
+    <releaseinfo role="committee"><ulink conformance="skip"
+    url="https://www.oasis-open.org/committees/vel">OASIS Variability Exchange
+    Language (VEL) TC</ulink></releaseinfo>
+
     <authorgroup>
       <editor>
         <firstname>Michael</firstname>
+
         <surname>Schulze</surname>
+
         <affiliation>
-          <orgname><ulink url="http://www.pure-systems.com/" conformance="skip">pure-systems GmbH</ulink></orgname>
+          <orgname><ulink conformance="skip"
+          url="http://www.pure-systems.com/">pure-systems
+          GmbH</ulink></orgname>
         </affiliation>
+
         <email>michael.schulze@pure-systems.com</email>
       </editor>
+
       <editor>
         <firstname>Uwe</firstname>
+
         <surname>Ryssel</surname>
+
         <affiliation>
-          <orgname><ulink url="http://www.pure-systems.com/" conformance="skip">pure-systems GmbH</ulink></orgname>
+          <orgname><ulink conformance="skip"
+          url="http://www.pure-systems.com/">pure-systems
+          GmbH</ulink></orgname>
         </affiliation>
+
         <email>uwe.ryssel@pure-systems.com</email>
       </editor>
-<!-- Chairs -->
+
+      <!-- Chairs -->
+
       <othercredit>
         <firstname>Michael</firstname>
+
         <surname>Schulze</surname>
+
         <affiliation>
-          <orgname><ulink url="http://www.pure-systems.com/" conformance="skip">pure-systems GmbH</ulink></orgname>
+          <orgname><ulink conformance="skip"
+          url="http://www.pure-systems.com/">pure-systems
+          GmbH</ulink></orgname>
         </affiliation>
+
         <email>michael.schulze@pure-systems.com</email>
       </othercredit>
+
       <othercredit>
         <firstname>Uwe</firstname>
+
         <surname>Ryssel</surname>
+
         <affiliation>
-          <orgname><ulink url="http://www.pure-systems.com/" conformance="skip">pure-systems GmbH</ulink></orgname>
+          <orgname><ulink conformance="skip"
+          url="http://www.pure-systems.com/">pure-systems
+          GmbH</ulink></orgname>
         </affiliation>
+
         <email>uwe.ryssel@pure-systems.com</email>
       </othercredit>
     </authorgroup>
+
     <pubdate>&pubdate;</pubdate>
+
     <copyright>
-      <year>2019</year>
+      <year>2020</year>
     </copyright>
+
     <legalnotice role="additional">
       <title>Additional artifacts</title>
-      <para>This prose specification is one component of a Work Product which also includes:</para>
+
+      <para>This prose specification is one component of a Work Product which
+      also includes:</para>
+
       <itemizedlist spacing="compact">
         <listitem>
           <para>{XML schemas}</para>
         </listitem>
+
         <listitem>
           <para>{Other parts}</para>
         </listitem>
       </itemizedlist>
     </legalnotice>
+
     <legalnotice role="related">
       <title>Related work</title>
+
       <para>This specification replaces or supersedes:</para>
+
       <itemizedlist spacing="compact">
         <listitem>
           <para>{specification replaced by this standard}</para>
         </listitem>
+
         <listitem>
-          <para>{specification replaced by this standard} </para>
+          <para>{specification replaced by this standard}</para>
         </listitem>
       </itemizedlist>
+
       <para>This specification is related to:</para>
+
       <itemizedlist spacing="compact">
         <listitem>
           <para>{related specifications}</para>
         </listitem>
+
         <listitem>
           <para>{related specifications}</para>
         </listitem>
       </itemizedlist>
     </legalnotice>
+
     <legalnotice role="namespaces">
       <title>Declared XML namespaces</title>
-      <para><ulink url="https://docs.oasis-open.org/ns/vel/xxxx"
-          >https://docs.oasis-open.org/ns/vel/xxxx</ulink></para>
+
+      <para><ulink
+      url="https://docs.oasis-open.org/ns/vel/xxxx">https://docs.oasis-open.org/ns/vel/xxxx</ulink></para>
     </legalnotice>
+
     <abstract>
-      <para>The Variability Exchange Language (VEL) enables the exchange of variability information among tools for variant management tools and systems development tools. VEL eliminates the cost of building customized interfaces by defining a standard way for information to be exchanged among corresponding tools. Using VEL, a variant management tool is able to read the variability from a development tool and pass configurations of selected system features to a development tool.</para>
-      <para>By defining a common variability data interface that can be implemented by both the development tools and the variant management tools, VEL enables a continuous development process for variable systems and more flexible use of tools.</para>
+      <para>The Variability Exchange Language (VEL) enables the exchange of
+      variability information among tools for variant management tools and
+      systems development tools. VEL eliminates the cost of building
+      customized interfaces by defining a standard way for information to be
+      exchanged among corresponding tools. Using VEL, a variant management
+      tool is able to read the variability from a development tool and pass
+      configurations of selected system features to a development tool.</para>
+
+      <para>By defining a common variability data interface that can be
+      implemented by both the development tools and the variant management
+      tools, VEL enables a continuous development process for variable systems
+      and more flexible use of tools.</para>
     </abstract>
+
     <legalnotice role="status">
       <title>Status</title>
-      <para>This document was last revised or approved by the OASIS Variability Exchange Language (VEL) TC on the
-        above date. The level of approval is also listed above. Check the &#x201c;Latest
-        stage&#x201d; location noted above for possible later revisions of this document. Any
-        other numbered Versions and other technical work produced by the Technical Committee (TC)
-        are listed at <ulink
-          url="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=vel#technical"
-          >https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=vel#technical</ulink>.</para>
-      <para>Technical Committee members should send comments on this specification to the TC&#x2019;s email list. Others should send comments to the TC by
-        using the &#x201c;<ulink
-          url="http://www.oasis-open.org/committees/comments/index.php?wg_abbrev=vel"
-          conformance="skip">Send A Comment</ulink>&#x201d; button on the TC&#x2019;s web page at <ulink
-          url="https://www.oasis-open.org/committees/vel/"
-          >https://www.oasis-open.org/committees/vel/</ulink>.</para>
-      <para>This specification is provided under the
-        <ulink conformance="skip" url="https://www.oasis-open.org/policies-guidelines/ipr/#Non-Assertion-Mode">Non-Assertion </ulink>
-        Mode of the OASIS IPR
-        Policy, the mode chosen when the Technical Committee was established. For information on
-        whether any patents have been disclosed that may be essential to implementing this
-        specification, and any offers of patent licensing terms, please refer to the Intellectual
-        Property Rights section of the TC&#x2019;s web page (<ulink
-          url="https://www.oasis-open.org/committees/vel/ipr.php"
-          >https://www.oasis-open.org/committees/vel/ipr.php</ulink>).</para>
-      <para>Note that any machine-readable content (<ulink url="https://www.oasis-open.org/policies-guidelines/tc-process#wpComponentsCompLang">Computer Language Definitions</ulink>) declared
-        Normative for this Work Product is provided in separate plain text files. In the event of a
-        discrepancy between any such plain text file and display content in the Work
-        Product&#x2019;s prose narrative document(s), the content in the separate plain text file
-        prevails.</para>
+
+      <para>This document was last revised or approved by the OASIS
+      Variability Exchange Language (VEL) TC on the above date. The level of
+      approval is also listed above. Check the &ldquo;Latest stage&rdquor;
+      location noted above for possible later revisions of this document. Any
+      other numbered Versions and other technical work produced by the
+      Technical Committee (TC) are listed at <ulink
+      url="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=vel#technical">https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=vel#technical</ulink>.</para>
+
+      <para>Technical Committee members should send comments on this
+      specification to the TC&rsquor;s email list. Others should send comments
+      to the TC by using the &ldquo;<ulink conformance="skip"
+      url="http://www.oasis-open.org/committees/comments/index.php?wg_abbrev=vel">Send
+      A Comment</ulink>&rdquor; button on the TC&rsquor;s web page at <ulink
+      url="https://www.oasis-open.org/committees/vel/">https://www.oasis-open.org/committees/vel/</ulink>.</para>
+
+      <para>This specification is provided under the <ulink conformance="skip"
+      url="https://www.oasis-open.org/policies-guidelines/ipr/#Non-Assertion-Mode">Non-Assertion
+      </ulink> Mode of the OASIS IPR Policy, the mode chosen when the
+      Technical Committee was established. For information on whether any
+      patents have been disclosed that may be essential to implementing this
+      specification, and any offers of patent licensing terms, please refer to
+      the Intellectual Property Rights section of the TC&rsquor;s web page
+      (<ulink
+      url="https://www.oasis-open.org/committees/vel/ipr.php">https://www.oasis-open.org/committees/vel/ipr.php</ulink>).</para>
+
+      <para>Note that any machine-readable content (<ulink
+      url="https://www.oasis-open.org/policies-guidelines/tc-process#wpComponentsCompLang">Computer
+      Language Definitions</ulink>) declared Normative for this Work Product
+      is provided in separate plain text files. In the event of a discrepancy
+      between any such plain text file and display content in the Work
+      Product&rsquor;s prose narrative document(s), the content in the
+      separate plain text file prevails.</para>
     </legalnotice>
+
     <legalnotice role="citation">
       <title>Citation format</title>
-      <para>When referencing this specification the following citation format should be used:</para>
+
+      <para>When referencing this specification the following citation format
+      should be used:</para>
+
       <bibliolist>
-        <bibliomixed conformance="skip">
-          <abbrev>&name;</abbrev>
-          <citetitle>&title;. </citetitle>
-		  <bibliomisc>Edited by Michael Schulze and Uwe Ryssel. </bibliomisc>
-          <date>&pubdate;. </date>
-          <releaseinfo>OASIS &standard;. </releaseinfo>
-          <bibliomisc><ulink url="&this-loc;/&name;-&stage;.html"
-            >&this-loc;/&name;-&stage;.html</ulink>. Latest version:
-              <ulink url="&latest-loc;/&name;.html"
-              >&latest-loc;/&name;.html</ulink>.</bibliomisc>
-        </bibliomixed>
+        <bibliomixed conformance="skip"><abbrev>&name;</abbrev>
+        <citetitle>&title;. </citetitle> <bibliomisc>Edited by Michael Schulze
+        and Uwe Ryssel. </bibliomisc> <date>&pubdate;. </date>
+        <releaseinfo>OASIS &standard;. </releaseinfo> <bibliomisc><ulink
+        url="https://docs.oasis-open.org/vel/VEL/v1.0/csprd01/VEL-v1.0-csprd01.html">&this-loc;/&name;-&stage;.html</ulink>.
+        Latest version: <ulink
+        url="https://docs.oasis-open.org/vel/VEL/v1.0/VEL-v1.0.html">&latest-loc;/&name;.html</ulink>.</bibliomisc></bibliomixed>
       </bibliolist>
     </legalnotice>
+
     <legalnotice role="notices">
       <title>Notices</title>
-      <para>Copyright &#169; OASIS Open 2019. All Rights Reserved. </para>
-      <para>All capitalized terms in the following text have the meanings assigned to them in the
-        OASIS Intellectual Property Rights Policy (the &#8220;OASIS IPR Policy&#8221;). The full
-          <ulink url="https://www.oasis-open.org/policies-guidelines/ipr" conformance="skip"
-          >Policy</ulink> may be found at the OASIS website.</para>
-      <para>This document and translations of it may be copied and furnished to others, and
-        derivative works that comment on or otherwise explain it or assist in its implementation may
-        be prepared, copied, published, and distributed, in whole or in part, without restriction of
-        any kind, provided that the above copyright notice and this section are included on all such
-        copies and derivative works. However, this document itself may not be modified in any way,
-        including by removing the copyright notice or references to OASIS, except as needed for the
-        purpose of developing any document or deliverable produced by an OASIS Technical Committee
-        (in which case the rules applicable to copyrights, as set forth in the OASIS IPR Policy,
-        must be followed) or as required to translate it into languages other than English.</para>
-      <para>The limited permissions granted above are perpetual and will not be revoked by OASIS or
-        its successors or assigns.</para>
-      <para>This document and the information contained herein is provided on an &#8220;AS IS&#8221;
-        basis and OASIS DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
-        ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY OWNERSHIP RIGHTS
-        AND ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</para>
-      <para>OASIS requests that any OASIS Party or any other party that believes it has patent
-        claims that would necessarily be infringed by implementations of this OASIS Committee
-        Specification or OASIS Standard notify OASIS TC Administrator and provide an indication of
-        its willingness to grant patent licenses to such patent claims in a manner consistent with
-        the IPR Mode of the OASIS Technical Committee that produced this specification.</para>
-      <para>OASIS invites any party to contact the OASIS TC Administrator if it is aware of a claim
-        of ownership of any patent claims that would necessarily be infringed by implementations of
-        this specification by a patent holder that is not willing to provide a license to such
-        patent claims in a manner consistent with the IPR Mode of the OASIS Technical Committee that
-        produced this specification. OASIS may include such claims on its website, but disclaims any
-        obligation to do so.</para>
-      <para>OASIS takes no position regarding the validity or scope of any intellectual property or
-        other rights that might be claimed to pertain to the implementation or use of the technology
-        described in this document or the extent to which any license under such rights might or
-        might not be available; neither does it represent that it has made any effort to identify
-        any such rights. Information on OASIS&#8217; procedures with respect to rights in any
-        document or deliverable produced by an OASIS Technical Committee can be found on the OASIS
-        website. Copies of claims of rights made available for publication and any assurances of
-        licenses to be made available, or the result of an attempt made to obtain a general license
-        or permission for the use of such proprietary rights by implementers or users of this OASIS
-        Committee Specification or OASIS Standard, can be obtained from the OASIS TC Administrator.
-        OASIS makes no representation that any information or list of intellectual property rights
-        will at any time be complete, or that any claims in such list are, in fact, Essential
-        Claims.</para>
-      <para>The name &#8220;OASIS&#8221; is a trademark of <ulink url="https://www.oasis-open.org"
-          conformance="skip">OASIS</ulink>, the owner and developer of this specification, and
-        should be used only to refer to the organization and its official outputs. OASIS welcomes
-        reference to, and implementation and use of, specifications, while reserving the right to
-        enforce its marks against misleading uses. Please see <ulink
-          url="https://www.oasis-open.org/policies-guidelines/trademark"
-          >https://www.oasis-open.org/policies-guidelines/trademark</ulink> for guidance.</para>
+
+      <para>Copyright © OASIS Open 2019. All Rights Reserved.</para>
+
+      <para>All capitalized terms in the following text have the meanings
+      assigned to them in the OASIS Intellectual Property Rights Policy (the
+      &ldquo;OASIS IPR Policy&rdquor;). The full <ulink conformance="skip"
+      url="https://www.oasis-open.org/policies-guidelines/ipr">Policy</ulink>
+      may be found at the OASIS website.</para>
+
+      <para>This document and translations of it may be copied and furnished
+      to others, and derivative works that comment on or otherwise explain it
+      or assist in its implementation may be prepared, copied, published, and
+      distributed, in whole or in part, without restriction of any kind,
+      provided that the above copyright notice and this section are included
+      on all such copies and derivative works. However, this document itself
+      may not be modified in any way, including by removing the copyright
+      notice or references to OASIS, except as needed for the purpose of
+      developing any document or deliverable produced by an OASIS Technical
+      Committee (in which case the rules applicable to copyrights, as set
+      forth in the OASIS IPR Policy, must be followed) or as required to
+      translate it into languages other than English.</para>
+
+      <para>The limited permissions granted above are perpetual and will not
+      be revoked by OASIS or its successors or assigns.</para>
+
+      <para>This document and the information contained herein is provided on
+      an &ldquo;AS IS&rdquor; basis and OASIS DISCLAIMS ALL WARRANTIES,
+      EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE
+      USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY OWNERSHIP RIGHTS AND
+      ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+      PURPOSE.</para>
+
+      <para>OASIS requests that any OASIS Party or any other party that
+      believes it has patent claims that would necessarily be infringed by
+      implementations of this OASIS Committee Specification or OASIS Standard
+      notify OASIS TC Administrator and provide an indication of its
+      willingness to grant patent licenses to such patent claims in a manner
+      consistent with the IPR Mode of the OASIS Technical Committee that
+      produced this specification.</para>
+
+      <para>OASIS invites any party to contact the OASIS TC Administrator if
+      it is aware of a claim of ownership of any patent claims that would
+      necessarily be infringed by implementations of this specification by a
+      patent holder that is not willing to provide a license to such patent
+      claims in a manner consistent with the IPR Mode of the OASIS Technical
+      Committee that produced this specification. OASIS may include such
+      claims on its website, but disclaims any obligation to do so.</para>
+
+      <para>OASIS takes no position regarding the validity or scope of any
+      intellectual property or other rights that might be claimed to pertain
+      to the implementation or use of the technology described in this
+      document or the extent to which any license under such rights might or
+      might not be available; neither does it represent that it has made any
+      effort to identify any such rights. Information on OASIS&rsquor;
+      procedures with respect to rights in any document or deliverable
+      produced by an OASIS Technical Committee can be found on the OASIS
+      website. Copies of claims of rights made available for publication and
+      any assurances of licenses to be made available, or the result of an
+      attempt made to obtain a general license or permission for the use of
+      such proprietary rights by implementers or users of this OASIS Committee
+      Specification or OASIS Standard, can be obtained from the OASIS TC
+      Administrator. OASIS makes no representation that any information or
+      list of intellectual property rights will at any time be complete, or
+      that any claims in such list are, in fact, Essential Claims.</para>
+
+      <para>The name &ldquo;OASIS&rdquor; is a trademark of <ulink
+      conformance="skip" url="https://www.oasis-open.org">OASIS</ulink>, the
+      owner and developer of this specification, and should be used only to
+      refer to the organization and its official outputs. OASIS welcomes
+      reference to, and implementation and use of, specifications, while
+      reserving the right to enforce its marks against misleading uses. Please
+      see <ulink
+      url="https://www.oasis-open.org/policies-guidelines/trademark">https://www.oasis-open.org/policies-guidelines/trademark</ulink>
+      for guidance.</para>
     </legalnotice>
   </articleinfo>
+
   <section id="S-INTRODUCTION">
     <title>Introduction</title>
+
     <section id="S-OVERVIEW">
       <title>Overview</title>
-      <para>This is a pro-forma XML instance of the DocBook <xref linkend="docbook"/> vocabulary
-        illustrating the components of an OASIS standards-related document. This XML file also
-        includes the use of XML stylesheet association <xref linkend="xml-assoc"/>.</para>
-      <para>The markup is suitable for publishing according to OASIS conventions by using the
-        available OASIS Specification Publishing in DocBook XML stylesheets <xref
-          linkend="oasis-spec"/>. Please review the publishing information for details on the
-        environment and this template.</para>
-      <para>What follows is some Lorem text in order to force a page break.</para>
-      <para>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam justo. Mauris eleifend,
-        pede at congue porttitor, magna tellus consectetuer odio, et dapibus quam velit quis lectus.
-        Curabitur vestibulum mattis leo. Vestibulum eget massa. Etiam a ligula sed massa placerat
-        interdum. In hac habitasse platea dictumst. Curabitur augue sapien, tincidunt non, varius
-        et, tincidunt non, augue. Proin urna. In diam dolor, pulvinar quis, euismod vitae, rhoncus
-        sed, odio. Vestibulum pellentesque feugiat turpis. Sed viverra, est ut consequat mattis,
-        neque libero porta metus, sit amet aliquam magna tellus vitae erat. Etiam quam arcu, euismod
-        vel, elementum vitae, gravida sed, eros. In sagittis justo ut orci. Nulla neque urna,
-        porttitor ut, lobortis vel, mollis vel, ipsum. Curabitur lacinia. Ut dui. Donec sapien
-        lorem, molestie ac, vestibulum eu, posuere vel, leo. Nam hendrerit molestie enim.
-        Suspendisse potenti. Etiam dapibus nulla id ligula. Ut a arcu. Sed at nulla. Proin viverra
-        odio sed velit. Praesent leo. Nulla scelerisque, mauris volutpat ultricies fringilla, nunc
-        lectus elementum ligula, non ultricies metus ligula hendrerit ante. Pellentesque posuere
-        ullamcorper enim. Mauris viverra elit vitae justo. Suspendisse potenti. Curabitur ultrices
-        commodo sapien. Cras convallis scelerisque neque. Nullam sit amet tortor. Sed posuere libero
-        ut justo. Donec dignissim elementum quam. Donec egestas sem eu elit. Duis sed ipsum. In
-        pretium ultrices magna.</para>
-      <para>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque
-        laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi
-        architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas
-        sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione
-        voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit,
-        amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut
-        labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-        exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-        consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam
-        nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?
-        [33] At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium
-        voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati
-        cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id
-        est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
-        libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id,
-        quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
-        Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet,
-        ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic
-        tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut
-        perferendis doloribus asperiores repellat.</para>
-      <para>All text is normative unless otherwise labeled.</para>
+
+      <para>VEL is an interoperability standard that enables the exchange of
+      variability information among variant management tools and systems
+      development tools. The essential tasks of a variants management tool are
+      to represent and analyze the variability of a system abstractly and to
+      define system configurations by selecting the desired system features. A
+      system development tool captures information of a specific kind, such as
+      requirements, architecture, component design, or tests. In order to
+      support the development of variable systems a development tool either
+      has to offer the capability to express and deal with variability
+      directly, or an adaptor must be provided that adds this capability to
+      the development tool.</para>
+
+      <para>To interconnect variants management with systems development the
+      information exchange among the corresponding tools must be established.
+      A variants management tool must be able to read or extract the
+      variability from a development tool and to pass a configuration, i.e. a
+      set of selected system features, to the development tool. Up to now the
+      interfaces that support this information exchange are built for each
+      development tool anew. With VEL&lt;emphasis&gt;,&lt;/emphasis&gt; a
+      common interface is defined that can be implemented by both the
+      development tools and the variants management tool, thus VEL eliminates
+      the cost of building customized interfaces by defining a standard way
+      for information to be exchanged between tools.</para>
+
+      <section>
+        <title>Variants Management, System Variability, and Variation
+        Points</title>
+
+        <para>Variants management is an activity that accompanies the whole
+        system development process and, therefore, is orthogonal to the other
+        development tasks. Like safety, security, and other system properties,
+        variability cannot be built into a system at the end of the process.
+        Rather, the desired variability has to be determined, analyzed,
+        designed, implemented and tested continuously, starting at the very
+        beginning of the process through to the final delivery of the system
+        or the system variant respectively. That means that within each
+        development stage &ndash; requirements analysis, design,
+        implementation, test, documentation, etc. &ndash; variability is an
+        aspect that has to be considered.</para>
+
+        <para>We consider as variable system a system that can be tailored by
+        the system producer according to individual clients&rsquor; needs. All
+        variants of a variable system are developed within one development
+        process. In addition to the standard development tasks the process
+        must also provide the means to tailor the system, i.e. to derive the
+        client specific variant of the system. This may happen at different
+        stages, also known as (variance) binding times.</para>
+
+        <para>Variability is embodied in variation points. Consider as example
+        a requirements document. A requirement toward a variable system may be
+        <emphasis>optional</emphasis>. In this case, two system variants can
+        be formed by either selecting or deselecting the requirement. A set of
+        requirements may be <emphasis>alternatives</emphasis>, then each
+        selection of one of these requirements forms one system variant.
+        Finally, a requirement may contain a <emphasis>parameter</emphasis>,
+        and then each value that can be selected for this parameter yields a
+        system variant.</para>
+
+        <para>The same definition of variation points holds for all other
+        artifacts that are created in the development process &ndash; be it
+        analysis or design models such as the views defined in the meta model,
+        test specifications, code, documentation, or whatever. In each
+        artifact there may be optional elements, alternative elements, and
+        parameterized elements.</para>
+
+        <para>We do not specify here how these variation points are
+        represented in the artifacts. Some artifact formats support the
+        definition of variation points, in other cases appropriate means have
+        to be added. This obviously also has an impact on the tools that are
+        used to create and manage the artifacts. In some cases they are
+        capable to express variation points. In other cases adaptors have to
+        be built in order to incorporate variation points.</para>
+      </section>
+
+      <section>
+        <title>Variability View and Variants Management Tools</title>
+
+        <para>It is an accepted best practice to define an explicit abstract
+        variability view on a system under development to support variants
+        management continuously throughout the process. This abstraction
+        contains the bare information on the variability of the system. That
+        means that it describes which variants exist, but does not describe
+        how the variability is realized. The variability information is
+        derived from an analysis of the commonalities, differences, and
+        dependencies of the system&rsquor;s variants and is often represented
+        as a feature model.</para>
+
+        <para>A variants management tool supports the creation of an artifact
+        &ndash; a variability model &ndash; that represents the abstract
+        variability information. Moreover, it offers operations to select or
+        deselect system features and via this feature configuration to specify
+        the system&rsquor;s variants.</para>
+
+        <para>The information of the variability view has to be connected with
+        the system development artifacts in order to define how the feature
+        selection (system configuration) determines the resolution of the
+        variation points within these artifacts, i.e. the selection of a
+        variation for each variation point. As soon as these connections are
+        established a feature configuration can be carried over to a
+        configuration of the variation points of the concerned artifact. The
+        technical realization of this connection is addressed by the
+        <emphasis>Variability Exchange Language</emphasis>.</para>
+
+        <para>At present there is no standard that would define how variation
+        points are expressed in different artifacts. That means that a tool
+        supplier who builds a variants management tool has to implement an
+        individual interface to each other tool that is used in a development
+        process to create the corresponding artifacts. The purpose of the
+        <emphasis>Variability Exchange Language</emphasis> is to support the
+        standardization of these interfaces by a common exchange format that
+        defines which information is exchanged between a variants management
+        tool and a tool that is used to manage a specific kind of artifacts in
+        a development process. As mentioned above, such a tool may either be a
+        tool that already supports the definition of variation points for the
+        concerned artifact type, or it may be an adaptor that adds this
+        capability to a base tool.</para>
+
+        <para>The <emphasis>Variability Exchange Language</emphasis> defines a
+        requirement on tools or tool adaptors that intend to support variants
+        management. Such a tool has to be able to extract the data that is
+        defined in the <emphasis>Variability Exchange Language</emphasis> from
+        the artifact that it manages and to incorporate the data that is sent
+        from the variants management tool into this artifact. Beyond the
+        exchange format, i.e. the contents of the information that is
+        exchanged, also some basic operations are defined here. They define in
+        which direction the variability information is intended to
+        flow.</para>
+
+        <figure>
+          <title>Use case for the Variability Exchange Language</title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata align="center" contentdepth="344" contentwidth="534"
+                         fileref="Figures/image1.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+
+        <para>A use case for the <emphasis>Variability Exchange
+        Language</emphasis> can be defined as follows. Assume an artifact with
+        variation points is given, for instance an artifact created with tool
+        A in <xref linkend="_Ref408318739"/>. First the development tool has
+        to collect the data defined in the <emphasis>Variability Exchange
+        Language, </emphasis>essentially given by the variation points
+        contained in the artifact. It passes this data to the variants
+        management tool that builds a variability model based on the data. The
+        variability model can be used to define a system configuration by
+        selecting the desired system features. The corresponding data, i.e.
+        the configuration, formatted according to the <emphasis>Variability
+        Exchange Language</emphasis>, is passed back to the development tool
+        or adaptor that uses this data to create or derive an artifact variant
+        that corresponds to the system variant defined in the variants
+        management tool.</para>
+
+        <para>Applying this scenario to all development tools and artifacts
+        yields a consistent set of development artifacts for any system
+        variant automatically. The variation points that correspond to
+        customer relevant system features should coincide in all artifacts,
+        i.e. they always induce the same variability model in the variants
+        management tool. In addition to that there may also be internal
+        variation points, for instance implementation variants that do not
+        alter the visible properties of the system but are relevant for the
+        system construction process. These variation points give rise to a
+        staged variability model in which customer features are separated from
+        internal features.</para>
+
+        <para>Since the system configuration is built once and for all in the
+        variants management tool an identical configuration is passed to all
+        development tools and thereby ensures consistency of the variants
+        selection. It might only happen that internal features for instance
+        are not interpreted by some development tool because it is not
+        concerned with internal decisions, such as a requirements document or
+        a system test.</para>
+      </section>
     </section>
+
     <section id="S-TERMINOLOGY">
       <title>Terminology</title>
+
       <section id="S-KEY-WORDS">
-        <title> Key words</title>
-        <para>The key words <glossterm>must</glossterm>, <glossterm>must not</glossterm>,
-            <glossterm>required</glossterm>, <glossterm>shall</glossterm>, <glossterm>shall
-            not</glossterm>, <glossterm>should</glossterm>, <glossterm>should not</glossterm>,
-            <glossterm>recommended</glossterm>, <glossterm>may</glossterm>, and
-            <glossterm>optional</glossterm> are to be interpreted as described in <xref
-            linkend="rfc2119"/>. Note that for reasons of style, these words are not capitalized in
-          this document.</para>
+        <title>Key words</title>
+
+        <para>The key words <glossterm>must</glossterm>, <glossterm>must
+        not</glossterm>, <glossterm>required</glossterm>,
+        <glossterm>shall</glossterm>, <glossterm>shall not</glossterm>,
+        <glossterm>should</glossterm>, <glossterm>should not</glossterm>,
+        <glossterm>recommended</glossterm>, <glossterm>may</glossterm>, and
+        <glossterm>optional</glossterm> are to be interpreted as described in
+        <xref linkend="rfc2119"/>. Note that for reasons of style, these words
+        are not capitalized in this document.</para>
       </section>
+
       <section id="S-DEFINITIONS">
-        <title> Definitions</title>
+        <title>Definitions</title>
+
         <variablelist>
           <varlistentry>
-            <term> term</term>
+            <term>term</term>
+
             <listitem>
               <para>Definition</para>
             </listitem>
           </varlistentry>
+
           <varlistentry>
-            <term> term</term>
+            <term>term</term>
+
             <listitem>
               <para>Definition</para>
             </listitem>
           </varlistentry>
         </variablelist>
       </section>
+
       <section id="S-KEY-CONCEPTS">
-        <title> Key concepts</title>
+        <title>Key concepts</title>
+
         <variablelist>
           <varlistentry>
-            <term> concept</term>
+            <term>concept</term>
+
             <listitem>
               <para>Definition</para>
             </listitem>
           </varlistentry>
+
           <varlistentry>
-            <term> concept</term>
+            <term>concept</term>
+
             <listitem>
               <para>Definition</para>
             </listitem>
           </varlistentry>
+
           <varlistentry>
-            <term> concept</term>
+            <term>concept</term>
+
             <listitem>
               <para>Definition</para>
             </listitem>
@@ -350,142 +602,595 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         </variablelist>
       </section>
     </section>
+
     <section id="S-NORMATIVE-REFERENCES">
       <title>Normative References</title>
+
       <bibliolist>
-        <bibliomixed id="docbook">
-          <abbrev>DocBook</abbrev>
-          <citetitle>DocBook 4.5 </citetitle>
-          <date>17 January 2005. </date>
-          <releaseinfo>OASIS Committee Draft 4.5. </releaseinfo>
-          <bibliomisc><ulink url="https://www.docbook.org/specs/docbook-4.5-spec.html"
-              >https://www.docbook.org/specs/docbook-4.5-spec.html</ulink>.</bibliomisc>
-        </bibliomixed>
-        <bibliomixed id="rfc2119"><abbrev>RFC 2119</abbrev>
-          <citetitle>Key words for use in RFCs to Indicate Requirement Levels</citetitle>,
-            <date>March 1997. </date>
-          <author>
-            <firstname>S. </firstname>
+        <bibliomixed id="docbook"><abbrev>DocBook</abbrev> <citetitle>DocBook
+        4.5 </citetitle> <date>17 January 2005. </date> <releaseinfo>OASIS
+        Committee Draft 4.5. </releaseinfo> <bibliomisc><ulink
+        url="https://www.docbook.org/specs/docbook-4.5-spec.html">https://www.docbook.org/specs/docbook-4.5-spec.html</ulink>.</bibliomisc></bibliomixed>
+
+        <bibliomixed id="rfc2119"><abbrev>RFC 2119</abbrev> <citetitle>Key
+        words for use in RFCs to Indicate Requirement Levels</citetitle>,
+        <date>March 1997. </date> <author>
+            <firstname>S.</firstname>
+
             <surname>Bradner</surname>
-          </author>. <releaseinfo>IETF (Internet Engineering Task Force) RFC 2119, </releaseinfo>
-          <bibliomisc><ulink url="http://www.ietf.org/rfc/rfc2119.txt"
-              >http://www.ietf.org/rfc/rfc2119.txt</ulink>.</bibliomisc>
-        </bibliomixed>
+          </author>. <releaseinfo>IETF (Internet Engineering Task Force) RFC
+        2119, </releaseinfo> <bibliomisc><ulink
+        url="http://www.ietf.org/rfc/rfc2119.txt">http://www.ietf.org/rfc/rfc2119.txt</ulink>.</bibliomisc></bibliomixed>
       </bibliolist>
     </section>
+
     <section id="S-NON-NORMATIVE-REFERENCES">
       <title>Non-Normative References</title>
+
       <bibliolist>
-        <bibliomixed id="oasis-spec">
-          <abbrev>oasis-spec</abbrev>
-          <citetitle>OASIS Specification Publishing in DocBook XML Version &version;. </citetitle>
-          <date>&pubdate;. </date>
-          <releaseinfo>OASIS Working Draft. </releaseinfo>
-          <bibliomisc><ulink
-              url="https://docs.oasis-open.org/templates/DocBook/spec-&version;/oasis-specification-&version;-&stage;.html"
-              >https://docs.oasis-open.org/templates/DocBook/spec-&version;/oasis-specification-&version;-&stage;.html</ulink>.</bibliomisc>
-        </bibliomixed>
+        <bibliomixed id="oasis-spec"><abbrev>oasis-spec</abbrev>
+        <citetitle>OASIS Specification Publishing in DocBook XML Version
+        &version;. </citetitle> <date>&pubdate;. </date> <releaseinfo>OASIS
+        Working Draft. </releaseinfo> <bibliomisc><ulink
+        url="https://docs.oasis-open.org/templates/DocBook/spec-1.0/oasis-specification-1.0-csprd01.html">https://docs.oasis-open.org/templates/DocBook/spec-&version;/oasis-specification-&version;-&stage;.html</ulink>.</bibliomisc></bibliomixed>
+
         <bibliomixed id="xml-assoc"><abbrev>xml-assoc</abbrev>
-          <title>Associating Style Sheets with XML documents Version 1.0. </title>
-          <date>29 June 1999. </date>
-          <author>
-            <firstname>James </firstname>
+        <title>Associating Style Sheets with XML documents Version 1.0.
+        </title> <date>29 June 1999. </date> <author>
+            <firstname>James</firstname>
+
             <surname>Clark</surname>
           </author>. <releaseinfo>W3C Recommendation. </releaseinfo>
-          <bibliomisc><ulink url="http://www.w3.org/1999/06/REC-xml-stylesheet-19990629"
-              >http://www.w3.org/1999/06/REC-xml-stylesheet-19990629</ulink></bibliomisc>
-        </bibliomixed>
+        <bibliomisc><ulink
+        url="http://www.w3.org/1999/06/REC-xml-stylesheet-19990629">http://www.w3.org/1999/06/REC-xml-stylesheet-19990629</ulink></bibliomisc></bibliomixed>
       </bibliolist>
     </section>
   </section>
+
   <section id="S-SECTION-TITLE">
-    <title>Section Title</title>
+    <title>Overview of the Variability Exchange Language</title>
+
+    <para>The core of the <emphasis>Variability Exchange Language</emphasis>
+    is given by the definition of variation points and their variations
+    &ndash; by the classes VariationPoint and Variation (see <xref
+    linkend="_Ref408311811"/>). In the following we immediately use the class
+    names from the meta-model presented in Chapter <xref
+    linkend="_Toc393199827"/> to discuss the corresponding concepts, such as
+    VariationPoint and Variation. This chapter gives a survey on the main
+    classes, in particular the ones shown in <xref
+    linkend="_Ref408311811"/>.</para>
+
+    <para>A detailed specification of all classes is provided in Chapter <xref
+    linkend="_Toc393199827"/>.</para>
+
+    <figure xml:id="_Ref408311811">
+      <title>An Overview of the Variability Exchange Language</title>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata contentdepth="777" contentwidth="605"
+                     fileref="Figures/image2.png"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <para>A [XMLmind] Exchange Language document starts with a
+    VariabilityExchangeModels element, which contains a number of
+    VariabilityExchangeModel elements. Each VariabilityExchangeModel
+    corresponds to one (or possibly several, but this is implementation
+    dependent) artefacts with variable elements.</para>
+
+    <para>A VariabilityExchangeModel in turn contains a number of
+    VariationPoints. Thus, a VariabilityExchangeModel describes the variable
+    aspects of an artifact, but only those. All non-variable facets of the
+    artifact are discarded because they are not necessary for our
+    purpose.</para>
+
     <section id="S-SUB-SECTION-TITLE">
-      <title>Sub-section Title</title>
-      <section id="S-SUB-SUB-SECTION-TITLE">
-        <title>Sub-sub-section Title</title>
-        <section id="S-SUB-SUB-SUB-SECTION-TITLE">
-          <title>Sub-sub-sub-section Title</title>
-          <section id="S-SUB-SUB-SUB-SECTION-INTRODUCTION">
-            <title>Sub-sub-sub-section Introduction</title>
-            <para>The parent level, this level and other deeper levels do not go into the table of
-              contents.</para>
-          </section>
-          <section id="S-SUB-SUB-SUB-SUB-SECTION-TITLE">
-            <title>Sub-sub-sub-sub-section Title</title>
-            <para>The parent level, this level and other deeper levels do not go into the table of
-              contents.</para>
-          </section>
-        </section>
-      </section>
+      <title>VariationPoint and Variation</title>
+
+      <para>As shown in <xref linkend="_Ref408311811"/>, we distinguish
+      between two different kinds of VariationPoints:</para>
+
+      <orderedlist>
+        <listitem>
+          <para>StructuralVariationPoints are variation points where the
+          structure of a model changes during the binding process.
+          StructuralVariationPoints define which elements are contained in a
+          bound artifact. There are two kinds of structural variation
+          points:</para>
+
+          <orderedlist numeration="loweralpha">
+            <listitem>
+              <para>OptionalStructuralVariationPoint &ndash; variation points
+              that can be selected or deselected.</para>
+            </listitem>
+
+            <listitem>
+              <para>XorStructuralVariationPoint &ndash; i.e. variation points
+              that represent sets of alternatives from which exactly one can
+              be selected.</para>
+            </listitem>
+          </orderedlist>
+        </listitem>
+
+        <listitem>
+          <para>ParameterVariationPoints are variation points which select a
+          numerical value for a parameter during the binding process. They do
+          not change the structure of an artifact. There are two kinds of
+          parameter variation points:</para>
+
+          <orderedlist numeration="loweralpha">
+            <listitem>
+              <para>CalculatedParameterVariationPoint &ndash; variation points
+              where the parameter value is calculated by an expression.</para>
+            </listitem>
+
+            <listitem>
+              <para>XorParameterVariationPoint &ndash; variation points where
+              the parameter value is selected from a list of values.</para>
+            </listitem>
+          </orderedlist>
+        </listitem>
+      </orderedlist>
+
+      <para>Each VariationPoint is [XMLmind] with one or more Variations. The
+      Variations enumerate the possible variants for their respective
+      VariationPoints. When an artifact is bound, then one of these variations
+      (OptionalStructuralVariationPoints also allow zero variations here) is
+      selected to be included in the bound artifact, and all others are
+      discarded.</para>
+
+      <para>Both Variations and VariationPoints may refer to artifact elements
+      (correspondingVariableArtifactElement), for example the Simulink block
+      or the line of code which correspond to the VariationPoint respectively
+      Variation.</para>
+
+      <para>VariationPoints can further define dependencies on other variation
+      points (VariationDependency), for example one variation point may
+      require another variation points. This is useful to express technical
+      dependencies in artifacts.</para>
+
+      <para>Furthermore, a VariationPoint may contain other VariationPoints to
+      establish a hierarchy (VariationPointHierarchy), similarly to subsystem
+      blocks in Simulink or hierarchies in software architectures.</para>
+    </section>
+
+    <section xml:id="_Ref409084549">
+      <title>Variation Point Descriptions versus Variation Point
+      Selections</title>
+
+      <para>A VariabilityExchangeModel as defined in <xref
+      linkend="_Ref408311811"/> can actually serve two different
+      purposes:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>A <emphasis>variation point description</emphasis> lists all
+          variation points and <emphasis>all</emphasis> their variations; that
+          is it describes a complete product line.</para>
+        </listitem>
+
+        <listitem>
+          <para>A <emphasis>variation point description</emphasis> also lists
+          all variation points, but selects one (or zero for optional
+          variation points) Variation for each variation point. The attribute
+          selected of Variation is used for that purpose. Any such selection
+          must be consistent with the expression or condition attribute of a
+          Variation, as well as with dependencies between variation
+          points.</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>Both variation point descriptions and variation point selections
+      use the same structure; the attribute type of VariabilityExchangeModel
+      determines how a VariabilityExchangeModel should be interpreted.</para>
+    </section>
+
+    <section>
+      <title>Binding</title>
+
+      <para>The <emphasis>Variability [XMLmind] Language</emphasis> does not
+      make any assumptions on how the binding process for the associated
+      artifact works. We do however provide a way to attach Conditions or
+      Expressions to Variations:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>In a StructuralVariationPoint, a Variation comes with a
+          Condition that determines whether the associated artifact element is
+          part of a bound artifact.</para>
+        </listitem>
+
+        <listitem>
+          <para>In a ParameterVariationPoint, the Variation determines a value
+          for the associated artifact element. This is done either by
+          computing it (CalculatedVariation) or selecting from one of several
+          values (ValueVariation).</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>In a variation point description (see section <xref
+      linkend="_Ref409084549"/>) the result of the evaluation of a condition
+      or expression in a Variation must be compatible with the attribute
+      selected of a Variation. That is, if the attribute selected of a
+      Variation has the value <emphasis>true</emphasis>, then its condition
+      must also evaluate to <emphasis>true</emphasis>.</para>
+    </section>
+
+    <section>
+      <title>Common Concepts</title>
+
+      <para>Most classes in the <emphasis>Variability Exchange
+      Language</emphasis> are based on the class Identifiable, which provides
+      them with a name and a unique identifier. Identifable also provide a way
+      to attach application-specific data (SpecialData) to elements in the
+      <emphasis>Variability Exchange Language</emphasis>.</para>
+    </section>
+
+    <section>
+      <title>API</title>
+
+      <para>In addition to the contents of the exchange format basic
+      operations of a Variability Interface are defined in the class
+      VariabilityAPI. These operations cover the following operations:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>The import and export of VariabilityExchangeModels</para>
+        </listitem>
+
+        <listitem>
+          <para>Getting and setting configurations, which are also
+          VariabilityExchangeModels</para>
+        </listitem>
+
+        <listitem>
+          <para>Getting [XMLmind] on the read or write access (Capability) to
+          VariationPoints and VariabilityExchangeModels as
+          configurations.</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
+      <title>Example</title>
+
+      <orderedlist>
+        <listitem>
+          <para>#if A</para>
+        </listitem>
+
+        <listitem>
+          <para>/* code active if A is defined */</para>
+        </listitem>
+
+        <listitem>
+          <para>#if B</para>
+        </listitem>
+
+        <listitem>
+          <para>/* code active if A and B is defined */</para>
+        </listitem>
+
+        <listitem>
+          <para>#endif</para>
+        </listitem>
+
+        <listitem>
+          <para>/* code active if A is defined */</para>
+        </listitem>
+
+        <listitem>
+          <para>#else</para>
+        </listitem>
+
+        <listitem>
+          <para>/* code active if A is not defined */</para>
+        </listitem>
+
+        <listitem>
+          <para>#endif</para>
+        </listitem>
+      </orderedlist>
+
+      <para>To demonstrate the applicability of the Variability Exchange
+      Language for the exchange of variability information, we show as an
+      example a simple source code section (see <xref
+      linkend="_Ref13056146"/>), in which the C-preprocessor (cpp) is employed
+      to realize variability, and the extract of that variability defined
+      according to Variability Exchange Language (see <xref
+      linkend="_Ref13056667"/>). We could have used further artifact types
+      like requirements, UML models, tests, etc. but for the sake of
+      simplicity and understandability we opted for C-source code using the
+      cpp.</para>
+
+      <orderedlist>
+        <listitem>
+          <para>...</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;variability-exchange-model
+          type="variationpoint-description" id="model"
+          uri="file///c:/example.c"&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;xor-structural-variationpoint id="vp1"&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;corresponding-variable-artifact-element
+          type="src-lines"&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;src-lines&gt;1-9&lt;/src-lines&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;/corresponding-variable-artifact-element&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;variation id="vp1v1" &gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;condition
+          [XMLmind]="single-feature-condition"&gt;A&lt;/condition&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;corresponding-variable-artifact-element
+          type="src-lines"&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;src-lines&gt;2-6&lt;/src-lines&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;/corresponding-variable-artifact-element&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;hierarchy id="vp2h1"&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;variationpoint ref="vp2"/&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;/hierarchy&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;/variation&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;variation id="vp1v2"&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;corresponding-variable-artifact-element
+          type="src-lines"&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;src-lines&gt;8&lt;/src-lines&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;/corresponding-variable-artifact-element&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;/variation&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;/xor-structural-variationpoint&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;optional-structural-variationpoint id="vp2"&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;corresponding-variable-artifact-element
+          type="src-lines"&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;src-lines&gt;3-5&lt;/src-lines&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;/corresponding-variable-artifact-element&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;variation id="vp1v1" &gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;condition
+          type="single-feature-condition"&gt;B&lt;/condition&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;corresponding-variable-artifact-element
+          [XMLmind]="src-lines"&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;src-lines&gt;4&lt;/src-lines&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;/corresponding-variable-artifact-element&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;/variation&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;/optional-structural-variationpoint&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>&lt;/variability-exchange-model&gt;</para>
+        </listitem>
+
+        <listitem>
+          <para>... </para>
+        </listitem>
+      </orderedlist>
+
+      <para>To note, the cpp is a stand-alone tool for text processing, which,
+      although initially invented for C, is not limited to a specific language
+      and can be used for arbitrary text and source code transformations <link
+      linkend="PS">[Fav96],</link> leading e.g. to conditional code
+      compilation. The cpp tool works on the basis of directives (a.k.a.
+      macros) that control syntactic program transformations. The directives
+      supported by the cpp tool can be divided into four classes: file
+      inclusion, macro definition, macro substitution, and conditional
+      inclusion.</para>
+
+      <para>In our example, we only use the macros <emphasis>A</emphasis> and
+      <emphasis>B</emphasis> and conditional inclusion mechanisms. The source
+      code comments in <xref linkend="_Ref13056146"/> explain how the cpp will
+      transform the code depending on the definition of the macros. From an
+      abstract point of view, the code contains two variation points and three
+      variations, which is reflected according to the Variability Exchange
+      Language in the exchange format definition in <xref
+      linkend="_Ref13056667"/>. The first variation point spans the source
+      lines 1-9 and contains two alternative variations. The variation point's
+      corresponding elements of the artifact &ndash; in this case exactly the
+      source lines &ndash; are represented in the exchange format as well.
+      Regarding the variations, the first one (lines 2-6) will be selected if
+      macro A is defined. Otherwise the second variation (line 8) gets
+      selected. Assuming that the macro names are identically with features or
+      at least there exists a mapping from a feature to a macro name, then the
+      <emphasis>condition</emphasis> in the eighth line in <xref
+      linkend="_Ref13056667"/> is the equivalent to the first source code
+      line.</para>
+
+      <para>The [XMLmind] variation point (lines 3-5) is nested within the
+      first variation of the first variation point, constituting a variation
+      point hierarchy. Within the corresponding exchange format, the variation
+      points are not nested but the nesting information is covered by the
+      definition in the lines 15-17 in <xref linkend="_Ref13056667"/>. There,
+      the nested variation point is referenced by its <emphasis>id</emphasis>,
+      resulting in a tree-like structure at the end.</para>
     </section>
   </section>
-  <section id="S-CONFORMANCE">
-    <title>Conformance</title>
+
+  <section id="Toc393199827">
+    <title>Variability Exchange Language Class Reference</title>
+
     <para>The last section contains the conformance clauses/statements.</para>
   </section>
+
   <appendix id="A-AN-ANNEX">
     <title>An Annex</title>
+
     <para>Appendices are distinguished from sections.</para>
   </appendix>
-  <appendix role="normative" id="A-A-NORMATIVE-ANNEX">
+
+  <appendix id="A-A-NORMATIVE-ANNEX" role="normative">
     <title>A Normative Annex</title>
+
     <para>An annex or section with <literal>role="normative"</literal>.</para>
   </appendix>
-  <appendix role="non-normative" id="A-A-NON-NORMATIVE-ANNEX">
+
+  <appendix id="A-A-NON-NORMATIVE-ANNEX" role="non-normative">
     <title>A Non-normative Annex</title>
-    <para>An annex or section with <literal>role="non-normative"</literal>.</para>
+
+    <para>An annex or section with
+    <literal>role="non-normative"</literal>.</para>
   </appendix>
-  <appendix role="informative" id="A-AN-INFORMATIVE-ANNEX">
+
+  <appendix id="A-AN-INFORMATIVE-ANNEX" role="informative">
     <title>An Informative Annex</title>
-    <para>An annex or section with <literal>role="informative"</literal>.</para>
+
+    <para>An annex or section with
+    <literal>role="informative"</literal>.</para>
   </appendix>
-  <appendix role="iso-normative" id="A-AN-ISO-NORMATIVE-ANNEX">
+
+  <appendix id="A-AN-ISO-NORMATIVE-ANNEX" role="iso-normative">
     <title>An ISO-normative Annex</title>
-    <para>An annex or section with <literal>role="iso-normative"</literal>.</para>
+
+    <para>An annex or section with
+    <literal>role="iso-normative"</literal>.</para>
   </appendix>
-  <appendix role="iso-informative" id="A-AN-ISO-INFORMATIVE-ANNEX">
+
+  <appendix id="A-AN-ISO-INFORMATIVE-ANNEX" role="iso-informative">
     <title>An ISO-informative Annex</title>
-    <para>An annex or section with <literal>role="iso-informative"</literal>.</para>
+
+    <para>An annex or section with
+    <literal>role="iso-informative"</literal>.</para>
   </appendix>
-  <appendix role="non-normative" id="A-ACKNOWLEDGMENTS">
+
+  <appendix id="A-ACKNOWLEDGMENTS" role="non-normative">
     <title>Acknowledgments</title>
-    <para>In a typical OASIS work product one might wish to list committee participants in a
-      non-normative annex (markup shown above in the normative annex example) using wording along
-      the line of &#x201c;The following individuals have participated in the creation of this
-      specification and are gratefully acknowledged:&#x201d;</para>
+
+    <para>In a typical OASIS work product one might wish to list committee
+    participants in a non-normative annex (markup shown above in the normative
+    annex example) using wording along the line of &ldquo;The following
+    individuals have participated in the creation of this specification and
+    are gratefully acknowledged:&rdquor;</para>
+
     <itemizedlist spacing="compact">
       <listitem>
         <para>Mary Baker, Associate Member</para>
       </listitem>
+
       <listitem>
         <para>Jane Doe, Example Corporation Member</para>
       </listitem>
+
       <listitem>
         <para>John Able, Other Example Corporation Member</para>
       </listitem>
     </itemizedlist>
-    <para>Note that the itemized list uses <literal>spacing="compact"</literal> to remove the space
-      between list items in the printed result, not the HTML result.</para>
+
+    <para>Note that the itemized list uses
+    <literal>spacing="compact"</literal> to remove the space between list
+    items in the printed result, not the HTML result.</para>
   </appendix>
+
   <appendix id="A-REVISION-HISTORY">
     <title>Revision History</title>
-    <para>Typically the revision history is removed from a finalized specification or note.</para>
-    <para>
-      <revhistory>
+
+    <para>Typically the revision history is removed from a finalized
+    specification or note.</para>
+
+    <para><revhistory>
         <revision>
           <revnumber>X.Y</revnumber>
+
           <date>DD Mmmmmm YYYY</date>
+
           <authorinitials>abc</authorinitials>
+
           <revremark>Details of the revision</revremark>
         </revision>
+
         <revision>
           <revnumber>X.Y</revnumber>
+
           <date>DD Mmmmmm YYYY</date>
+
           <authorinitials>abc</authorinitials>
+
           <revremark>Details of the revision</revremark>
         </revision>
-      </revhistory>
-    </para>
+      </revhistory></para>
   </appendix>
 </article>
