@@ -48,6 +48,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 <!ENTITY % equation.content "(alt?, (graphic+|mediaobject+|mml:math))">
 <!ENTITY % inlineequation.content "(alt?, (inlinegraphic+|inlinemediaobject+|mml:math))">
 <!ENTITY % mathml PUBLIC "-//W3C//DTD MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/mathml2.dtd">
+%mathml;
 ]>
 <article status="Committee Specification Draft 01 / Public Review Draft 01">
   <articleinfo>
@@ -223,17 +224,20 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
       <para>This document was last revised or approved by the OASIS
       Variability Exchange Language (VEL) TC on the above date. The level of
-      approval is also listed above. Check the &ldquo;Latest stage&rdquor;
-      location noted above for possible later revisions of this document. Any
-      other numbered Versions and other technical work produced by the
-      Technical Committee (TC) are listed at <ulink
+      approval is also listed above. Check the &OpenCurlyDoubleQuote;Latest
+      stage&CloseCurlyDoubleQuote; location noted above for possible later
+      revisions of this document. Any other numbered Versions and other
+      technical work produced by the Technical Committee (TC) are listed at
+      <ulink
       url="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=vel#technical">https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=vel#technical</ulink>.</para>
 
       <para>Technical Committee members should send comments on this
-      specification to the TC&rsquor;s email list. Others should send comments
-      to the TC by using the &ldquo;<ulink conformance="skip"
+      specification to the TC&CloseCurlyQuote;s email list. Others should send
+      comments to the TC by using the &OpenCurlyDoubleQuote;<ulink
+      conformance="skip"
       url="http://www.oasis-open.org/committees/comments/index.php?wg_abbrev=vel">Send
-      A Comment</ulink>&rdquor; button on the TC&rsquor;s web page at <ulink
+      A Comment</ulink>&CloseCurlyDoubleQuote; button on the
+      TC&CloseCurlyQuote;s web page at <ulink
       url="https://www.oasis-open.org/committees/vel/">https://www.oasis-open.org/committees/vel/</ulink>.</para>
 
       <para>This specification is provided under the <ulink conformance="skip"
@@ -242,8 +246,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       Technical Committee was established. For information on whether any
       patents have been disclosed that may be essential to implementing this
       specification, and any offers of patent licensing terms, please refer to
-      the Intellectual Property Rights section of the TC&rsquor;s web page
-      (<ulink
+      the Intellectual Property Rights section of the TC&CloseCurlyQuote;s web
+      page (<ulink
       url="https://www.oasis-open.org/committees/vel/ipr.php">https://www.oasis-open.org/committees/vel/ipr.php</ulink>).</para>
 
       <para>Note that any machine-readable content (<ulink
@@ -251,8 +255,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       Language Definitions</ulink>) declared Normative for this Work Product
       is provided in separate plain text files. In the event of a discrepancy
       between any such plain text file and display content in the Work
-      Product&rsquor;s prose narrative document(s), the content in the
-      separate plain text file prevails.</para>
+      Product&CloseCurlyQuote;s prose narrative document(s), the content in
+      the separate plain text file prevails.</para>
     </legalnotice>
 
     <legalnotice role="citation">
@@ -279,7 +283,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
       <para>All capitalized terms in the following text have the meanings
       assigned to them in the OASIS Intellectual Property Rights Policy (the
-      &ldquo;OASIS IPR Policy&rdquor;). The full <ulink conformance="skip"
+      &OpenCurlyDoubleQuote;OASIS IPR Policy&CloseCurlyDoubleQuote;). The full
+      <ulink conformance="skip"
       url="https://www.oasis-open.org/policies-guidelines/ipr">Policy</ulink>
       may be found at the OASIS website.</para>
 
@@ -300,11 +305,11 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       be revoked by OASIS or its successors or assigns.</para>
 
       <para>This document and the information contained herein is provided on
-      an &ldquo;AS IS&rdquor; basis and OASIS DISCLAIMS ALL WARRANTIES,
-      EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE
-      USE OF THE INFORMATION HEREIN WILL NOT INFRINGE ANY OWNERSHIP RIGHTS AND
-      ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
-      PURPOSE.</para>
+      an &OpenCurlyDoubleQuote;AS IS&CloseCurlyDoubleQuote; basis and OASIS
+      DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+      TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE
+      ANY OWNERSHIP RIGHTS AND ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR
+      FITNESS FOR A PARTICULAR PURPOSE.</para>
 
       <para>OASIS requests that any OASIS Party or any other party that
       believes it has patent claims that would necessarily be infringed by
@@ -327,25 +332,26 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       to the implementation or use of the technology described in this
       document or the extent to which any license under such rights might or
       might not be available; neither does it represent that it has made any
-      effort to identify any such rights. Information on OASIS&rsquor;
-      procedures with respect to rights in any document or deliverable
-      produced by an OASIS Technical Committee can be found on the OASIS
-      website. Copies of claims of rights made available for publication and
-      any assurances of licenses to be made available, or the result of an
-      attempt made to obtain a general license or permission for the use of
-      such proprietary rights by implementers or users of this OASIS Committee
-      Specification or OASIS Standard, can be obtained from the OASIS TC
-      Administrator. OASIS makes no representation that any information or
-      list of intellectual property rights will at any time be complete, or
-      that any claims in such list are, in fact, Essential Claims.</para>
+      effort to identify any such rights. Information on
+      OASIS&CloseCurlyQuote; procedures with respect to rights in any document
+      or deliverable produced by an OASIS Technical Committee can be found on
+      the OASIS website. Copies of claims of rights made available for
+      publication and any assurances of licenses to be made available, or the
+      result of an attempt made to obtain a general license or permission for
+      the use of such proprietary rights by implementers or users of this
+      OASIS Committee Specification or OASIS Standard, can be obtained from
+      the OASIS TC Administrator. OASIS makes no representation that any
+      information or list of intellectual property rights will at any time be
+      complete, or that any claims in such list are, in fact, Essential
+      Claims.</para>
 
-      <para>The name &ldquo;OASIS&rdquor; is a trademark of <ulink
-      conformance="skip" url="https://www.oasis-open.org">OASIS</ulink>, the
-      owner and developer of this specification, and should be used only to
-      refer to the organization and its official outputs. OASIS welcomes
-      reference to, and implementation and use of, specifications, while
-      reserving the right to enforce its marks against misleading uses. Please
-      see <ulink
+      <para>The name &OpenCurlyDoubleQuote;OASIS&CloseCurlyDoubleQuote; is a
+      trademark of <ulink conformance="skip"
+      url="https://www.oasis-open.org">OASIS</ulink>, the owner and developer
+      of this specification, and should be used only to refer to the
+      organization and its official outputs. OASIS welcomes reference to, and
+      implementation and use of, specifications, while reserving the right to
+      enforce its marks against misleading uses. Please see <ulink
       url="https://www.oasis-open.org/policies-guidelines/trademark">https://www.oasis-open.org/policies-guidelines/trademark</ulink>
       for guidance.</para>
     </legalnotice>
@@ -398,12 +404,12 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         aspect that has to be considered.</para>
 
         <para>We consider as variable system a system that can be tailored by
-        the system producer according to individual clients&rsquor; needs. All
-        variants of a variable system are developed within one development
-        process. In addition to the standard development tasks the process
-        must also provide the means to tailor the system, i.e. to derive the
-        client specific variant of the system. This may happen at different
-        stages, also known as (variance) binding times.</para>
+        the system producer according to individual clients&CloseCurlyQuote;
+        needs. All variants of a variable system are developed within one
+        development process. In addition to the standard development tasks the
+        process must also provide the means to tailor the system, i.e. to
+        derive the client specific variant of the system. This may happen at
+        different stages, also known as (variance) binding times.</para>
 
         <para>Variability is embodied in variation points. Consider as example
         a requirements document. A requirement toward a variable system may be
@@ -441,14 +447,14 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         means that it describes which variants exist, but does not describe
         how the variability is realized. The variability information is
         derived from an analysis of the commonalities, differences, and
-        dependencies of the system&rsquor;s variants and is often represented
-        as a feature model.</para>
+        dependencies of the system&CloseCurlyQuote;s variants and is often
+        represented as a feature model.</para>
 
         <para>A variants management tool supports the creation of an artifact
         &ndash; a variability model &ndash; that represents the abstract
         variability information. Moreover, it offers operations to select or
         deselect system features and via this feature configuration to specify
-        the system&rsquor;s variants.</para>
+        the system&CloseCurlyQuote;s variants.</para>
 
         <para>The information of the variability view has to be connected with
         the system development artifacts in order to define how the feature
@@ -485,7 +491,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         which direction the variability information is intended to
         flow.</para>
 
-        <figure>
+        <figure id="_fig-velUseCase">
           <title>Use case for the Variability Exchange Language</title>
 
           <mediaobject>
@@ -499,7 +505,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         <para>A use case for the <emphasis>Variability Exchange
         Language</emphasis> can be defined as follows. Assume an artifact with
         variation points is given, for instance an artifact created with tool
-        A in <xref linkend="_Ref408318739"/>. First the development tool has
+        A in <xref linkend="_fig-velUseCase"/>. First the development tool has
         to collect the data defined in the <emphasis>Variability Exchange
         Language, </emphasis>essentially given by the variation points
         contained in the artifact. It passes this data to the variants
@@ -655,15 +661,15 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
     &ndash; by the classes VariationPoint and Variation (see <xref
     linkend="_Ref408311811"/>). In the following we immediately use the class
     names from the meta-model presented in Chapter <xref
-    linkend="_Toc393199827"/> to discuss the corresponding concepts, such as
-    VariationPoint and Variation. This chapter gives a survey on the main
+    linkend="_sec-detailedSpec"/> to discuss the corresponding concepts, such
+    as VariationPoint and Variation. This chapter gives a survey on the main
     classes, in particular the ones shown in <xref
     linkend="_Ref408311811"/>.</para>
 
     <para>A detailed specification of all classes is provided in Chapter <xref
-    linkend="_Toc393199827"/>.</para>
+    linkend="_sec-detailedSpec"/>.</para>
 
-    <figure xml:id="_Ref408311811">
+    <figure id="_Ref408311811">
       <title>An Overview of the Variability Exchange Language</title>
 
       <mediaobject>
@@ -756,7 +762,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       blocks in Simulink or hierarchies in software architectures.</para>
     </section>
 
-    <section xml:id="_Ref409084549">
+    <section id="_Ref409084549">
       <title>Variation Point Descriptions versus Variation Point
       Selections</title>
 
@@ -856,220 +862,56 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
     <section>
       <title>Example</title>
 
-      <orderedlist>
-        <listitem>
-          <para>#if A</para>
-        </listitem>
+      <figure id="_fig-exampleSource">
+        <title>Example source code with C-preprocessor directives</title>
 
-        <listitem>
-          <para>/* code active if A is defined */</para>
-        </listitem>
-
-        <listitem>
-          <para>#if B</para>
-        </listitem>
-
-        <listitem>
-          <para>/* code active if A and B is defined */</para>
-        </listitem>
-
-        <listitem>
-          <para>#endif</para>
-        </listitem>
-
-        <listitem>
-          <para>/* code active if A is defined */</para>
-        </listitem>
-
-        <listitem>
-          <para>#else</para>
-        </listitem>
-
-        <listitem>
-          <para>/* code active if A is not defined */</para>
-        </listitem>
-
-        <listitem>
-          <para>#endif</para>
-        </listitem>
-      </orderedlist>
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="777" contentwidth="605"
+                       fileref="Figures/example.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
 
       <para>To demonstrate the applicability of the Variability Exchange
       Language for the exchange of variability information, we show as an
-      example a simple source code section (see <xref
-      linkend="_Ref13056146"/>), in which the C-preprocessor (cpp) is employed
-      to realize variability, and the extract of that variability defined
-      according to Variability Exchange Language (see <xref
-      linkend="_Ref13056667"/>). We could have used further artifact types
+      example a simple source code section in Figure <xref
+      linkend="_fig-exampleSource"/>, in which the C-preprocessor (cpp) is
+      employed to realize variability, and the extract of that variability
+      defined according to Variability Exchange Language (see <xref
+      linkend="_fig-exampleVEL"/>). We could have used further artifact types
       like requirements, UML models, tests, etc. but for the sake of
       simplicity and understandability we opted for C-source code using the
       cpp.</para>
 
-      <orderedlist>
-        <listitem>
-          <para>...</para>
-        </listitem>
+      <figure id="_fig-exampleVEL">
+        <title>Example source code with C-preprocessor directives</title>
 
-        <listitem>
-          <para>&lt;variability-exchange-model
-          type="variationpoint-description" id="model"
-          uri="file///c:/example.c"&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;xor-structural-variationpoint id="vp1"&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;corresponding-variable-artifact-element
-          type="src-lines"&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;src-lines&gt;1-9&lt;/src-lines&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;/corresponding-variable-artifact-element&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;variation id="vp1v1" &gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;condition
-          [XMLmind]="single-feature-condition"&gt;A&lt;/condition&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;corresponding-variable-artifact-element
-          type="src-lines"&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;src-lines&gt;2-6&lt;/src-lines&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;/corresponding-variable-artifact-element&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;hierarchy id="vp2h1"&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;variationpoint ref="vp2"/&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;/hierarchy&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;/variation&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;variation id="vp1v2"&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;corresponding-variable-artifact-element
-          type="src-lines"&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;src-lines&gt;8&lt;/src-lines&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;/corresponding-variable-artifact-element&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;/variation&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;/xor-structural-variationpoint&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;optional-structural-variationpoint id="vp2"&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;corresponding-variable-artifact-element
-          type="src-lines"&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;src-lines&gt;3-5&lt;/src-lines&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;/corresponding-variable-artifact-element&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;variation id="vp1v1" &gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;condition
-          type="single-feature-condition"&gt;B&lt;/condition&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;corresponding-variable-artifact-element
-          [XMLmind]="src-lines"&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;src-lines&gt;4&lt;/src-lines&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;/corresponding-variable-artifact-element&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;/variation&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;/optional-structural-variationpoint&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>&lt;/variability-exchange-model&gt;</para>
-        </listitem>
-
-        <listitem>
-          <para>... </para>
-        </listitem>
-      </orderedlist>
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="777" contentwidth="605"
+                       fileref="Figures/example-vel.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
 
       <para>To note, the cpp is a stand-alone tool for text processing, which,
       although initially invented for C, is not limited to a specific language
-      and can be used for arbitrary text and source code transformations <link
-      linkend="PS">[Fav96],</link> leading e.g. to conditional code
-      compilation. The cpp tool works on the basis of directives (a.k.a.
-      macros) that control syntactic program transformations. The directives
-      supported by the cpp tool can be divided into four classes: file
-      inclusion, macro definition, macro substitution, and conditional
-      inclusion.</para>
+      and can be used for arbitrary text and source code transformations
+      leading e.g. to conditional code compilation. The cpp tool works on the
+      basis of directives (a.k.a. macros) that control syntactic program
+      transformations. The directives supported by the cpp tool can be divided
+      into four classes: file inclusion, macro definition, macro substitution,
+      and conditional inclusion.</para>
 
       <para>In our example, we only use the macros <emphasis>A</emphasis> and
       <emphasis>B</emphasis> and conditional inclusion mechanisms. The source
-      code comments in <xref linkend="_Ref13056146"/> explain how the cpp will
-      transform the code depending on the definition of the macros. From an
-      abstract point of view, the code contains two variation points and three
-      variations, which is reflected according to the Variability Exchange
-      Language in the exchange format definition in <xref
-      linkend="_Ref13056667"/>. The first variation point spans the source
+      code comments in Figure <xref linkend="_fig-exampleSource"/> explain how
+      the cpp will transform the code depending on the definition of the
+      macros. From an abstract point of view, the code contains two variation
+      points and three variations, which is reflected according to the
+      Variability Exchange Language in the exchange format definition in <xref
+      linkend="_fig-exampleVEL"/>. The first variation point spans the source
       lines 1-9 and contains two alternative variations. The variation point's
       corresponding elements of the artifact &ndash; in this case exactly the
       source lines &ndash; are represented in the exchange format as well.
@@ -1078,23 +920,3936 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       selected. Assuming that the macro names are identically with features or
       at least there exists a mapping from a feature to a macro name, then the
       <emphasis>condition</emphasis> in the eighth line in <xref
-      linkend="_Ref13056667"/> is the equivalent to the first source code
+      linkend="_fig-exampleVEL"/> is the equivalent to the first source code
       line.</para>
 
       <para>The [XMLmind] variation point (lines 3-5) is nested within the
       first variation of the first variation point, constituting a variation
       point hierarchy. Within the corresponding exchange format, the variation
       points are not nested but the nesting information is covered by the
-      definition in the lines 15-17 in <xref linkend="_Ref13056667"/>. There,
-      the nested variation point is referenced by its <emphasis>id</emphasis>,
-      resulting in a tree-like structure at the end.</para>
+      definition in the lines 15-17 in <xref linkend="_fig-exampleVEL"/>.
+      There, the nested variation point is referenced by its
+      <emphasis>id</emphasis>, resulting in a tree-like structure at the
+      end.</para>
     </section>
   </section>
 
-  <section id="Toc393199827">
+  <section id="_sec-detailedSpec">
     <title>Variability Exchange Language Class Reference</title>
 
-    <para>The last section contains the conformance clauses/statements.</para>
+    <section>
+      <title>ArtifactElement &lt; artifact-element-type&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class ArtifactElement</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="121" contentwidth="284"
+                       fileref="Figures/image3.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType name="artifact-element-type"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:any processContents="lax" minOccurs="0"
+      maxOccurs="unbounded"/&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;xs:attribute [XMLmind]="type" type="xs:string"
+      use="optional"/&gt;</para>
+
+      <para>&lt;xs:attribute name="uri" type="xs:anyURI"
+      use="optional"/&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para id="_Ref396826618">XML Schema for artifact-element-type</para>
+
+      <para>&lt;optional-structural-variationpoint id="vp1"&gt;</para>
+
+      <para>&lt;variation id="vp1v1"&gt;</para>
+
+      <para><emphasis role="bold"> &lt;corresponding-variable-artifact-element
+      uri="file:///C:/SPES/file1.c"/&gt;</emphasis></para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature1&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;/optional-structural-variationpoint&gt;</para>
+
+      <para>[XMLmind] Example for artifact-element-type using URIs</para>
+
+      <para>&lt;optional-structural-variationpoint id="vp2"&gt;</para>
+
+      <para>&lt;variation id="vp2v1"&gt;</para>
+
+      <para><emphasis role="bold"> &lt;corresponding-variable-artifact-element
+      type="simulink"&gt;</emphasis></para>
+
+      <para><emphasis role="bold">
+      &lt;simulink-id&gt;12&lt;/simulink-id&gt;</emphasis></para>
+
+      <para><emphasis role="bold">
+      &lt;/corresponding-variable-artifact-element&gt;</emphasis></para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature1&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;/optional-structural-variationpoint&gt;</para>
+
+      <para id="_Ref394051016">XML Example for artifact-element-type using
+      artifact-specific XML elements</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>An ArtifactElement is a reference to an element in an
+        artifact.</para>
+      </section>
+
+      <section>
+        <title>Attribute uri</title>
+
+        <para>The optional attribute uri is a reference to the artifact. The
+        content of the attribute uri is a Uniform Resource Identifier.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The attribute URI of an ArtifactElement should conform to
+            the definition of Uniform Resource Locators as specified in
+            ???.</para>
+          </listitem>
+
+          <listitem>
+            <para>Although the attribute URI of ArtifactElement is optional,
+            it is recommended to supply an URI instead of additional
+            attributes (that is, arbitrary XML child elements as described in
+            section <xref linkend="_Ref401836486"/>) whenever possible.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Attribute type</title>
+
+        <para>The optional attribute type specifies the type of artifact that
+        is addressed by this ArtifactElement.</para>
+
+        <para>The attribute type is a string, not an enumeration so that new
+        artifact types can be added without changing the XML schema.
+        Nevertheless, the following types are predefined:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>simulink</para>
+          </listitem>
+
+          <listitem>
+            <para>doors</para>
+          </listitem>
+        </itemizedlist>
+
+        <itemizedlist>
+          <listitem>
+            <para>Although the attribute type of an ArtifactElement is defined
+            as optional, it is recommended to supply a type.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section id="_Ref401836486">
+        <title>Adding arbitrary XML Elements</title>
+
+        <para>In the XML schema, the type artifact-element-type allows
+        arbitrary XML child elements. This is implemented by using the
+        &lt;xs:any&gt; element (see <xref linkend="_Ref396826618"/>), which
+        permits the use of any XML element regardless of whether it is defined
+        in the current schema. The type of the artifact is documented in the
+        type attribute.</para>
+
+        <para>For example, <xref linkend="_Ref394051016"/> shows a Variation
+        whose corresponding variable artifact element is a Simulink block with
+        the Identifier 12.</para>
+      </section>
+    </section>
+
+    <section id="_Ref395705586">
+      <title>BindingTime &lt;bindingtime-type&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class BindingTime</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="121" contentwidth="183"
+                       fileref="Figures/image4.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType name="bindingtime-type"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:element name="name"</para>
+
+      <para>type="bindingtime-enum"/&gt;</para>
+
+      <para>&lt;xs:element name="condition"</para>
+
+      <para>type="expression-type"</para>
+
+      <para>minOccurs="0"</para>
+
+      <para>maxOccurs="1" /&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;xs:attribute name="selected" type="xs:boolean"
+      use="optional"/&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para id="_BindingTimeEnum">[XMLmind] Schema for bindingtime-type</para>
+
+      <para>&lt;variability-exchange-model type="<emphasis
+      role="bold">variationpoint-description</emphasis>" id="model"&gt;</para>
+
+      <para>&lt;optional-structural-variationpoint id="vp1"&gt;</para>
+
+      <para>&lt;bindingtime&gt;</para>
+
+      <para>&lt;name&gt;<emphasis
+      role="bold">preprocessor</emphasis>-time&lt;/name&gt;</para>
+
+      <para>&lt;/bindingtime&gt;</para>
+
+      <para>&lt;variation id="vp1v1"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature1&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;/optional-structural-variationpoint&gt;</para>
+
+      <para>&lt;optional-structural-variationpoint id="vp2"&gt;</para>
+
+      <para>&lt;bindingtime&gt;</para>
+
+      <para>&lt;name&gt;<emphasis
+      role="bold">preprocessor-time</emphasis>&lt;/name&gt;</para>
+
+      <para>&lt;condition type="single-feature-condition"&gt;</para>
+
+      <para>SmallSoftwareFootprint</para>
+
+      <para>&lt;/condition&gt;</para>
+
+      <para>&lt;/bindingtime&gt;</para>
+
+      <para>&lt;bindingtime&gt;</para>
+
+      <para>&lt;name&gt;<emphasis
+      role="bold">post-build</emphasis>&lt;/name&gt;</para>
+
+      <para>&lt;condition type="single-feature-condition"&gt;</para>
+
+      <para>LargeSoftwareFootprint</para>
+
+      <para>&lt;/condition&gt;</para>
+
+      <para>&lt;/bindingtime&gt;</para>
+
+      <para>&lt;variation id="vp2v1"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature1&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;/optional-structural-variationpoint&gt;</para>
+
+      <para>&lt;/variability-exchange-model&gt;</para>
+
+      <para>XML Example for binding-time-type in a
+      variationpoint-configuration</para>
+
+      <para>&lt;variability-exchange-model type="<emphasis
+      role="bold">variationpoint-configuration</emphasis>"
+      id="model"&gt;</para>
+
+      <para>&lt;optional-structural-variationpoint id="vp1"&gt;</para>
+
+      <para>&lt;bindingtime&gt;</para>
+
+      <para>&lt;name&gt;<emphasis
+      role="bold">preprocessor-time</emphasis>&lt;/name&gt;</para>
+
+      <para>&lt;/bindingtime&gt;</para>
+
+      <para>&lt;variation id="vp1v1"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature1&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;/optional-structural-variationpoint&gt;</para>
+
+      <para>&lt;optional-structural-variationpoint id="vp2"&gt;</para>
+
+      <para>&lt;bindingtime selected="false"&gt;</para>
+
+      <para>&lt;name&gt;<emphasis
+      role="bold">preprocessor-time</emphasis>&lt;/name&gt;</para>
+
+      <para>&lt;condition type="single-feature-condition"&gt;</para>
+
+      <para>SmallSoftwareFootprint</para>
+
+      <para>&lt;/condition&gt;</para>
+
+      <para>&lt;/bindingtime&gt;</para>
+
+      <para>&lt;bindingtime selected="true"&gt;</para>
+
+      <para>&lt;name&gt;<emphasis
+      role="bold">post-build</emphasis>&lt;/name&gt;</para>
+
+      <para>&lt;condition type="single-feature-condition"&gt;</para>
+
+      <para>LargeSoftwareFootprint</para>
+
+      <para>&lt;/condition&gt;</para>
+
+      <para>&lt;/bindingtime&gt;</para>
+
+      <para>&lt;variation id="vp2v1"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature1&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;/optional-structural-variationpoint&gt;</para>
+
+      <para>&lt;/variability-exchange-model&gt;</para>
+
+      <para>XML Example for binding-time-type in a
+      variationpoint-configuration</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>The <emphasis>binding time</emphasis> of a variation point
+        describes how the associated variability is resolved<footnote
+            id="__FN1__">
+            <para>Contrary to what the term Binding<emphasis>Time</emphasis>
+            suggests, this is not a point in time, but rather a phase in the
+            build process.</para>
+          </footnote>. Common ways to resolve a variation point are</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>A variation point is removed from its artefact. For example,
+            the #ifdef / #endif idiom commonly found in a C preprocessor code
+            removes part of the source code.</para>
+          </listitem>
+
+          <listitem>
+            <para>A [XMLmind] point is set to
+            &OpenCurlyDoubleQuote;inactive&CloseCurlyDoubleQuote;. For
+            example, an if statement may prevent certain code sections from
+            being executed. This is typically used if the binding comes too
+            late in the process and the code cannot be removed.</para>
+          </listitem>
+
+          <listitem>
+            <para>A parameter is assigned a fixed value.</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>What exactly happens when a variation point is bound is
+        implementation specific, and beyond the scope this document.</para>
+      </section>
+
+      <section id="_Ref395705988">
+        <title>Attribute selected</title>
+
+        <para>A VariationPoint may have more than one BindingTime attributes.
+        This is useful if the decision for the binding time of the variation
+        point is delayed. For example, it may not be clear from the beginning
+        whether a particular subsystem is removed during code generation
+        (binding time CodeGenerationTime, section ??? or just deactivated
+        during startup (binding time PostBuild, section ???). This decision is
+        made at some time during the build process.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The attribute selected of a BindingTime shall be present if
+            the VariabilityExchangeModel which contains the BindingTime is of
+            type VariationPointSelection.</para>
+          </listitem>
+
+          <listitem>
+            <para>The attribute selected has no effect if the type of the
+            VariabilityExchangeModel is of type VariationPointDescription and
+            thus shall be omitted.</para>
+
+            <para>If a VariationPoint has more than one bindingtime attribute,
+            then the attribute selected is used to designate exactly one of
+            the binding times as the binding time that is actually used for
+            the binding:</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Attribute name</title>
+
+        <para>The attribute name of a BindingTime is a textual representation
+        of the binding time. It is of type BindingTimeEnum.</para>
+      </section>
+
+      <section>
+        <title>Attribute condition</title>
+
+        <para>In [XMLmind] words, if a VariationPoint has more than one
+        BindingTime with a condition, then only one condition shall evaluate
+        to true. Obviously, a condition is only useful if a VariationPoint has
+        more than one BindingTime.</para>
+
+        <para>See section <xref linkend="_Ref395705988"/> for more information
+        on condition is used to select a binding time.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>BindingTimeEnum &lt;bindingtime-enum&gt;</title>
+
+      <figure>
+        <title>UML Diagram for enumeration BindingTimeEnum</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="254" contentwidth="172"
+                       fileref="Figures/image5.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:simpleType name="bindingtime-enum"&gt;</para>
+
+      <para>&lt;xs:restriction base="xs:string"&gt;</para>
+
+      <para>&lt;xs:enumeration value="requirements-time"/&gt;</para>
+
+      <para>&lt;xs:enumeration value="blueprint-derivation-time"/&gt;</para>
+
+      <para>&lt;xs:enumeration [XMLmind]="model-construction-time"/&gt;</para>
+
+      <para>&lt;xs:enumeration value="model-simulation-time"/&gt;</para>
+
+      <para>&lt;xs:enumeration value="code-generation-time"/&gt;</para>
+
+      <para>&lt;xs:enumeration value="preprocessor-time"/&gt;</para>
+
+      <para>&lt;xs:enumeration value="compile-time"/&gt;</para>
+
+      <para>&lt;xs:enumeration value="link-time"/&gt;</para>
+
+      <para>&lt;xs:enumeration value="flash-time"/&gt;</para>
+
+      <para>&lt;xs:enumeration value="post-build"/&gt;</para>
+
+      <para>&lt;xs:enumeration value="post-build-loadable-time"/&gt;</para>
+
+      <para>&lt;xs:enumeration value="post-build-selectable-time"/&gt;</para>
+
+      <para>&lt;xs:enumeration [XMLmind]="run-time"/&gt;</para>
+
+      <para>&lt;/xs:restriction&gt;</para>
+
+      <para>&lt;/xs:simpleType&gt;</para>
+
+      <para>XML Schema for bindingtime-enum</para>
+
+      <section>
+        <title>RequirementsTime</title>
+
+        <para>At RequirementsTime, variants are bound by selecting a subset of
+        the overall requirements for a product line.</para>
+      </section>
+
+      <section>
+        <title>BluePrintDerivationTime</title>
+
+        <para>The binding time BlueprintDerivationTime stems from AUTOSAR. In
+        AUTOSAR, Blueprints are predefined templates for partial models. When
+        a blueprint is applied, the variation points in the blueprint indicate
+        locations in the template where a template processor or even human
+        developer needs to fill in more information.</para>
+      </section>
+
+      <section>
+        <title>ModelConstructionTime</title>
+
+        <para>At ModelConstructionTime, variants are bound by modifying the
+        artifact. This may involve deleting part of the model, but may also be
+        achieved by adding new elements to a model or changing parts of the
+        existing model, or a combination of all three.</para>
+      </section>
+
+      <section>
+        <title>ModelSimulationTime</title>
+
+        <para>At ModelSimulationTime, variants are bound by excluding parts of
+        the model during simulation. This is typically done by constructing
+        the model in such a way that some parts are not used during the
+        simulation.</para>
+      </section>
+
+      <section id="_Toc367432854">
+        <title>CodeGenerationTime</title>
+
+        <para>At CodeGenerationTime, variants are bound by generating code
+        that is tailored for one or more variants.</para>
+      </section>
+
+      <section>
+        <title>PreprocessorTime</title>
+
+        <para>At <phrase>PreProcessorTime</phrase>, variants are bound by
+        using a preprocessor that emits code only for specific variants. To do
+        that, the code must contain appropriate preprocessor directives, for
+        example #ifdef statements.</para>
+      </section>
+
+      <section>
+        <title>CompileTime</title>
+
+        <para>At <phrase>CompileTime,</phrase> variation points are resolved
+        by the compiler, for example by not generating code for certain
+        variants (dead code elimination) or by using specific compiler
+        switches.</para>
+      </section>
+
+      <section>
+        <title>LinkTime</title>
+
+        <para>At Linktime, variants are bound by using only those files that
+        are necessary for a particular variant are used to build a library or
+        application.</para>
+      </section>
+
+      <section>
+        <title>FlashTime</title>
+
+        <para>At <phrase>FlashTime</phrase>, variants are bound by
+        (pre)loading variant specific data sets into the flash memory embedded
+        device.</para>
+      </section>
+
+      <section id="_Toc367432859">
+        <title>PostBuild</title>
+
+        <para>At PostBuild, variants are bound by activating only certain
+        parts of an application.</para>
+      </section>
+
+      <section>
+        <title>PostBuildLoadable</title>
+
+        <para>At PostBuildLoadable, variants are bound by selecting a
+        parameter set (typically stored in flash memory) at the launch of an
+        application. PostBuildLoadable is often used as a synonym for
+        PostBuild.</para>
+      </section>
+
+      <section>
+        <title>PostBuildSelectable</title>
+
+        <para>At PostBuildSelectable, variants are bound by selecting one of
+        several parameter sets (typically stored in flash memory) at the
+        launch of an application. PostBuildSelectable is often used as a
+        synonym for PostBuild.</para>
+      </section>
+
+      <section>
+        <title>RunTime</title>
+
+        <para>At <phrase>RunTime,</phrase> variants are bound by switching
+        between different program states or executing different parts of an
+        application. Runtime is usually not regarded as a binding time, but is
+        included for completeness here.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>CalculatedParameterVariationPoint
+      &lt;calculated-parameter-variationpoint-type&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class CalculatedParameterVariationPoint</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="607" contentwidth="415"
+                       fileref="Figures/image6.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType
+      name="calculated-parameter-variationpoint-type"&gt;</para>
+
+      <para>&lt;xs:complexContent&gt;</para>
+
+      <para>&lt;xs:extension base="variationpoint-type"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:element name="variation"
+      type="calculated-variation-type"/&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;/xs:extension&gt;</para>
+
+      <para>&lt;/xs:complexContent&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>XML Schema for calculated-parameter-variationpoint-type</para>
+
+      <para>&lt;calculated-parameter-variationpoint id="vp1"&gt;</para>
+
+      <para>&lt;variation id="vp1v1"&gt;</para>
+
+      <para>&lt;expression
+      type="pvscl-expression"&gt;6*9&lt;/expression&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;/calculated-parameter-variationpoint&gt;</para>
+
+      <para>XML Example for calculated-parameter-variationpoint-type</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>A CalculatedParameterVariatonPoint is a ParameterVariationPoint
+        [XMLmind] defines a value for a variation point in an artifact. Unlike
+        a XorParameterVariationPoint, which picks one value from a number of
+        choices, a CalculatedParameterVariatonPoint uses an expression to
+        define the value.</para>
+
+        <para>A CalculatedParameterVariatonPoint contains a single
+        CalculatedVariation whose attribute expression defines the expression
+        that is used to calculate the value for the associated variation
+        point.</para>
+      </section>
+
+      <section>
+        <title>Notes</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>The class CalculatedParameterVariationPoint inherits from
+            the class ParameterVariationPoint, which inherits from
+            VariationPoint.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+
+    <section>
+      <title>CalculatedVariation &lt;calculated-variation-type&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class CalculatedVariation</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="607" contentwidth="415"
+                       fileref="Figures/image6.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType name="calculated-variation-type"&gt;</para>
+
+      <para>&lt;xs:complexContent&gt;</para>
+
+      <para>&lt;xs:extension base="variation-type"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:element name="expression"</para>
+
+      <para>type="expression-type"</para>
+
+      <para>minOccurs="0" maxOccurs="1"/&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;/xs:extension&gt;</para>
+
+      <para>&lt;/xs:complexContent&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>XML Schema for calculated-variation-type</para>
+
+      <para>&lt;calculated-parameter-variationpoint id="vp1"&gt;</para>
+
+      <para><emphasis role="bold"> &lt;variation
+      id="vp1v1"&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;expression
+      type="pvscl-expression"&gt;6*9&lt;/expression&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;/variation&gt;</emphasis></para>
+
+      <para>&lt;/calculated-parameter-variationpoint&gt;</para>
+
+      <para>XML Example for calculated-variation-type</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>Each CalculatedParameterVariationPoint aggregates a single
+        CalculatedVariation. A CalculatedVariation is a Variation that
+        determines a value for a CalculatedVariationPoint.</para>
+      </section>
+
+      <section>
+        <title>Attribute expression</title>
+
+        <para>The optional attribute expression of a CalculatedVariation
+        specifies the expression that is used to compute the value of a
+        CalculatedVariation.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The attribute expression of a CalculatedVariation may return
+            an arbitrary value. Which values are allowed depends on the
+            artifact elements which are referenced by the attribute
+            correspondingVariableArtifactElement (see <xref
+            linkend="_Toc367432891"/>).</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Binding</title>
+
+        <para>When a CalculatedParameterVariationPoint is bound, the
+        expression of its CalculatedVariation is evaluated. The result of the
+        evaluation gets assigned to the artifact element(s) which are
+        referenced by the attribute correspondingVariableArtifactElement (see
+        section <xref linkend="_Toc367432891"/>).</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>A CalculatedParameterVariationPoint can only be bound when
+            its CalculatedVariation has an attribute expression.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Notes</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>The class CalculatedVariation inherits from the class
+            Variation.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+
+    <section>
+      <title>Capability &lt;capability-type&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class Capability</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="128" contentwidth="317"
+                       fileref="Figures/image7.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType name="capability-type"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:element [XMLmind]="import-variability-exchange-model"
+      type="xs:boolean" /&gt;</para>
+
+      <para>&lt;xs:element name="export-variability-exchange-model"
+      type="xs:boolean" /&gt;</para>
+
+      <para>&lt;xs:element name="get-configuration" type="xs:boolean"
+      /&gt;</para>
+
+      <para>&lt;xs:element name="set-configuration" type="xs:boolean"
+      /&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>XML Schema for capability-type</para>
+
+      <para>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</para>
+
+      <para>&lt;variability-exchange-models id="root"</para>
+
+      <para>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"</para>
+
+      <para>[XMLmind]:noNamespaceSchemaLocation="../VariabilityExchangeLanguage.xsd"&gt;</para>
+
+      <para>&lt;version&gt;1&lt;/version&gt;</para>
+
+      <para><emphasis role="bold"> &lt;capability&gt;</emphasis></para>
+
+      <para><emphasis role="bold">
+      &lt;import-variability-exchange-model&gt;true&lt;/import-variability-exchange-model&gt;</emphasis></para>
+
+      <para><emphasis role="bold">
+      &lt;export-variability-exchange-model&gt;true&lt;/export-variability-exchange-model&gt;</emphasis></para>
+
+      <para><emphasis role="bold">
+      &lt;get-configuration&gt;true&lt;/get-configuration&gt;</emphasis></para>
+
+      <para><emphasis role="bold">
+      &lt;set-configuration&gt;true&lt;/set-configuration&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;/capability&gt;</emphasis></para>
+
+      <para>&lt;/variability-exchange-models&gt;</para>
+
+      <para>XML Example for capability-type</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>A Capability describes which operations are supported by a
+        particular instance of VariabilityAPI. The rationale for introducing
+        Capability is that not all implementations of the VariabilityAPI
+        support all its operations.</para>
+      </section>
+
+      <section>
+        <title>Attribute importVariabilityExchangeModels</title>
+
+        <para>The attribute getVariationPoints determines whether the
+        operation importVariabilityExchangeModels of the class VariabilityAPI
+        is supported: ???</para>
+      </section>
+
+      <section>
+        <title>Attribute exportVariabilityExchangeModels</title>
+
+        <para>The attribute setVariationPoints determines whether the
+        operation exportVariabilityExchangeModels of the class VariabilityAPI
+        is supported: ???</para>
+      </section>
+
+      <section>
+        <title>Attribute getConfiguration</title>
+
+        <para>The attribute getConfiguration determines whether the operation
+        getConfiguration of the class VariabilityAPI is supported: ???</para>
+      </section>
+
+      <section>
+        <title>Attribute setConfiguration</title>
+
+        <para>The attribute <emphasis
+        role="underline">setConfiguration</emphasis> determines whether the
+        operation <emphasis role="underline">setConfiguration </emphasis>of
+        the class <emphasis role="underline">VariabilityAPI</emphasis> is
+        supported: ???</para>
+      </section>
+    </section>
+
+    <section id="_Toc393199836">
+      <title>Expression &lt;expression-type&gt;</title>
+
+      <figure>
+        <title>[XMLmind] Diagram for class Expression</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="111" contentwidth="188"
+                       fileref="Figures/image8.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType name="expression-type"&gt;</para>
+
+      <para>&lt;xs:simpleContent&gt;</para>
+
+      <para>&lt;xs:extension base="xs:string"&gt;</para>
+
+      <para>&lt;xs:attribute name="type" type="expression-enum"
+      use="required"/&gt;</para>
+
+      <para>&lt;xs:attribute name="datatype" type="xs:string"
+      use="optional"/&gt;</para>
+
+      <para>&lt;/xs:extension&gt;</para>
+
+      <para>&lt;/xs:simpleContent&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>XML Schema for expression-type</para>
+
+      <para>&lt;xor-structural-variationpoint id="vp1"&gt;</para>
+
+      <para>&lt;variation id="vp1v1"&gt;</para>
+
+      <para>&lt;condition type="<emphasis
+      role="bold">single-feature-condition</emphasis>"
+      datatype="bool"&gt;</para>
+
+      <para>Feature1</para>
+
+      <para>&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;variation id="vp1v2"&gt;</para>
+
+      <para>&lt;condition type="<emphasis
+      role="bold">and-feature-condition</emphasis>" datatype="bool"&gt;</para>
+
+      <para>Feature2,Feature3</para>
+
+      <para>&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;variation id="vp1v3"&gt;</para>
+
+      <para>&lt;condition type="<emphasis
+      role="bold">or-feature-condition</emphasis>" datatype="bool"&gt;</para>
+
+      <para>Feature4, Feature5, Feature6</para>
+
+      <para>&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;variation id="vp1v4"&gt;</para>
+
+      <para>&lt;condition type="<emphasis
+      role="bold">pvscl-expression</emphasis>"
+      datatype="ps:boolean"&gt;</para>
+
+      <para>Feaure7 AND Feature8</para>
+
+      <para>&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;/xor-structural-variationpoint&gt;</para>
+
+      <para id="_Ref403984631">XML Example for expression-type</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>. In the case of VEL, expressions fall into two
+        categories:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>&OpenCurlyDoubleQuote;Genuine&CloseCurlyDoubleQuote;
+            expressions which may return any kind of value. These are
+            represented by the type PVSCLExpression.</para>
+          </listitem>
+
+          <listitem>
+            <para>Constraints, which may only return Boolean values. These are
+            represented by the SingleFeatureExpression, AndFeatureExpression
+            and OrFeatureExpression. A constraint may also be of type
+            PVSCLExpression; in this case the return value must be of type
+            Boolean.</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Technically, an Expression is a string whose syntax is
+        determined by the attribute type. In the XML representation, the
+        actual expression is contained in the inner text of the expression of
+        condition element<footnote id="__FN2__">
+            <para>[XMLmind] simplicity and consistency, XML elements of type
+            expression-type are always named <phrase>expression</phrase> or
+            <phrase>condition</phrase>.</para>
+          </footnote>.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>An expression shall not be an empty string.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Attribute type</title>
+
+        <para>The [XMLmind] type defines the kind of expression in the inner
+        text of the expression of condition element. There are several kinds
+        of expressions:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>SingleFeatureExpression (single-feature-condition)</para>
+          </listitem>
+
+          <listitem>
+            <para>AndFeatureExpression (and-feature-condition)</para>
+          </listitem>
+
+          <listitem>
+            <para>OrFeatureExpression (or-feature-condition)</para>
+          </listitem>
+
+          <listitem>
+            <para>PVSCLExpression (pvscl-expression)</para>
+          </listitem>
+
+          <listitem>
+            <para>OCLExpression (ocl-expression)</para>
+          </listitem>
+
+          <listitem>
+            <para>AUTOSARExpression (autosar-expression)</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>The individual expression types are explained in subsections
+        <xref linkend="_Ref403984388"/>, <xref linkend="_Ref403984401"/>,
+        <xref linkend="_Ref403984407"/>, <xref linkend="_Ref403984425"/>,
+        <xref linkend="_Ref404857666"/> and <xref
+        linkend="_Ref404857672"/>.</para>
+      </section>
+
+      <section>
+        <title>Attribute datatype</title>
+
+        <para>The attribute datatype constrains the return type of the
+        expression. Since the possible values for datatype depend on the
+        artifact(s) involved, they are not further standardized here.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>If [XMLmind] attribute datatype of an Expression exists,
+            then the return type of the Expression should be compatible with
+            the data type given by datatype.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section id="_Ref403984388">
+        <title>SingleFeatureCondition</title>
+
+        <para>A SingleFeatureCondition is a type of expression that models a
+        Boolean condition whose literal is a single Feature.</para>
+
+        <para>The example in <xref linkend="_Ref403984631"/> translates to the
+        Boolean expression ???</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The datatype for an Expression of type
+            SingleFeatureExpression should be Boolean.</para>
+
+            <para>See also section <xref linkend="_Ref400711346"/> on how
+            single features are represented in XML.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section id="_Ref403984401">
+        <title>AndFeatureCondition</title>
+
+        <para>An AndFeatureCondition is a Condition that models a Boolean
+        condition whose literals are features, and which are connected by a
+        Boolean <emphasis>AND</emphasis>. The example in <xref
+        linkend="_Ref403984631"/> translates to the Boolean expression
+        ???</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The datatype for an Expression of type AndFeatureCondition
+            should be Boolean.</para>
+
+            <para>In the XML representation, an AndFeatureCondition is
+            comma-separated list of features. See also section <xref
+            linkend="_Ref400711361"/> on how features are represented in
+            XML.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section id="_Ref403984407">
+        <title>OrFeatureCondition</title>
+
+        <para>An OrFeatureCondition is a special Condition that models a
+        Boolean condition whose literals are features, and which are connected
+        by a Boolean <emphasis>OR</emphasis>. The example in <xref
+        linkend="_Ref403984631"/> translates to the Boolean expression
+        ???</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The datatype for an Expression of type OrFeatureCondition
+            should be Boolean.</para>
+
+            <para>In the XML representation, an OrFeatureCondition is
+            comma-separated list of features. See also section <xref
+            linkend="_Ref400711361"/> on how features are represented in
+            XML.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section id="_Ref403984425">
+        <title>PVSCLExpression</title>
+
+        <para>In terms of syntax and scope, PVSCLExpression is comparable to
+        what most programming languages offer.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>An expression of type PVSCLExpression shall use the syntax
+            defined by (???).</para>
+          </listitem>
+
+          <listitem>
+            <para>An expression of type PVSCLExpression shall be evaluated
+            according to the rules defined in (???).</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section id="_Ref404857666">
+        <title>OCLExpression</title>
+
+        <para>An OCLExpression uses the expression syntax and semantics
+        defined by OCL,</para>
+
+        <para>[<emphasis role="bold">OCL</emphasis>]</para>
+      </section>
+
+      <section id="_Ref404857672">
+        <title>AUTOSARExpression</title>
+
+        <para>An AUTOSARExpression uses the expression syntax and semantics
+        defined by AUTOSAR, <phrase>&gt;.</phrase></para>
+
+        <para>[<emphasis role="bold">AUTOSAR</emphasis>]</para>
+      </section>
+
+      <section>
+        <title>Representation of expressions and features in XML</title>
+
+        <para>A Feature is a reference to an element in a model that describes
+        the variability of an artifact, typically a feature model. The exact
+        nature of a feature model is beyond the scope of this document.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>In the XML, a feature is just a name. How exactly a Feature
+            is mapped to its corresponding element in the feature model is
+            implementation dependent and beyond the scope of this
+            document.</para>
+          </listitem>
+        </itemizedlist>
+
+        <section id="_Ref400711346">
+          <title>Syntax [XMLmind] single-feature&ndash;condition</title>
+
+          <itemizedlist>
+            <listitem>
+              <para>In the XML representation, a feature is a string that
+              matches the following pattern:</para>
+
+              <para>\s*[a-zA-Z_]([a-zA-Z0-9_]*\s*</para>
+
+              <para>That is, a feature is a sequence of characters which
+              starts with a letter or an underscore followed by letters,
+              digits and underscores.</para>
+
+              <para>An XML element of type expression-type whose attribute
+              type has the value single-feature&ndash;condition must match to
+              the above pattern.</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+
+        <section id="_Ref400711361">
+          <title>Syntax for and-feature-condition and
+          or-feature-condition</title>
+
+          <itemizedlist>
+            <listitem>
+              <para>In the XML representation, a comma-separated list of
+              features is a string that matches the following pattern<footnote
+                  id="__FN3__">
+                  <para>In this pattern, <phrase>\s</phrase> donates a white
+                  space, typically a space or tab character,or a
+                  newline.</para>
+                </footnote>:</para>
+
+              <para>\s*[a-zA-Z_]([a-zA-Z0-9_]*(\s*,\s*[a-zA-Z_]([a-zA-Z0-9_]*)*\s*</para>
+
+              <para>An XML element of type expression-type whose attribute
+              type has the value and-feature&ndash;condition or
+              or-feature-condition must match to the above pattern.</para>
+            </listitem>
+          </itemizedlist>
+        </section>
+      </section>
+    </section>
+
+    <section>
+      <title>ExpressionTypeEnum &lt;expression-enum&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class ExpressionTypeEnum</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="164" contentwidth="172"
+                       fileref="Figures/image9.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:simpleType name="expression-enum"&gt;</para>
+
+      <para>&lt;xs:restriction base="xs:string"&gt;</para>
+
+      <para>&lt;xs:enumeration value="single-feature-condition"/&gt;</para>
+
+      <para>&lt;xs:enumeration value="and-feature-condition"/&gt;</para>
+
+      <para>&lt;xs:enumeration value="or-feature-condition"/&gt;</para>
+
+      <para>&lt;xs:enumeration value="pvscl-expression"/&gt;</para>
+
+      <para>&lt;xs:enumeration value="ocl-expression"/&gt;</para>
+
+      <para>&lt;xs:enumeration value="autosar-expression"/&gt;</para>
+
+      <para>&lt;/xs:restriction&gt;</para>
+
+      <para>&lt;/xs:simpleType&gt;</para>
+
+      <para>XML Schema for expression-enum</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>The enumeration ExpressionTypeEnum defines the possible values
+        for the attribute type of the class Expression. The semantics of these
+        expression types is explained in Section <xref
+        linkend="_Toc393199836"/>.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>Identifiable &lt;identifiable-type&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class Identifiable</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="306" contentwidth="430"
+                       fileref="Figures/image10.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType name="identifiable-type"
+      abstract="true"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:element [XMLmind]="special-data"</para>
+
+      <para>type="special-data-type"</para>
+
+      <para>minOccurs="0"</para>
+
+      <para>maxOccurs="unbounded"/&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;xs:attribute name="name" use="optional"&gt;</para>
+
+      <para>&lt;xs:simpleType&gt;</para>
+
+      <para>&lt;xs:restriction base="xs:string"&gt;</para>
+
+      <para>&lt;xs:minLength value="1"/&gt;</para>
+
+      <para>&lt;/xs:restriction&gt;</para>
+
+      <para>&lt;/xs:simpleType&gt;</para>
+
+      <para>&lt;/xs:attribute&gt;</para>
+
+      <para>&lt;xs:attribute name="id" type="xs:ID" use="required"/&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>XML Schema for identifable-type</para>
+
+      <para>&lt;optional-structural-variationpoint <emphasis
+      role="bold">id="vp1" name="optional
+      variationpoint"</emphasis>&gt;</para>
+
+      <para><emphasis role="bold"> &lt;special-data
+      name="CreatorInfo"&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;data&gt;</emphasis></para>
+
+      <para><emphasis role="bold">
+      &lt;key&gt;Created&lt;/key&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;value
+      type="xs:date"&gt;1998-11-17&lt;/value&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;/data&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;/special-data&gt;</emphasis></para>
+
+      <para>&lt;variation id="vp1v1" name="optional variation"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature1&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;/optional-structural-variationpoint&gt;</para>
+
+      <para>XML Example for identifable-type (id attribute)</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>Identifiable is an <emphasis>abstract</emphasis> class that
+        defines means to provide unique identifiers for elements of the
+        variability exchange language. Identifiable is used as the base class
+        for many classes of the <emphasis>Variability Exchange
+        Language</emphasis>.</para>
+
+        <para>In the XML Schema, identifiable-type does not define an XML
+        element of its own, but adds two new attributes id and name to any
+        type that is an extension of identifiable-type.</para>
+
+        <para>&lt;xs:complexType [XMLmind]="variationpoint-type"
+        abstract="true"&gt;</para>
+
+        <para>&lt;xs:complexContent&gt;</para>
+
+        <para><emphasis role="bold"> &lt;xs:extension
+        base="identifiable-type"&gt;</emphasis></para>
+
+        <para>&lt;xs:sequence&gt;</para>
+
+        <para>&lt;xs:element name="bindingtime"</para>
+
+        <para>type="bindingtime-type"</para>
+
+        <para>minOccurs="0"</para>
+
+        <para>maxOccurs="unbounded"/&gt;</para>
+
+        <para>&lt;xs:element
+        name="corresponding-variable-artifact-element"</para>
+
+        <para>type="artifact-element-type"</para>
+
+        <para>[XMLmind]="0"</para>
+
+        <para>maxOccurs="unbounded"/&gt;</para>
+
+        <para>&lt;/xs:sequence&gt;</para>
+
+        <para><emphasis role="bold"> &lt;/xs:extension&gt;</emphasis></para>
+
+        <para>&lt;/xs:complexContent&gt;</para>
+
+        <para>&lt;/xs:complexType&gt;</para>
+
+        <para>Use of identifiable-type in the XML Schema</para>
+      </section>
+
+      <section>
+        <title>Attribute id</title>
+
+        <para>The attribute id of an Identifiable provides a unique identifier
+        for an element.</para>
+
+        <para>In XML, id is an attribute of type xs:ID, which means that id is
+        guaranteed to be unique within a <emphasis>Variability Exchange
+        Language</emphasis> document. Other XML elements may use an attribute
+        of type xs:IDREF to refer to an XML clement that is
+        Identifiable.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The [XMLmind] of the attribute id of an Identifiable shall
+            be unique within a single <emphasis>Variability Exchange
+            Language</emphasis> document. That is, the following condition
+            holds: ???</para>
+
+            <para>This is consistent with the definition of the types xs:IDREF
+            and xs:IDREFS in XML.</para>
+          </listitem>
+
+          <listitem>
+            <para>The value of the attribute id of an Identifiable shall not
+            change over the lifetime of the element which the Identifiable
+            represents.</para>
+
+            <para>The reason for introducing the latter constraint is as
+            follows. Imagine the following situation: the operations
+            importVariabilityExchangeModels and getConfiguration return
+            variability language exchange documents that contain information
+            about the same variation point (in this context,
+            &OpenCurlyDoubleQuote;same&CloseCurlyDoubleQuote; usually means
+            that they refer to the same artifact elements).</para>
+
+            <para>Then, the attribute id should have an identical value in
+            both the documents returned from importVariabilityExchangeModels
+            and getConfiguration; otherwise there would be no way to match the
+            variation points.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Attribute name</title>
+
+        <para>The attribute name of an Identifiable provides a human readable
+        name for an element. It is recommended (but not enforced by the XML
+        Schema) that all the name attributes of the Identifiable elements in a
+        <emphasis>Variability Exchange Language</emphasis> document have
+        unique values.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The value of the attribute <emphasis
+            role="underline">name</emphasis> of an <emphasis
+            role="underline">Identifiable</emphasis> is not guaranteed to be
+            unique within a single variability exchange language document. It
+            is however strongly recommended to use unique values for name
+            attributes as well.</para>
+          </listitem>
+
+          <listitem>
+            <para>The value of attribute name shall not be an empty
+            string.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Attribute specialData</title>
+
+        <para>Each Identifiable may aggregate one or more SpecialData objects.
+        This makes sure that most elements in the <emphasis>Variability
+        Exchange Language</emphasis> can be augmented with application
+        specific data.</para>
+      </section>
+
+      <section>
+        <title>Notes</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>Identifiable is an abstract class. Most of the classes
+            described in this document inherit from Identifiable.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+
+    <section>
+      <title>KeyValuePair &lt;key-value-pair-type&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class KeyValuePair</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="306" contentwidth="430"
+                       fileref="Figures/image10.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType name="key-value-pair-type"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:element name="key"&gt;</para>
+
+      <para>&lt;xs:simpleType&gt;</para>
+
+      <para>&lt;xs:restriction base="xs:string"&gt;</para>
+
+      <para>&lt;xs:minLength value="1"/&gt;</para>
+
+      <para>&lt;/xs:restriction&gt;</para>
+
+      <para>&lt;/xs:simpleType&gt;</para>
+
+      <para>&lt;/xs:element&gt;</para>
+
+      <para>&lt;xs:element name="value"&gt;</para>
+
+      <para>&lt;xs:complexType&gt;</para>
+
+      <para>&lt;xs:simpleContent&gt;</para>
+
+      <para>&lt;xs:extension base="xs:string"&gt;</para>
+
+      <para>&lt;xs:attribute [XMLmind]="type" type="xs:string"
+      use="optional"/&gt;</para>
+
+      <para>&lt;/xs:extension&gt;</para>
+
+      <para>&lt;/xs:simpleContent&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>&lt;/xs:element&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>XML Schema for key-value-pair-type</para>
+
+      <para>&lt;optional-structural-variationpoint id="vp1" name="optional
+      variationpoint"&gt;</para>
+
+      <para><emphasis role="bold"> &lt;special-data
+      name="CreatorInfo"&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;data&gt;</emphasis></para>
+
+      <para><emphasis role="bold">
+      &lt;key&gt;Created&lt;/key&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;value
+      type="xs:date"&gt;1998-11-17&lt;/value&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;/data&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;/special-data&gt;</emphasis></para>
+
+      <para>&lt;variation id="vp1v1" name="optional variation"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature1&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;/optional-structural-variationpoint&gt;</para>
+
+      <para id="_Ref400962860">XML Example for key-value-pair-type</para>
+
+      <section>
+        <title>Description of [XMLmind] KeyValuePair</title>
+
+        <para>Application specific data for VariationPoint and Variation
+        objects is implemented by the class SpecialData, which aggregates a
+        number of KeyValuePair elements. As the name already suggests, a
+        KeyValuePair consists of a key and a value.</para>
+
+        <para>KeyValuePair is restricted to data that can be represented as
+        strings. How key and value are interpreted is up to the application.
+        It is strongly recommended to use the attribute key as some kind of
+        (unique) identifier, and store the data associated with key in the
+        attribute value.</para>
+      </section>
+
+      <section>
+        <title>Attribute key of Class KeyValuePair</title>
+
+        <para>The attribute key of class KeyValuePair provides a way to
+        identify a KeyValuePair.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>A SpecialData object shall not contain two or more
+            KeyValueData objects whose attribute key have the same
+            value.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Description of Class Value</title>
+
+        <para>An object of class Value is a container for the value of a
+        KeyValuePair.</para>
+      </section>
+
+      <section>
+        <title>Attribute value of Class Value</title>
+
+        <para>The attribute value of an object of class Value contains the
+        application specific data that is associated with the key of the
+        KeyValuePair object which aggregates this object.</para>
+      </section>
+
+      <section>
+        <title>Attribute type of [XMLmind] Value</title>
+
+        <para>The attribute type of class Value can be used to indicate the
+        data type of the value of a Value object. The contents of type are not
+        standardized, but using XML data types such as xs:string or xs:date is
+        recommended.</para>
+      </section>
+
+      <section>
+        <title>XML Representation</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>As shown in <xref linkend="_Ref400962860"/>, a key-value
+            pair is implemented by the XML elements key and value, which are
+            enclosed by a data element<footnote id="__FN4__">
+                <para>The XML element data is not strictly necessary, but
+                makes it easier to extend the key-value pair implementation in
+                the future, if neccessary.</para>
+              </footnote>. The elements key and value are XML strings.</para>
+          </listitem>
+
+          <listitem>
+            <para>The XML representation of a Value object is an XML element
+            named value which contains an arbitrary string. Its definition is
+            based on the XML type xs:string and defines an additional
+            attribute type which indicates the data type of the
+            content.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+
+    <section>
+      <title>OptionalStructuralVariationPoint
+      &lt;optional-structural-variaton-point-type&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class OptionalStructuralVariatonPoint</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="614" contentwidth="420"
+                       fileref="Figures/image11.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType
+      name="optional-structural-variationpoint-type"&gt;</para>
+
+      <para>&lt;xs:complexContent&gt;</para>
+
+      <para>&lt;xs:extension [XMLmind]="variationpoint-type"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:element name="variation"</para>
+
+      <para>type="optional-variation-type"</para>
+
+      <para>minOccurs="1"</para>
+
+      <para>maxOccurs="unbounded"/&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;/xs:extension&gt;</para>
+
+      <para>&lt;/xs:complexContent&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>[XMLmind] Schema for
+      optional-structural-variaton-point-type</para>
+
+      <para>&lt;optional-structural-variationpoint id="vp1"&gt;</para>
+
+      <para>&lt;variation id="vp1v1"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;feature1&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;/optional-structural-variationpoint&gt;</para>
+
+      <para>XML Example for optional-structural-variaton-point-type</para>
+
+      <para>&lt;optional-structural-variationpoint id="vp2"&gt;</para>
+
+      <para>&lt;variation id="vp2v1"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature1&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;variation id="vp2v2"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature2&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;variation id="vp2v3"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature3&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;/optional-structural-variationpoint&gt;</para>
+
+      <para>XML Example for optional-structural-variaton-point-type with
+      multiple variations</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>An OptionalStructuralVariationPoint is a VariationPoint
+        [XMLmind] contains one or more <phrase>OptionalVariation</phrase>
+        objects.</para>
+      </section>
+
+      <section>
+        <title>Notes</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>The class OptionalStructuralVariationPoint inherits from the
+            class StructuralVariationPoint.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+
+    <section>
+      <title>OptionalVariation &lt;optional-variation-type&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class OptionalVariation</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="614" contentwidth="420"
+                       fileref="Figures/image11.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType name="optional-variation-type"&gt;</para>
+
+      <para>&lt;xs:complexContent&gt;</para>
+
+      <para>&lt;xs:extension base="variation-type"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:element [XMLmind]="condition"</para>
+
+      <para>type="expression-type"</para>
+
+      <para>minOccurs="0" maxOccurs="1"/&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;/xs:extension&gt;</para>
+
+      <para>&lt;/xs:complexContent&gt;</para>
+
+      <para>&lt;/xs:complexType ???? &gt;</para>
+
+      <para>&lt;optional-structural-variationpoint id="vp1"&gt;</para>
+
+      <para><emphasis role="bold">&lt;variation id="v1"&gt;</emphasis></para>
+
+      <para>&lt;condition
+      [XMLmind]="or-feature-expression"&gt;Feature1,Feature2&lt;/condition&gt;</para>
+
+      <para><emphasis role="bold">&lt;/variation&gt;</emphasis></para>
+
+      <para>&lt;/optional-structural-variationpoint&gt;</para>
+
+      <para>XML Example for optional-variation-type</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>Each OptionalStructuralVariationPoint aggregates one or more
+        OptionalVariation objects. An OptionalVariation is a Variation that
+        determines whether an OptionalStructuralVariationPoint gets deleted or
+        set inactive during the binding process.</para>
+      </section>
+
+      <section>
+        <title>Attribute condition</title>
+
+        <para>The optional attribute condition of an OptionalVariation defines
+        the expression that is used to compute the condition of an
+        OptionalVariation.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The attribute condition of an OptionalVariation shall return
+            a Boolean value. That is, its datatype attribute (if present)
+            should be a Boolean or a data type which can be converted into a
+            Boolean.???</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Binding</title>
+
+        <para>When an OptionalStructuralVariationPoint is bound, the condition
+        of each of its OptionalVariations is evaluated. If the result of the
+        evaluation is ???? then the artifact elements which are referenced by
+        the attribute correspondingVariableArtifactElement (see section <xref
+        linkend="_Toc367432891"/>) of the OptionalVariation get deleted or set
+        inactive.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>An OptionalStructuralVariationPoint can only be bound when
+            all its OptionalVariations have a condition.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Notes</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>The class OptionalVariation inherits from the class
+            Variation.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+
+    <section>
+      <title>ParameterVariationPoint
+      &lt;parameter-variationpoint-group&gt;</title>
+
+      <figure id="_Ref396914104">
+        <title>UML Diagram for class ParamaterVariationPoint</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="607" contentwidth="415"
+                       fileref="Figures/image6.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:group name="parameter-variationpoint-group"&gt;</para>
+
+      <para>&lt;xs:choice&gt;</para>
+
+      <para>&lt;xs:element name="calculated-parameter-variationpoint"</para>
+
+      <para>type="calculated-parameter-variationpoint-type"/&gt;</para>
+
+      <para>&lt;xs:element name="xor-parameter-variationpoint"</para>
+
+      <para>type="xor-parameter-variationpoint-type"/&gt;</para>
+
+      <para>&lt;/xs:choice&gt;</para>
+
+      <para>&lt;/xs:group&gt;</para>
+
+      <para>XML Schema for parameter-variationpoint-group</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>A ParameterVariationPoint defines a value for a variable element
+        in an artifact, for example</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>A [XMLmind] or a C-preprocessor symbol (#define)</para>
+          </listitem>
+
+          <listitem>
+            <para>A initialization value for a variable or a constant in a
+            programing language</para>
+          </listitem>
+
+          <listitem>
+            <para>A value for a variable in a Matlab workspace</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>The artifact elements are referenced by the attribute
+        correspondingVariableArtifactElement of the ParameterVariationPoint
+        and the attribute correspondingVariableArtifactElement of its
+        Variation(s) (see the classes VariationPoint and Variation in <xref
+        linkend="_Ref396914104"/>)</para>
+      </section>
+
+      <section>
+        <title>Notes</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>The class ParameterVariationPoint is an abstract class which
+            inherits from the class VariationPoint.</para>
+          </listitem>
+
+          <listitem>
+            <para>There are two subclasses of ParameterVariationPoint:
+            CalculatedParameterVariationPoint und
+            XorParameterVariationPoint.</para>
+          </listitem>
+
+          <listitem>
+            <para>Like StructuralVariationPoint, ParameterVariationPoint is
+            implemented in the XML schema as group, not a type. We chose to
+            use a group here because a type would have established an extra
+            XML element for ParameterVariationPoint, which would only have
+            complicated the document structure.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+
+    <section>
+      <title>SpecialData &lt;special-data-type&gt;</title>
+
+      <figure>
+        <title>[XMLmind] Diagram for class SpecialData</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="306" contentwidth="431"
+                       fileref="Figures/image12.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType name="special-data-type"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:element name="data"</para>
+
+      <para>type="key-value-pair-type"</para>
+
+      <para>minOccurs="0"</para>
+
+      <para>maxOccurs="unbounded"/&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;xs:attribute name="name" type="xs:string"
+      use="optional"/&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>[XMLmind] Schema for special-data-type</para>
+
+      <para>&lt;optional-structural-variationpoint id="vp1" name="optional
+      variationpoint"&gt;</para>
+
+      <para><emphasis role="bold"> &lt;special-data
+      name="CreatorInfo"&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;data&gt;</emphasis></para>
+
+      <para><emphasis role="bold">
+      &lt;key&gt;Created&lt;/key&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;value
+      type="xs:date"&gt;1998-11-17&lt;/value&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;/data&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;/special-data&gt;</emphasis></para>
+
+      <para>&lt;variation id="vp1v1" name="optional variation"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature1&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;/optional-structural-variationpoint&gt;</para>
+
+      <para>XML Example for special-data-type</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>The class SpecialData allows adding application specific
+        information to VariationPoint and Variation objects. SpecialData
+        aggregates a number of KeyValuePair elements which contain the actual
+        information.</para>
+      </section>
+
+      <section>
+        <title>Attribute name</title>
+
+        <para>The attribute name of a SpecialData indicates which kind of data
+        is contained in the SpecialData structure. The values of name are not
+        standardized; it is highly recommended to use a descriptive name that
+        has a high probability of being unique.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The attribute name of a SpecialData is optional.</para>
+          </listitem>
+
+          <listitem>
+            <para>Any application that deals with variability information read
+            from an artifact via methods exportVariabilityExchangeModels or
+            getConfiguration (see Section <xref linkend="_Ref400958695"/>)
+            shall not read or write the information contained in SpecialData
+            if its name is unknown to the application.</para>
+          </listitem>
+
+          <listitem>
+            <para>If an application reads variability information from an
+            artifact via methods exportVariabilityExchangeModels or
+            getConfiguration (see Section <xref linkend="_Ref400958695"/>),
+            then changes this information, and later uses the methods
+            importVariabilityExchangeModels or setConfiguration (see Section
+            <xref linkend="_Ref400958695"/>) to write the information to an
+            artifact, then any SpecialData whose type is not known to the
+            application may be in an undefined state. This is because the
+            information contained in SpecialData may depend on the overall
+            structure.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+
+    <section>
+      <title>StructuralVariationPoint
+      &lt;structural-variationpoint-group&gt;</title>
+
+      <figure id="_Ref395172805">
+        <title>UML Diagram for class StructuralVariationPoint</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="614" contentwidth="420"
+                       fileref="Figures/image11.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:group name="structural-variationpoint-group"&gt;</para>
+
+      <para>&lt;xs:choice&gt;</para>
+
+      <para>&lt;xs:element name="optional-structural-variationpoint"</para>
+
+      <para>type="optional-structural-variationpoint-type"/&gt;</para>
+
+      <para>&lt;xs:element name="xor-structural-variationpoint"</para>
+
+      <para>type="xor-structural-variationpoint-type"/&gt;</para>
+
+      <para>&lt;/xs:choice&gt;</para>
+
+      <para>&lt;/xs:group&gt;</para>
+
+      <para>XML Schema for structural-variationpoint-group</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>A StructuralVariationPoint determines whether one or more
+        elements in an artifact gets deleted or set inactive during the
+        binding process.</para>
+
+        <para>The artifact elements are referenced by the attribute
+        correspondingVariableArtifactElement of the StructuralVariationPoint
+        and the attribute correspondingVariableArtifactElement of its
+        Variations (see the classes VariationPoint and Variation in <xref
+        linkend="_Ref395172805"/>)</para>
+      </section>
+
+      <section>
+        <title>Notes</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>The class StructuralVariationPoint is an abstract class
+            which inherits from the class VariationPoint.</para>
+          </listitem>
+
+          <listitem>
+            <para><phrase>The class</phrase> StructuralVariationPoint<phrase>
+            has two subclasses:
+            </phrase>OptionalStructuralVariationPoint<phrase> and
+            </phrase>XorStructuralVariationPoint<phrase>.</phrase></para>
+          </listitem>
+
+          <listitem>
+            <para>Like ParameterVariationPoint, StructuralVariationPoint is
+            implemented in the XML Schema as a group, not as a type. We choose
+            to use a group here because a type would have established an extra
+            XML element for StructuralVariationPoint, which would only have
+            complicated the document structure.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+
+    <section>
+      <title>ValueVariation &lt;value-variation-type&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class ValueVariation</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="607" contentwidth="415"
+                       fileref="Figures/image6.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType name="value-variation-type"&gt;</para>
+
+      <para>&lt;xs:complexContent&gt;</para>
+
+      <para>&lt;xs:extension base="variation-type"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:element name="condition"</para>
+
+      <para>type="expression-type"</para>
+
+      <para>minOccurs="0"</para>
+
+      <para>maxOccurs="1"/&gt;</para>
+
+      <para>&lt;xs:element [XMLmind]="value" type="xs:string"/&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;/xs:extension&gt;</para>
+
+      <para>&lt;/xs:complexContent&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>XML Schema for value-variation-type</para>
+
+      <para>&lt;xor-parameter-variationpoint id="vp1"&gt;</para>
+
+      <para><emphasis role="bold"> &lt;variation
+      id="vp1v1"&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;condition
+      type="single-feature-condition"&gt;Feature1&lt;/condition&gt;</emphasis></para>
+
+      <para><emphasis role="bold">
+      &lt;value&gt;1&lt;/value&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;/variation&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;variation
+      id="vp1v2"&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;condition
+      type="single-feature-condition"&gt;Feature2&lt;/condition&gt;</emphasis></para>
+
+      <para><emphasis role="bold">
+      &lt;value&gt;2&lt;/value&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;/variation&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;variation
+      id="vp1v3"&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;condition
+      type="single-feature-condition"&gt;Feature3&lt;/condition&gt;</emphasis></para>
+
+      <para><emphasis role="bold">
+      &lt;value&gt;3&lt;/value&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;/variation&gt;</emphasis></para>
+
+      <para>&lt;/xor-parameter-variationpoint&gt;</para>
+
+      <para>[XMLmind] Example for value-variation-type</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>A ValueVariation selects a value for the corresponding artifact
+        element of a <phrase>XorParameterVariationPoint</phrase>. The artifact
+        element in question is referenced by its attribute
+        correspondingVariableArtifactElement (see section <xref
+        linkend="_Toc367432891"/>).</para>
+
+        <para>Each <phrase>XorParameterVariationPoint</phrase> contains one or
+        more ValueVariation objects. When a
+        <phrase>XorParameterVariationPoint</phrase> gets bound, the attribute
+        condition of each ValueVariation is evaluated. The condition may
+        evaluate to ??? for only one ValueVariation, and the attribute value
+        of this ValueVariation is then used to provide a value for its
+        correspondingVariableArtifactElement.???</para>
+      </section>
+
+      <section id="_Toc367432887">
+        <title>Attribute condition</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>When evaluated, the attribute condition of a ValueVariation
+            shall return a Boolean value. That is, its datatype attribute (if
+            present) should be a Boolean or a data type which can be converted
+            into a Boolean.???</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Attribute value</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>The attribute value of a ValueVariation is a constant, not
+            an expression.</para>
+          </listitem>
+
+          <listitem>
+            <para>The data type (e.g. Boolean, Integer, Floating Point, or an
+            enumeration) and range (e.g. 1&mldr;10) that is allowed for the
+            attribute value of a ValueVariaton is defined by the artifact
+            element that is associated with ValueVariation (see
+            correspondingVariableArtifactElement, section <xref
+            linkend="_Toc367432891"/>).</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Binding</title>
+
+        <para>Each <phrase>XorParameterVariationPoint</phrase> contains one or
+        more ValueVariation objects. When a
+        <phrase>XorParameterVariationPoint</phrase> gets bound, the attribute
+        condition of each ValueVariation is evaluated. The condition may
+        evaluate to ??? for only one ValueVariation, and the attribute value
+        of this ValueVariation is then used to provide a value for its
+        correspondingVariableArtifactElement.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>A <phrase>XorParameterVariationPoint</phrase> can only be
+            bound when all its ValueVariations have a condition.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section id="_Toc367432892">
+        <title>Notes</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>The class ValueVariation inherits from the abstract class
+            Variation.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+
+    <section id="_Ref400958695">
+      <title>VariabilityAPI</title>
+
+      <figure id="_Ref396986103">
+        <title>UML Diagram for class VariabilityAPI</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="188" contentwidth="380"
+                       fileref="Figures/image13.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <section>
+        <title>Description</title>
+
+        <para>The class VariabilityAPI defines the methods that are available
+        for exchanging variability information through the
+        <emphasis>Variability Exchange Language</emphasis>.</para>
+      </section>
+
+      <section>
+        <title>Attribute version</title>
+
+        <para>The attribute version documents the version of the variability
+        language which is supported by this implementation of the
+        <emphasis>Variability Exchange Language</emphasis>. It is a read-only
+        attribute.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The attribute version shall be a positive integer.</para>
+          </listitem>
+
+          <listitem>
+            <para>See [XMLmind] attribute version of the class
+            VariabilityExchangeModels (section <xref
+            linkend="_Ref396985690"/>) for further constraints on this
+            attribute.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Attribute capability</title>
+
+        <para>Not all implementations of the VariabilityAPI support all the
+        methods that are shown in <xref linkend="_Ref396986103"/>. The
+        attribute capability documents which of these methods &ndash; most
+        importantly, importVariabilityExchangeModels,
+        exportVariabilityExchangeModels, getConfiguration, and
+        setConfiguration &ndash; are supported by this implementation of the
+        VariabilityAPI.</para>
+      </section>
+
+      <section>
+        <title>Method importVariabilityExchangeModels</title>
+
+        <para>The method importVariabilityExchangeModels synchronizes all
+        changes in the artifacts with the VariabilityExchangeModels structure.
+        This means that new variation points may be introduced, and existing
+        variation points in the artifact may be changed or deleted.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Let ??? be the VariabilityExchangeModel objects which are
+            contained by the parameter of type VariabilityExchangeModels
+            object which is the input to the method
+            importVariabilityExchangeModels. Then for all ???, the attribute
+            type shall have the value VariationPointDescription.</para>
+          </listitem>
+
+          <listitem>
+            <para>The method importVariabilityExchangeModels is only available
+            if the attribute capability.setVariationPoints has the value
+            ???</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Method exportVariabilityExchangeModels</title>
+
+        <para>The method exportVariabilityExchangeModels reads information on
+        the variation points in all available artifacts and returns a
+        VariabilityExchangeModels structure.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Let ???be the VariabilityExchangeModel objects which are
+            contained by the VariabilityExchangeModels object which is
+            returned from the method exportVariabilityExchangeModels. Then for
+            all ???, the attribute type shall have the value
+            VariationPointDescription .</para>
+          </listitem>
+
+          <listitem>
+            <para>The [XMLmind] exportVariabilityExchangeModels is only
+            available if the attribute capability.getVariationPoints is set to
+            ???</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Method getConfiguration</title>
+
+        <para>The method getConfiguration reads one or more variant
+        configurations from an artifact.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Let ??? be the VariabilityExchangeModel objects which are
+            contained by the VariabilityExchangeModels object which is
+            returned from the method getConfiguration. Then for all ??? the
+            attribute type shall have the value
+            VariationPointConfiguration.</para>
+          </listitem>
+
+          <listitem>
+            <para>The method getConfiguration is only available if the
+            attribute capability.getConfiguration has the value ???</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Method setConfiguration</title>
+
+        <para>The method setConfiguration writes one or more variant
+        configurations to an artifact.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Let ??? be the VariabilityExchangeModel objects which are
+            contained by the parameter of type VariabilityExchangeModels
+            object which is the input to the method setConfiguration. Then for
+            ??? all , the attribute type shall have the value
+            VariationPointConfiguration.</para>
+          </listitem>
+
+          <listitem>
+            <para>The method setConfiguration is only available if the
+            attribute capability.setConfiguration has the value ???</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+
+    <section>
+      <title>VariabilityExchangeModel
+      &lt;variability-exchange-model-type&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class VariabilityExchangeModel</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="344" contentwidth="407"
+                       fileref="Figures/image14.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType
+      name="variability-exchange-model-type"&gt;</para>
+
+      <para>&lt;xs:complexContent&gt;</para>
+
+      <para>&lt;xs:extension base="identifiable-type"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:group ref="variationpoint-group"</para>
+
+      <para>minOccurs="0"</para>
+
+      <para>maxOccurs="unbounded"/&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;xs:attribute [XMLmind]="type" type="variability-api-enum"
+      use="required"/&gt;</para>
+
+      <para>&lt;xs:attribute name="uri" type="xs:anyURI"
+      use="optional"/&gt;</para>
+
+      <para>&lt;/xs:extension&gt;</para>
+
+      <para>&lt;/xs:complexContent&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>XML schema for variability-exchange-model-type</para>
+
+      <para>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</para>
+
+      <para>&lt;variability-exchange-models id="root"</para>
+
+      <para>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"</para>
+
+      <para>xsi:noNamespaceSchemaLocation="../VariabilityExchangeLanguage.xsd"&gt;</para>
+
+      <para>&lt;version&gt;1&lt;/version&gt;</para>
+
+      <para>&lt;capability&gt;</para>
+
+      <para>&lt;import-variability-exchange-model&gt;true&lt;/import-variability-exchange-model&gt;</para>
+
+      <para>&lt;export-variability-exchange-model&gt;true&lt;/export-variability-exchange-model&gt;</para>
+
+      <para>&lt;get-configuration&gt;true&lt;/get-configuration&gt;</para>
+
+      <para>&lt;set-configuration&gt;true&lt;/set-configuration&gt;</para>
+
+      <para>&lt;/capability&gt;</para>
+
+      <para>&lt;variability-exchange-model type="variationpoint-description"
+      id="model1"</para>
+
+      <para>uri="file:///C:/SPES/file1.c"&gt;</para>
+
+      <para>&mldr;</para>
+
+      <para>&lt;/variability-exchange-model&gt;</para>
+
+      <para>&lt;variability-exchange-model type="variationpoint-description"
+      id="model2"</para>
+
+      <para>uri="file:///C:/SPES/file2.c"&gt;</para>
+
+      <para>&mldr;</para>
+
+      <para>&lt;/variability-exchange-model&gt;</para>
+
+      <para>&lt;variability-exchange-model type="variationpoint-description"
+      id="model3"</para>
+
+      <para>uri="file:///C:/SPES/file3.c"&gt;</para>
+
+      <para>&mldr;</para>
+
+      <para>&lt;/variability-exchange-model&gt;</para>
+
+      <para>&lt;variability-exchange-model type="variationpoint-description"
+      id="model4"</para>
+
+      <para>[XMLmind]="file:///C:/SPES/file4.c"&gt;</para>
+
+      <para>&mldr;</para>
+
+      <para>&lt;/variability-exchange-model&gt;</para>
+
+      <para>&lt;/variability-exchange-models&gt;</para>
+
+      <para>XML example for variability-exchange-model-type</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>A VariabilityExchangeModel is an artifact which may contain
+        variation points. Examples for artifacts are</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>C/C++ files</para>
+          </listitem>
+
+          <listitem>
+            <para>Matlab/Simulink Models</para>
+          </listitem>
+
+          <listitem>
+            <para>DOORS databases</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Attribute type</title>
+
+        <para>The attribute type of a VariabilitExchangeModel determines
+        whether this model is a description of the variation points in the
+        artifacts or defines a variant configuration:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>If the value of type is VariationPointDescription, then the
+            attribute selected of all Variations (see section <xref
+            linkend="_Toc367432890"/>) and BindingTimes (see section <xref
+            linkend="_Ref395705988"/>) has no effect and shall be
+            omitted.</para>
+          </listitem>
+
+          <listitem>
+            <para>If the value of type is VariationPointConfiguration, then
+            the attribute selected of all Variations (see section <xref
+            linkend="_Toc367432890"/>) and BindingTimes (see section <xref
+            linkend="_Ref395705988"/>) is not optional, and the attribute
+            expression of CalculatedVariation must contain a constant.</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>See also section <xref linkend="_Toc367432890"/>.</para>
+      </section>
+
+      <section>
+        <title>Attribute uri</title>
+
+        <para>The attribute uri of a VariabilityExchangeModel defines the
+        Uniform Resource Locator (URI, see (???)) of the artifact that is
+        associated with the VariabilityExchangeModel.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>VariabilityExchangeModels
+      &lt;variability-exchange-models-type&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class VariabilityExchangeModels</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="344" contentwidth="407"
+                       fileref="Figures/image14.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType
+      [XMLmind]="variability-exchange-models-type"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:element name="version" type="xs:unsignedInt" fixed="1"
+      /&gt;</para>
+
+      <para>&lt;xs:element name="capability" type="capability-type"
+      /&gt;</para>
+
+      <para>&lt;xs:element name="variability-exchange-model"</para>
+
+      <para>type="variability-exchange-model-type"</para>
+
+      <para>minOccurs="0"</para>
+
+      <para>maxOccurs="unbounded" /&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>[XMLmind] Schema for variability-exchange-models-type</para>
+
+      <para>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</para>
+
+      <para>&lt;variability-exchange-models id="root"</para>
+
+      <para>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"</para>
+
+      <para>xsi:noNamespaceSchemaLocation="../VariabilityExchangeLanguage.xsd"&gt;</para>
+
+      <para>&lt;version&gt;1&lt;/version&gt;</para>
+
+      <para>&lt;capability&gt;</para>
+
+      <para>&lt;import-variability-exchange-model&gt;true&lt;/import-variability-exchange-model&gt;</para>
+
+      <para>&lt;export-variability-exchange-model&gt;true&lt;/export-variability-exchange-model&gt;</para>
+
+      <para>&lt;get-configuration&gt;true&lt;/get-configuration&gt;</para>
+
+      <para>&lt;set-configuration&gt;true&lt;/set-configuration&gt;</para>
+
+      <para>&lt;/capability&gt;</para>
+
+      <para>&lt;variability-exchange-model type="<emphasis
+      role="bold">variationpoint-description</emphasis>"
+      id="model1"&gt;</para>
+
+      <para>&mldr;</para>
+
+      <para>&lt;/variability-exchange-model&gt;</para>
+
+      <para>&lt;variability-exchange-model type="<emphasis
+      role="bold">variationpoint-configuration</emphasis>"
+      id="model2"&gt;</para>
+
+      <para>&mldr;</para>
+
+      <para>&lt;/variability-exchange-model&gt;</para>
+
+      <para>&lt;/variability-exchange-models&gt;</para>
+
+      <para>XML example for variability-exchange-models-type</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>VariabilityExchangeModels is the top level object of a
+        <emphasis>Variability Exchange Language</emphasis> document. In the
+        XML representation, variability-exchange-models is the root element of
+        the XML document object.</para>
+      </section>
+
+      <section id="_Ref396985690">
+        <title>Attribute version</title>
+
+        <para>The attribute version of VariabilityExchangeModels defines the
+        version of the <emphasis>Variability Exchange Language</emphasis> to
+        which the <emphasis>Variability Exchange Language</emphasis> document
+        conforms.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The attribute version of VariabilityExchangeModels should be
+            a positive non-zero Integer.</para>
+          </listitem>
+
+          <listitem>
+            <para>If a specific implementation of the <emphasis>Variability
+            Exchange Language</emphasis> supports version ??? and a
+            <emphasis>Variability Exchange Language</emphasis> document is in
+            version ???, then the following conditions should hold:</para>
+
+            <orderedlist>
+              <listitem>
+                <para>The implementation shall reject the document if
+                ???</para>
+              </listitem>
+
+              <listitem>
+                <para>The implementation shall accept the document if
+                ???</para>
+              </listitem>
+
+              <listitem>
+                <para>The implementation may accept the document if ???</para>
+              </listitem>
+            </orderedlist>
+
+            <para>In other words, an implementation of the
+            <emphasis>Variability Exchange Language</emphasis> should never
+            accept a document where the attribute version of the element
+            VariabilityExchangeModels is a greater than the one that is
+            supported by the implementation. It may, however accept a document
+            with a smaller version number (backwards compatibility)., if both
+            version numbers are equal, the document should be
+            accepted<footnote id="__FN5__">
+                <para>Of course, the document might still be rejected later
+                for another reason, for example a data type mismatch.</para>
+              </footnote>.</para>
+          </listitem>
+
+          <listitem>
+            <para>The [XMLmind] version of VariabilityExchangeModels is
+            read-only.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Attribute capability</title>
+
+        <para>The attribute capability of VariabilityExchangeModels defines
+        which API operations (see section <xref linkend="_Toc367432892"/>) are
+        supported by the implementation of the <emphasis>Variability Exchange
+        Language</emphasis> that created the <emphasis>Variability Exchange
+        Language</emphasis> document.</para>
+
+        <para>For more information see the class Capability.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>VariabilityAPITypeEnum &lt;variability-api-enum&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class VariabilityAPITypeEnum</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="117" contentwidth="284"
+                       fileref="Figures/image15.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:simpleType name="variability-api-enum"&gt;</para>
+
+      <para>&lt;xs:restriction base="xs:string"&gt;</para>
+
+      <para>&lt;xs:enumeration value="variationpoint-description"/&gt;</para>
+
+      <para>&lt;xs:enumeration
+      [XMLmind]="variationpoint-configuration"/&gt;</para>
+
+      <para>&lt;/xs:restriction&gt;</para>
+
+      <para>&lt;/xs:simpleType&gt;</para>
+
+      <para>XML Schema for variability-api-type-enum</para>
+
+      <para>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</para>
+
+      <para>&lt;variability-exchange-models id="root"</para>
+
+      <para>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"</para>
+
+      <para>xsi:noNamespaceSchemaLocation="../VariabilityExchangeLanguage.xsd"&gt;</para>
+
+      <para>&lt;version&gt;1&lt;/version&gt;</para>
+
+      <para>&lt;capability&gt;</para>
+
+      <para>&lt;import-variability-exchange-model&gt;true&lt;/import-variability-exchange-model&gt;</para>
+
+      <para>&lt;export-variability-exchange-model&gt;true&lt;/export-variability-exchange-model&gt;</para>
+
+      <para>&lt;get-configuration&gt;true&lt;/get-configuration&gt;</para>
+
+      <para>&lt;set-configuration&gt;true&lt;/set-configuration&gt;</para>
+
+      <para>&lt;/capability&gt;</para>
+
+      <para>&lt;variability-exchange-model type="<emphasis
+      role="bold">variationpoint-description</emphasis>"
+      id="model1"&gt;</para>
+
+      <para>&mldr;</para>
+
+      <para>&lt;/variability-exchange-model&gt;</para>
+
+      <para>&lt;variability-exchange-model type="<emphasis
+      role="bold">variationpoint-configuration</emphasis>"
+      id="model2"&gt;</para>
+
+      <para>&mldr;</para>
+
+      <para>&lt;/variability-exchange-model&gt;</para>
+
+      <para>&lt;/variability-exchange-models&gt;</para>
+
+      <para>XML example for variability-api-type-enum</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>The enumeration VariabilityAPITypeEnum differentiates between
+        the two flavors of VariabilityExchangeModel objects:</para>
+
+        <orderedlist>
+          <listitem>
+            <para>VariationPointDescription</para>
+          </listitem>
+
+          <listitem>
+            <para>VariationPointConfiguration</para>
+          </listitem>
+        </orderedlist>
+
+        <para>See the class VariabilityExchangeModel for more details.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>Variation &lt;variation-type&gt;</title>
+
+      <figure>
+        <title>[XMLmind] Diagram for class Variation</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="614" contentwidth="420"
+                       fileref="Figures/image11.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType name="variation-type"
+      abstract="true"&gt;</para>
+
+      <para>&lt;xs:complexContent&gt;</para>
+
+      <para>&lt;xs:extension base="identifiable-type"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:element name="hierarchy"</para>
+
+      <para>type="variationpoint-hierarchy-type"</para>
+
+      <para>minOccurs="0" maxOccurs="1"/&gt;</para>
+
+      <para>&lt;xs:element name="depencency"</para>
+
+      <para>type="variation-dependency-type"</para>
+
+      <para>[XMLmind]="0" maxOccurs="unbounded"/&gt;</para>
+
+      <para>&lt;xs:element
+      name="corresponding-variable-artifact-element"</para>
+
+      <para>type="artifact-element-type"</para>
+
+      <para>minOccurs="0" maxOccurs="unbounded"/&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;xs:attribute name="selected" type="xs:boolean"
+      use="optional"/&gt;</para>
+
+      <para>&lt;/xs:extension&gt;</para>
+
+      <para>&lt;/xs:complexContent&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>XML Schema for variation-type</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>The abstract class Variation implements a variation of a
+        variation point. Each instance of the class VariationPoint contains
+        one or more instances of the class Variation.</para>
+
+        <para>There are four classes that derive from Variation, namely
+        OptionalVariaton, XorVariation, CalculatedVariation and
+        ValueVariation.</para>
+      </section>
+
+      <section id="_Toc367432890">
+        <title>Attribute selected</title>
+
+        <para>If the attribute type of a VariabilityExchangeModel has the
+        value VariationPointConfiguration, then the attribute
+        <phrase>selected</phrase> of a Variation ??? is contained in the
+        variation point configuration which is defined by the
+        VariabilityExchangeModel which contains ???</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>If the attribute <emphasis role="underline">type</emphasis>
+            of a <emphasis
+            role="underline">VariabilityExchangeModel</emphasis> ??? has the
+            value <emphasis
+            role="underline">VariationPointDescription</emphasis>, then no
+            <emphasis role="underline">Variation</emphasis> ??? shall have an
+            attribute <emphasis role="underline">selected</emphasis>.</para>
+          </listitem>
+
+          <listitem>
+            <para>If the attribute <emphasis role="underline">type</emphasis>
+            of a <emphasis
+            role="underline">VariabilityExchangeModel</emphasis> ?? has the
+            value <emphasis
+            role="underline">VariationPointConfiguration</emphasis>, then
+            every <emphasis role="underline">Variation</emphasis> ??? shall
+            have an attribute <emphasis
+            role="underline">selected</emphasis>.</para>
+          </listitem>
+
+          <listitem>
+            <para>If the attribute type of a VariabilityExchangeModel ??? has
+            the value VariationPointConfiguration, and the attribute
+            <phrase>selected</phrase> of a Variation ?? is a member of the
+            variation point configuration defined by ????</para>
+          </listitem>
+
+          <listitem>
+            <para>If the attribute <emphasis role="underline">type</emphasis>
+            of a <emphasis
+            role="underline">VariabilityExchangeModel</emphasis> ??? has the
+            value <emphasis
+            role="underline">VariationPointConfiguration</emphasis>, and the
+            attribute <emphasis role="underline">selected</emphasis> of a
+            <emphasis role="underline">Variation</emphasis>??? is not a member
+            of the variation point configuration defined by ???.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section id="_Toc367432891">
+        <title>Attribute correspondingVariableArtifactElement</title>
+
+        <para>The [XMLmind] correspondingVariableArtifactElement of a
+        Variation ??? implements a reference to the artifact elements which
+        correspond to???</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The attribute correspondingVariableArtifactElement is
+            optional.</para>
+          </listitem>
+
+          <listitem>
+            <para>If a Variation ??? has more than one
+            correspondingVariableArtifactElements ???</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Notes</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>The class Variation inherits from the class
+            Identifiable.</para>
+          </listitem>
+
+          <listitem>
+            <para>The classes OptionalVariation, XorVariation,
+            CalculatedVariation and ValueVariation inherit from
+            Variation.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+
+    <section>
+      <title>VariationPoint &lt;variationpoint-type&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class VariationPoint</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="344" contentwidth="407"
+                       fileref="Figures/image16.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType name="variationpoint-type"
+      abstract="true"&gt;</para>
+
+      <para>&lt;xs:complexContent&gt;</para>
+
+      <para>&lt;xs:extension base="identifiable-type"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:element name="bindingtime"</para>
+
+      <para>type="bindingtime-type"</para>
+
+      <para>minOccurs="0" maxOccurs="unbounded"/&gt;</para>
+
+      <para>&lt;xs:element
+      name="corresponding-variable-artifact-element"</para>
+
+      <para>type="artifact-element-type"</para>
+
+      <para>minOccurs="0" maxOccurs="unbounded"/&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;/xs:extension&gt;</para>
+
+      <para>&lt;/xs:complexContent&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>&lt;xs:group name="variationpoint-group"&gt;</para>
+
+      <para>&lt;xs:choice&gt;</para>
+
+      <para>&lt;xs:group ref="structural-variationpoint-group"/&gt;</para>
+
+      <para>&lt;xs:group ref="parameter-variationpoint-group"/&gt;</para>
+
+      <para>&lt;/xs:choice&gt;</para>
+
+      <para>&lt;/xs:group&gt;</para>
+
+      <para>[XMLmind] Schema for variationpoint-type</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>The abstract class VariationPoint describes a variationpoint in
+        an artifact.</para>
+      </section>
+
+      <section>
+        <title>Attribute bindingTime</title>
+
+        <para>The attribute bindingTime defines the binding time of a
+        VariationPoint. For more information on the concept of binding times,
+        see section <xref linkend="_Ref395705586"/>.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>If a VariationPoint does not declare a BindingTime, then it
+            is up to the binding process to define which binding time to use.
+            For example, a process that uses a single binding time may not
+            state an explicit binding time for its variation points.</para>
+          </listitem>
+
+          <listitem>
+            <para>A VariationPoint may define more than one binding time. In
+            this case, the attribute selected of the BindingTime elements
+            decides which binding time is used in the actual binding
+            process.</para>
+          </listitem>
+
+          <listitem>
+            <para>If the VariabilityExchangeModel ??? which contains a
+            VariationPoint ??? has the type VariationPointConfiguration, then
+            let ??? be the values of the attribute selected of the BindingTime
+            attributes of ???. Then the following conditions must hold:</para>
+
+            <para>A [XMLmind] of the above condition is that if a
+            VariationPoint in a VariationPointConfiguration has only a single
+            BindingTime attribute ???, then the attribute selected of ???
+            shall have the value ???</para>
+
+            <para>How and when a value for the attribute selected is
+            determined is beyond the scope of this document.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Attribute correspondingVariableArtifactElement</title>
+
+        <para>The attribute correspondingVariableArtifactElement of a
+        VariationPoint ??? implements a reference to the artifact elements
+        which correspond to ???</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Not all VariationPoints have a
+            correspondingVariableArtifactElement.</para>
+          </listitem>
+
+          <listitem>
+            <para>If a VariationPoint ??? has more than one
+            correspondingVariableArtifactElements ??? do not need to point to
+            the same artifacts. That is, the URI attributes of ??? may have
+            different values for each ???</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Notes</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>The class VariationPoint inherits from the class
+            Identifiable.</para>
+          </listitem>
+
+          <listitem>
+            <para>There classes StructuralVariationPoint and
+            ParameterVariationPoint inherit from the class
+            VariationPoint.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+
+    <section>
+      <title>VariationPointHierarchy
+      &lt;variationpoint-hierarchy-type&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class VariationPointHierarchy</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="607" contentwidth="605"
+                       fileref="Figures/image17.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType name="variationpoint-hierarchy-type"&gt;</para>
+
+      <para>&lt;xs:complexContent&gt;</para>
+
+      <para>&lt;xs:extension base="identifiable-type"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:element name="variationpoint" minOccurs="1"
+      maxOccurs="unbounded"&gt;</para>
+
+      <para>&lt;xs:complexType&gt;</para>
+
+      <para>&lt;xs:attribute name="ref" type="xs:IDREF"
+      use="required"/&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>&lt;/xs:element&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;/xs:extension&gt;</para>
+
+      <para>&lt;/xs:complexContent&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>XML Schema for variationpoint-hierarchy-type</para>
+
+      <para>&lt;variability-exchange-model type="variationpoint-description"
+      id="model"&gt;</para>
+
+      <para>&lt;optional-structural-variationpoint id="<emphasis
+      role="bold">vp1</emphasis>"&gt;</para>
+
+      <para>&lt;variation id="vp1v1"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature1&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;/optional-structural-variationpoint&gt;</para>
+
+      <para>&lt;optional-structural-variationpoint id="vp2"&gt;</para>
+
+      <para>&lt;variation id="vp2v1"&gt;</para>
+
+      <para><emphasis role="bold"> &lt;hierarchy
+      id="vp2h1"&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;variationpoint
+      ref="vp1"/&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;/hierarchy&gt;</emphasis></para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature1&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;/optional-structural-variationpoint&gt;</para>
+
+      <para>&lt;/variability-exchange-model&gt;</para>
+
+      <para>XML Example for variationpoint-hierarchy-type</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>Each Variation may contain a VariationPointHierarchy object.
+        VariationPointHierarchy establishes a hierarchy among VariationPoints
+        and Variations.</para>
+
+        <para>The hierarchy is a graph ??? defined as follows:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>??? is a VariationPoint in a <emphasis>Variability Exchange
+            Language</emphasis> document<footnote id="__FN6__">
+                <para><phrase>Strictly speaking, </phrase>???<phrase> would be
+                a set of nodes and there is bijective mapping between
+                </phrase>???<phrase> and the set of elements of type
+                </phrase>variationpoint-type in the DOM of the Variability
+                Exchange Language document. We use a simplified language for
+                the sake of clarity here.</para>
+              </footnote>.</para>
+          </listitem>
+
+          <listitem>
+            <para>Let??? be a VariationPoint which contains a Variation which
+            contains a VariationPointHierarchy whose attribute ref refers to a
+            VariationPoint ???</para>
+          </listitem>
+
+          <listitem>
+            <para>No two VariationPointHierarchy elements may refer to the
+            same VariationPoints. Formally, the following condition shall
+            hold: ??? must not contain cycles, that is, there cannot be a
+            sequence. Formally, the following condition shall hold:</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>These conditions make sure that ??? is a tree or a set of
+        trees.</para>
+      </section>
+
+      <section>
+        <title>Attribute variationPoint</title>
+
+        <para>The attribute variationPoint of a VariationPointHierarchy
+        identifies the endpoint of a variationpoint hierarchy relation.</para>
+      </section>
+
+      <section>
+        <title>Notes</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>The class VariationPointHierarchy inherits from
+            Identifiable.</para>
+          </listitem>
+
+          <listitem>
+            <para>In the XML Schema, the attribute variationPoint of
+            VariationPointHierarchy is not implemented as a XML attribute but
+            as a separate XML element named variation with an XML attribute
+            ref that implements the actual reference. This is because
+            variation has an upper multiplicity greater than one, but XML
+            attributes are restricted to an upper multiplicity of 1.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+
+    <section>
+      <title>VariationDependency &lt;variation-dependency-type&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class VariationDependenxy</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="233" contentwidth="407"
+                       fileref="Figures/image18.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType name="variation-dependency-type"&gt;</para>
+
+      <para>&lt;xs:complexContent&gt;</para>
+
+      <para>&lt;xs:extension [XMLmind]="identifiable-type"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:element name="variation"</para>
+
+      <para>minOccurs="1" maxOccurs="unbounded"&gt;</para>
+
+      <para>&lt;xs:complexType&gt;</para>
+
+      <para>&lt;xs:attribute name="ref" type="xs:IDREF"
+      use="required"/&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>&lt;/xs:element&gt;</para>
+
+      <para>&lt;xs:element name="condition"</para>
+
+      <para>type="expression-type"</para>
+
+      <para>[XMLmind]="0" maxOccurs="1"/&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;xs:attribute name="type"</para>
+
+      <para>type="variation-dependency-enum"</para>
+
+      <para>use="required"/&gt;</para>
+
+      <para>&lt;/xs:extension&gt;</para>
+
+      <para>&lt;/xs:complexContent&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>XML Schema for variation-dependency-type</para>
+
+      <para>&lt;variability-exchange-model type="variationpoint-description"
+      id="model"&gt;</para>
+
+      <para>&lt;optional-structural-variationpoint id="vp1"&gt;</para>
+
+      <para>&lt;variation id="<emphasis
+      role="bold">vp1v1</emphasis>"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature1&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;/optional-structural-variationpoint&gt;</para>
+
+      <para>&lt;optional-structural-variationpoint id="vp2"&gt;</para>
+
+      <para>&lt;variation id="vp2v1"&gt;</para>
+
+      <para><emphasis role="bold"> &lt;depencency type="conflicts"
+      id="vp2d1"&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;variation
+      ref="vp1v1"/&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;/depencency&gt;</emphasis></para>
+
+      <para>&lt;condition
+      [XMLmind]="single-feature-condition"&gt;Feature1&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;variation id="vp2v2"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature2&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;variation id="vp2v3"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature3&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;/optional-structural-variationpoint&gt;</para>
+
+      <para>&lt;/variability-exchange-model&gt;</para>
+
+      <para>[XMLmind] example for variation-dependency-type</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>A VariationDependency defines a dependency between Variation
+        objects. Each Variation may have an arbitrary number of dependencies
+        to other Variations. There are two types of variations: requires and
+        conflicts.</para>
+
+        <para>If a Variation aggregates more than one VariationDependency,
+        then all dependencies must be fulfilled.</para>
+      </section>
+
+      <section>
+        <title>Attribute type</title>
+
+        <para>The attribute type of VariationDependency defines the type of a
+        dependency. There are two types of dependencies:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>requires</para>
+          </listitem>
+
+          <listitem>
+            <para>conflicts</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>The enumeration VariationDependencyEnum defines the values that
+        are allowed for the attribute type.</para>
+      </section>
+
+      <section>
+        <title>Attribute variation</title>
+
+        <para>The [XMLmind] variation of a VariationDependency defines the
+        target of a dependency.</para>
+      </section>
+
+      <section>
+        <title>Attribute condition</title>
+
+        <para>The optional attribute condition of a VariationDependency
+        defines a condition under which the relation that is defined by the
+        VariationDependency is effective.</para>
+      </section>
+
+      <section>
+        <title>Formal Definition</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>Let ??? be the Variation to which the attribute variation of
+            ??? is defined as follows:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>If the attribute type of ??? is requires, then</para>
+
+                 ???
+              </listitem>
+
+              <listitem>
+                <para>If the attribute type of ??? is conflicts, then</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Let ??? be [XMLmind] VariationDependency objects contained
+            by a Variation??? is defined as follows:</para>
+
+             ???
+          </listitem>
+
+          <listitem>
+            <para>Let ??? be the conditions of all Variation objects in a
+            <emphasis>Variability Exchange Language</emphasis>. Then the
+            following condition shall hold:</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Notes</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>The class VariationDependency inherits from
+            Identifiable.</para>
+          </listitem>
+
+          <listitem>
+            <para>In the XML Schema, the attribute variation is not
+            implemented as a XML attribute but as a separate XML element named
+            variation with an XML attribute ref that implements the actual
+            reference. This is because variation has an upper multiplicity
+            greater than one, but XML attributes are restricted to an upper
+            multiplicity of 1 (that is, an XML element may not have multiple
+            elements with the same name).</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+
+    <section id="_Capability">
+      <title>VariationDependencyEnum &lt;variation-dependency-enum&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class VariationDependenyEnum</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="111" contentwidth="284"
+                       fileref="Figures/image19.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:simpleType [XMLmind]="variation-dependency-enum"&gt;</para>
+
+      <para>&lt;xs:restriction base="xs:string"&gt;</para>
+
+      <para>&lt;xs:enumeration value="requires"/&gt;</para>
+
+      <para>&lt;xs:enumeration value="conflicts"/&gt;</para>
+
+      <para>&lt;/xs:restriction&gt;</para>
+
+      <para>&lt;/xs:simpleType&gt;</para>
+
+      <para>XML Schema for variation-dependency-enum</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>The enumeration VariationDependencyEnum defines which values are
+        allowed for the attribute type of VariationDependency. Currently, this
+        enumeration defines two values:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>requires</para>
+          </listitem>
+
+          <listitem>
+            <para>conflicts</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>For more information see VariationDependency.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>XorParameterVariationPoint &lt;
+      xor-parameter-variationpoint-type&gt;</title>
+
+      <figure>
+        <title>UML Diagram for class XorParameterVariationPoint</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="607" contentwidth="415"
+                       fileref="Figures/image6.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType
+      name="xor-parameter-variationpoint-type"&gt;</para>
+
+      <para>&lt;xs:complexContent&gt;</para>
+
+      <para>&lt;xs:extension base="variationpoint-type"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:element name="variation"</para>
+
+      <para>[XMLmind]="value-variation-type"</para>
+
+      <para>maxOccurs="unbounded" /&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;/xs:extension&gt;</para>
+
+      <para>&lt;/xs:complexContent&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>XML Schema for xor-parameter-variationpoint-type</para>
+
+      <para>&lt;xor-parameter-variationpoint id="vp1"&gt;</para>
+
+      <para>&lt;variation id="vp1v1"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature1&lt;/condition&gt;</para>
+
+      <para>&lt;value&gt;1&lt;/value&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;variation id="vp1v2"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature2&lt;/condition&gt;</para>
+
+      <para>&lt;value&gt;2&lt;/value&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;variation id="vp1v3"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature3&lt;/condition&gt;</para>
+
+      <para>&lt;value&gt;3&lt;/value&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;/xor-parameter-variationpoint&gt;</para>
+
+      <para>XML Example for xor-parameter-variationpoint-type</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>A <phrase>XorParameterVariationPoint</phrase> contains a number
+        of <phrase>ValueVariation</phrase> objects. During the binding
+        process, the attribute condition of each ValueVariation objects is
+        evaluated. As described in section <xref linkend="_Toc367432887"/>, it
+        is guaranteed that if all ValueVariation objects have a condition
+        attribute, then there is exactly one ValueVariation whose condition
+        evaluates to ???. The attribute value of this ValueVariation is then
+        used to set the value of the associated artifact element.</para>
+      </section>
+
+      <section>
+        <title>Notes</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>The class XorParameterVariationPoint inherits from the class
+            ParameterVariationPoint.</para>
+          </listitem>
+
+          <listitem>
+            <para>The class XorParameterVariationPoint is modelled after the
+            switch statement in the programming languages C or Java; it
+            selects a single value from a list of values. The difference is
+            that a switch in C or Java first evaluates a Boolean expression
+            and then compares the result to a list of constants, while
+            XorParameterVariationPoint evaluates a list of Boolean expressions
+            and selects the one which returns???.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+
+    <section>
+      <title>XorStructuralVariationPoint
+      &lt;xor-structural-variationpoint-type&gt;</title>
+
+      <figure>
+        <title>UML Diagram for XorStructuralVariationPoint</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="614" contentwidth="420"
+                       fileref="Figures/image11.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType
+      [XMLmind]="xor-structural-variationpoint-type"&gt;</para>
+
+      <para>&lt;xs:complexContent&gt;</para>
+
+      <para>&lt;xs:extension base="variationpoint-type"&gt;</para>
+
+      <para>&lt;xs:sequence maxOccurs="unbounded"&gt;</para>
+
+      <para>&lt;xs:element name="variation"
+      type="xor-variation-type"/&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;/xs:extension&gt;</para>
+
+      <para>&lt;/xs:complexContent&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>XML Schema for xor-structural-variationpoint-type</para>
+
+      <para><emphasis role="bold">&lt;xor-structural-variationpoint
+      id="vp1"&gt;</emphasis></para>
+
+      <para>&lt;variation id="vp1v1" name="Alternative 1"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature1&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;variation id="vp1v2" name="Alternative 2"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature2&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para>&lt;variation id="vp1v3" name="Alternative 3"&gt;</para>
+
+      <para>&lt;condition
+      type="single-feature-condition"&gt;Feature3&lt;/condition&gt;</para>
+
+      <para>&lt;/variation&gt;</para>
+
+      <para><emphasis
+      role="bold">&lt;/xor-structural-variationpoint&gt;</emphasis></para>
+
+      <para>XML Example for xor-structural-variationpoint-type</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>A XorStructuralVariationPoint contains one or more
+        XorVariations. Its purpose is to choose exactly one of several
+        alternative Variations.</para>
+
+        <para>During the binding process, the attribute condition is evaluated
+        for each XorVariation. As described in section <xref
+        linkend="_Ref396825921"/>, it is guaranteed that if all XorVariation
+        objects have a condition attribute, then exactly one of those
+        conditions evaluates to???. The artifact element that corresponds to
+        the XorVariation whose attribute condition evaluates to true is then
+        removed or set inactive.</para>
+      </section>
+
+      <section>
+        <title>Notes</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>The class XorStructuralVariationPoint inherits from the
+            class StructuralVariationPoint.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
+
+    <section>
+      <title>XorVariation &lt;xor-variation-type&gt;</title>
+
+      <figure>
+        <title>UML Diagram for XorVariation</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata contentdepth="614" contentwidth="420"
+                       fileref="Figures/image11.png"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>&lt;xs:complexType [XMLmind]="xor-variation-type"&gt;</para>
+
+      <para>&lt;xs:complexContent&gt;</para>
+
+      <para>&lt;xs:extension base="variation-type"&gt;</para>
+
+      <para>&lt;xs:sequence&gt;</para>
+
+      <para>&lt;xs:element name="condition"</para>
+
+      <para>type="expression-type"</para>
+
+      <para>minOccurs="0"</para>
+
+      <para>maxOccurs="1"/&gt;</para>
+
+      <para>&lt;/xs:sequence&gt;</para>
+
+      <para>&lt;/xs:extension&gt;</para>
+
+      <para>&lt;/xs:complexContent&gt;</para>
+
+      <para>&lt;/xs:complexType&gt;</para>
+
+      <para>XML Schema for xor-variation-type</para>
+
+      <para>&lt;xor-structural-variationpoint id="vp1"&gt;</para>
+
+      <para><emphasis role="bold"> &lt;variation id="vp1v1" name="Alternative
+      1"&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;condition
+      type="single-feature-condition"&gt;Feature1&lt;/condition&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;/variation&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;variation id="vp1v2" name="Alternative
+      2"&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;condition
+      type="single-feature-condition"&gt;Feature2&lt;/condition&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;/variation&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;variation id="vp1v3"
+      [XMLmind]="Alternative 3"&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;condition
+      type="single-feature-condition"&gt;Feature3&lt;/condition&gt;</emphasis></para>
+
+      <para><emphasis role="bold"> &lt;/variation&gt;</emphasis></para>
+
+      <para>&lt;/xor-structural-variationpoint&gt;</para>
+
+      <para>XML Example for xor-variation-type</para>
+
+      <section>
+        <title>Description</title>
+
+        <para>A XorVariation is a kind of variation that choses Variation out
+        of several alternative Variations.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Let??? be the values of the selected attributes of the
+            XorVariations which are aggregated by ???. Then the following
+            conditions shall hold:</para>
+
+            <orderedlist>
+              <listitem>
+                <para>???</para>
+              </listitem>
+
+              <listitem>
+                <para>???</para>
+              </listitem>
+            </orderedlist>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section id="_Ref396825921">
+        <title>Attribute condition</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>When evaluated, the attribute condition of a XorVariation
+            shall return a <emphasis>Boolean</emphasis> value. That is, its
+            datatype attribute (if present) should be a Boolean or a data type
+            which can be converted into a Boolean.</para>
+          </listitem>
+
+          <listitem>
+            <para>Let ??? be the conditions of all the XorVariations that are
+            contained in a given <phrase>XorStructuralVariationPoint</phrase>.
+            Then the following conditions must hold</para>
+
+            <orderedlist>
+              <listitem>
+                <para>???</para>
+              </listitem>
+
+              <listitem>
+                <para>???</para>
+              </listitem>
+            </orderedlist>
+          </listitem>
+
+          <listitem>
+            <para>If a XorVariation has an attribute condition ??? and an
+            attribute selected ??? (inherited from Variation), then the
+            following condition shall hold:</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Binding</title>
+
+        <para>Each XorStructuralVariationPoint contains one or more
+        XorVariations. When a XorStructuralVariationPoint gets bound, the
+        attribute condition of each XorVariation is evaluated. For only one
+        XorVariation the condition shall evaluate to???. For all other
+        XorVariations, the artifact elements that are referenced by its
+        attribute correspondingVariableArtifactElement (see section <xref
+        linkend="_Toc367432891"/>) get deleted or set to inactive.</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>A XorStructuralVariationPoint can only be bound when all its
+            ValueVariations have a condition.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Notes</title>
+
+        <itemizedlist>
+          <listitem>
+            <para>The class XorVariation inherits from the class
+            Variation.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+    </section>
   </section>
 
   <appendix id="A-AN-ANNEX">
@@ -1142,9 +4897,10 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
     <para>In a typical OASIS work product one might wish to list committee
     participants in a non-normative annex (markup shown above in the normative
-    annex example) using wording along the line of &ldquo;The following
-    individuals have participated in the creation of this specification and
-    are gratefully acknowledged:&rdquor;</para>
+    annex example) using wording along the line of &OpenCurlyDoubleQuote;The
+    following individuals have participated in the creation of this
+    specification and are gratefully
+    acknowledged:&CloseCurlyDoubleQuote;</para>
 
     <itemizedlist spacing="compact">
       <listitem>
