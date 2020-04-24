@@ -246,6 +246,7 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="variationpoint-description"/>
 			<xs:enumeration value="variationpoint-configuration"/>
+			<xs:enumeration value="variationpoint-partial-configuration"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="variation-dependency-enum">
