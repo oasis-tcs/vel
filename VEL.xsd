@@ -216,7 +216,22 @@
 		</xs:sequence>
 	</xs:complexType>
 	<!-- ========== ENUMERATIONS ========== -->
-	<xs:simpleType name="bindingtime-enum">
+	<xs:simpleType name="variability-api-enum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="variationpoint-description"/>
+			<xs:enumeration value="variationpoint-configuration"/>
+			<xs:enumeration value="variationpoint-partial-configuration"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- ========== EXTENDABLE ENUMERATIONS ========== -->
+	<xs:simpleType name="enumeration-extension-type">
+		<xs:restriction base="xsd:string">
+			<xs:pattern value="x:\S.*"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="bindingtime-enum-basetype">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="requirements-time"/>
 			<xs:enumeration value="blueprint-derivation-time"/>
@@ -233,20 +248,21 @@
 			<xs:enumeration value="run-time"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="variability-api-enum">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="variationpoint-description"/>
-			<xs:enumeration value="variationpoint-configuration"/>
-			<xs:enumeration value="variationpoint-partial-configuration"/>
-		</xs:restriction>
+	<xs:simpleType name="bindingtime-enum">
+		<xs:union memberTypes="bindingtime-enum-basetype enumeration-extension-type"/>
 	</xs:simpleType>
-	<xs:simpleType name="variation-dependency-enum">
+	
+	<xs:simpleType name="variation-dependency-basetype">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="requires"/>
 			<xs:enumeration value="conflicts"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="expression-enum">
+	<xs:simpleType name="variation-dependency-enum">
+		<xs:union memberTypes="variation-dependency-basetype enumeration-extension-type"/>
+	</xs:simpleType>
+	
+	<xs:simpleType name="expression-enum-basetype">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="single-feature-condition"/>
 			<xs:enumeration value="and-feature-condition"/>
@@ -256,6 +272,10 @@
 			<xs:enumeration value="autosar-expression"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="expression-enum">
+		<xs:union memberTypes="expression-enum-basetype enumeration-extension-type"/>
+	</xs:simpleType>
+		
 	<!-- ========== AUXILIARY DATA TYPES ========== -->
 	<xs:complexType name="identifiable-type" abstract="true">
 		<xs:sequence>
