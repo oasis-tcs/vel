@@ -9,19 +9,10 @@
 			<xs:extension base="identifiable-type">
 				<xs:sequence>
 					<xs:element name="version" type="xs:unsignedInt"/>
-					<xs:element name="capability" type="capability-type"/>
 					<xs:element name="variability-exchange-model" type="variability-exchange-model-type" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="capability-type">
-		<xs:sequence>
-			<xs:element name="import-variability-exchange-model" type="xs:boolean"/>
-			<xs:element name="export-variability-exchange-model" type="xs:boolean"/>
-			<xs:element name="get-configuration" type="xs:boolean"/>
-			<xs:element name="set-configuration" type="xs:boolean"/>
-		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="variability-exchange-model-type">
 		<xs:complexContent>
