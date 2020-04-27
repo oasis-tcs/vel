@@ -226,7 +226,7 @@
 	
 	<!-- ========== EXTENDABLE ENUMERATIONS ========== -->
 	<xs:simpleType name="enumeration-extension-type">
-		<xs:restriction base="xsd:string">
+		<xs:restriction base="xs:string">
 			<xs:pattern value="x:\S.*"/>
 		</xs:restriction>
 	</xs:simpleType>
