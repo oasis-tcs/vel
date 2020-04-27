@@ -1,6 +1,5 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSpy v2011 (http://www.altova.com) by Michael Himsolt (Daimler AG) -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?> 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
 	<!-- ========== TOP LEVEL ELEMENTS  ==========-->
 	<xs:element name="variability-exchange-models" type="variability-exchange-models-type"/>
 	<!-- ========== VARIABILITY EXCHANGE MODEL(S) ========== -->
