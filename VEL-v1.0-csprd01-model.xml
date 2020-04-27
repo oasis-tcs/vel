@@ -1311,6 +1311,160 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
             the binding times as the binding time that is actually used for
             the binding:</para>
           </listitem>
+
+          <listitem>
+            <para>Let <inlineequation>
+                <mml:math display="inline" id="mml_m174b"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mrow>
+                    <mi>v</mi>
+                  </mrow>
+                </mml:math>
+              </inlineequation> be a VariationPoint and let <inlineequation>
+                <mml:math display="inline" id="mml_m174b"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>s</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+
+                    <mml:mo>,...,</mml:mo>
+
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>s</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>n</mml:mn>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> be the values of the selected attributes of
+            the BindingTimes of <inlineequation>
+                <mml:math display="inline" id="mml_m174b"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> . Then the following conditions shall
+            hold:</para>
+
+            <orderedlist>
+              <listitem>
+                <mml:math display="block" id="mml_m174"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:apply>
+                    <mml:exists/>
+
+                    <mml:in/>
+
+                    <mml:ci>i</mml:ci>
+
+                    <mml:set>
+                      <mml:cn>1</mml:cn>
+
+                      <mml:ci>,...,</mml:ci>
+
+                      <mml:ci>n</mml:ci>
+                    </mml:set>
+
+                    <mml:condition>
+                      <mml:apply>
+                        <mml:eq/>
+
+                        <mml:msub>
+                          <mml:mi>s</mml:mi>
+
+                          <mml:mi>i</mml:mi>
+                        </mml:msub>
+
+                        <mml:true/>
+                      </mml:apply>
+                    </mml:condition>
+                  </mml:apply>
+                </mml:math>
+              </listitem>
+
+              <listitem>
+                <mml:math display="block" id="mml_m174"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:apply>
+                    <mml:forall/>
+
+                    <mml:in/>
+
+                    <mml:ci>i</mml:ci>
+
+                    <mml:set>
+                      <mml:cn>1</mml:cn>
+
+                      <mml:ci>,...,</mml:ci>
+
+                      <mml:ci>n</mml:ci>
+                    </mml:set>
+
+                    <mml:apply>
+                      <mml:neq/>
+
+                      <mml:ci>i</mml:ci>
+
+                      <mml:ci>j</mml:ci>
+                    </mml:apply>
+
+                    <mml:condition>
+                      <mml:apply>
+                        <mml:eq/>
+
+                        <mml:msub>
+                          <mml:mi>s</mml:mi>
+
+                          <mml:mi>i</mml:mi>
+                        </mml:msub>
+
+                        <mml:false/>
+                      </mml:apply>
+                    </mml:condition>
+                  </mml:apply>
+                </mml:math>
+              </listitem>
+            </orderedlist>
+          </listitem>
+
+          <listitem>
+            <para>If a BindingTime has both an attribute selected
+            <inlineequation>
+                <mml:math display="inline" id="mml_m174b"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:mi>s</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> and an attribute condition <inlineequation>
+                <mml:math display="inline" id="mml_m174b"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:mi>c</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation>, then the following condition shall hold:
+            <mml:math display="block" id="mml_m174"
+                xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                <mml:apply>
+                  <mml:eq/>
+
+                  <mml:ci type="function">eval</mml:ci>
+
+                  <mml:ci>c</mml:ci>
+
+                  <mml:ci>s</mml:ci>
+                </mml:apply>
+              </mml:math></para>
+          </listitem>
         </itemizedlist>
       </section>
 
@@ -4391,9 +4545,58 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
             <itemizedlist>
               <listitem>
-                <para>If the attribute type of ??? is requires, then</para>
+                <para>If the attribute type of <inlineequation>
+                    <mml:math display="inline" id="mml_m174b"
+                              xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                      <mml:mrow>
+                        <mml:mi>d</mml:mi>
+                      </mml:mrow>
+                    </mml:math>
+                  </inlineequation> is requires, then</para>
 
-                 ???
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:apply>
+                      <mml:eq/>
+
+                      <mml:apply>
+                        <mml:ci type="function">condition</mml:ci>
+
+                        <mml:ci>d</mml:ci>
+                      </mml:apply>
+
+                      <mml:apply>
+                        <mml:implies/>
+
+                        <mml:ci>v</mml:ci>
+
+                        <mml:apply>
+                          <mml:and/>
+
+                          <mml:ci>c</mml:ci>
+
+                          <mml:apply>
+                            <mml:or/>
+
+                            <mml:msub>
+                              <mml:mi>v</mml:mi>
+
+                              <mml:mn>1</mml:mn>
+                            </mml:msub>
+
+                            <mml:mtext>,...,</mml:mtext>
+
+                            <mml:msub>
+                              <mml:mi>v</mml:mi>
+
+                              <mml:mn>1</mml:mn>
+                            </mml:msub>
+                          </mml:apply>
+                        </mml:apply>
+                      </mml:apply>
+                    </mml:apply>
+                  </mml:mrow>
+                </mml:math>
               </listitem>
 
               <listitem>
