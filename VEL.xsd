@@ -44,11 +44,9 @@
 	<xs:group name="structural-variationpoint-group">
 		<xs:choice>
 			<xs:element name="optional-structural-variationpoint" type="optional-structural-variationpoint-type"/>
-			<xs:element name="osvp" type="optional-structural-variationpoint-type"/>
 			<xs:element name="xor-structural-variationpoint" type="xor-structural-variationpoint-type"/>
 		</xs:choice>
 	</xs:group>
-
 	<xs:group name="parameter-variationpoint-group">
 		<xs:choice>
 			<xs:element name="calculated-parameter-variationpoint" type="calculated-parameter-variationpoint-type"/>
