@@ -32,6 +32,7 @@
 					<xs:element name="bindingtime" type="bindingtime-type" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="corresponding-variable-artifact-element" type="artifact-element-type" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
+				<xs:attribute name="type" type="variationpoint-types-enum" use="required"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -220,7 +221,15 @@
 			<xs:enumeration value="variationpoint-partial-configuration"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
+
+	<xs:simpleType name="variationpoint-types-enum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="optional"/>
+			<xs:enumeration value="or"/>
+			<xs:enumeration value="xor"/>
+		</xs:restriction>
+	</xs:simpleType>
+
 	<!-- ========== EXTENDABLE ENUMERATIONS ========== -->
 	<xs:simpleType name="enumeration-extension-type">
 		<xs:restriction base="xs:string">
