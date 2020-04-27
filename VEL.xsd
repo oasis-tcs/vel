@@ -103,7 +103,7 @@
 			<xs:extension base="identifiable-type">
 				<xs:sequence>
 					<xs:element name="hierarchy" type="variationpoint-hierarchy-type" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="depencency" type="variation-dependency-type" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="dependency" type="variation-dependency-type" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="corresponding-variable-artifact-element" type="artifact-element-type" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
 				<xs:attribute name="selected" type="xs:boolean" use="optional"/>
