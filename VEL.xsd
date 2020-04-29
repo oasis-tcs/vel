@@ -38,20 +38,8 @@
 	</xs:complexType>
 	<xs:group name="variationpoint-group">
 		<xs:choice>
-			<xs:group ref="structural-variationpoint-group"/>
-			<xs:group ref="parameter-variationpoint-group"/>
-		</xs:choice>
-	</xs:group>
-	<xs:group name="structural-variationpoint-group">
-		<xs:choice>
-			<xs:element name="optional-structural-variationpoint" type="optional-structural-variationpoint-type"/>
-			<xs:element name="xor-structural-variationpoint" type="xor-structural-variationpoint-type"/>
-		</xs:choice>
-	</xs:group>
-	<xs:group name="parameter-variationpoint-group">
-		<xs:choice>
-			<xs:element name="calculated-parameter-variationpoint" type="calculated-parameter-variationpoint-type"/>
-			<xs:element name="xor-parameter-variationpoint" type="xor-parameter-variationpoint-type"/>
+			<xs:element name="structural-variationpoint" type="structural-variationpoint-type"/>
+			<xs:element name="parameter-variationpoint" type="parameter-variationpoint-type"/>
 		</xs:choice>
 	</xs:group>
 	<xs:complexType name="bindingtime-type">
@@ -62,34 +50,16 @@
 		<xs:attribute name="selected" type="xs:boolean" use="optional"/>
 	</xs:complexType>
 	<!--Individual variation points-->
-	<xs:complexType name="optional-structural-variationpoint-type">
+	<xs:complexType name="structural-variationpoint-type">
 		<xs:complexContent>
 			<xs:extension base="variationpoint-type">
 				<xs:sequence>
-					<xs:element name="variation" type="optional-variation-type" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element name="variation" type="structural-variation-type" minOccurs="1" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:complexType name="xor-structural-variationpoint-type">
-		<xs:complexContent>
-			<xs:extension base="variationpoint-type">
-				<xs:sequence>
-					<xs:element name="variation" type="xor-variation-type" minOccurs="1" maxOccurs="unbounded"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="calculated-parameter-variationpoint-type">
-		<xs:complexContent>
-			<xs:extension base="variationpoint-type">
-				<xs:sequence>
-					<xs:element name="variation" type="calculated-variation-type"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="xor-parameter-variationpoint-type">
+	<xs:complexType name="parameter-variationpoint-type">
 		<xs:complexContent>
 			<xs:extension base="variationpoint-type">
 				<xs:sequence>
@@ -106,6 +76,7 @@
 					<xs:element name="hierarchy" type="variationpoint-hierarchy-type" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="dependency" type="variation-dependency-type" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="corresponding-variable-artifact-element" type="artifact-element-type" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="condition" type="expression-type" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 				<xs:attribute name="selected" type="xs:boolean" use="optional"/>
 			</xs:extension>
@@ -140,30 +111,9 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!--Individual variations-->
-	<xs:complexType name="optional-variation-type">
+	<xs:complexType name="structural-variation-type">
 		<xs:complexContent>
 			<xs:extension base="variation-type">
-				<xs:sequence>
-					<xs:element name="condition" type="expression-type" minOccurs="0" maxOccurs="1"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="xor-variation-type">
-		<xs:complexContent>
-			<xs:extension base="variation-type">
-				<xs:sequence>
-					<xs:element name="condition" type="expression-type" minOccurs="0" maxOccurs="1"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="calculated-variation-type">
-		<xs:complexContent>
-			<xs:extension base="variation-type">
-				<xs:sequence>
-					<xs:element name="expression" type="expression-type" minOccurs="0" maxOccurs="1"/>
-				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -171,8 +121,8 @@
 		<xs:complexContent>
 			<xs:extension base="variation-type">
 				<xs:sequence>
-					<xs:element name="condition" type="expression-type" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="value" type="xs:string"/>
+					<xs:element name="expression" type="expression-type" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="value" type="xs:string" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
