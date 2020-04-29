@@ -273,9 +273,6 @@
 			<xs:enumeration value="single-feature-condition"/>
 			<xs:enumeration value="and-feature-condition"/>
 			<xs:enumeration value="or-feature-condition"/>
-			<xs:enumeration value="pvscl-expression"/>
-			<xs:enumeration value="ocl-expression"/>
-			<xs:enumeration value="autosar-expression"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="expression-enum">
