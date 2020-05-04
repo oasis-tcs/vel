@@ -250,7 +250,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       page (<ulink
       url="https://www.oasis-open.org/committees/vel/ipr.php">https://www.oasis-open.org/committees/vel/ipr.php</ulink>).</para>
 
-      <para>Note that any machine-readable content (<ulink
+      <para>Note that any machine-readable content (<ulink conformance="skip"
       url="https://www.oasis-open.org/policies-guidelines/tc-process#wpComponentsCompLang">Computer
       Language Definitions</ulink>) declared Normative for this Work Product
       is provided in separate plain text files. In the event of a discrepancy
@@ -362,7 +362,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
     <section id="S-OVERVIEW">
       <title>Overview</title>
-
+	 
+      <section>
+      <title>Section Prolog</title>
       <para>VEL is an interoperability standard that enables the exchange of
       variability information among variant management tools and systems
       development tools. The essential tasks of a variants management tool are
@@ -387,6 +389,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       the cost of building customized interfaces by defining a standard way
       for information to be exchanged between tools.</para>
 
+	  </section>  
+ 
       <section>
         <title>Variants Management, System Variability, and Variation
         Points</title>
@@ -613,10 +617,12 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <title>Normative References</title>
 
       <bibliolist>
+	    <!--
         <bibliomixed id="docbook"><abbrev>DocBook</abbrev> <citetitle>DocBook
         4.5 </citetitle> <date>17 January 2005. </date> <releaseinfo>OASIS
         Committee Draft 4.5. </releaseinfo> <bibliomisc><ulink
         url="https://www.docbook.org/specs/docbook-4.5-spec.html">https://www.docbook.org/specs/docbook-4.5-spec.html</ulink>.</bibliomisc></bibliomixed>
+        -->
 
         <bibliomixed id="rfc2119"><abbrev>RFC 2119</abbrev> <citetitle>Key
         words for use in RFCs to Indicate Requirement Levels</citetitle>,
@@ -633,7 +639,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
     <section id="S-NON-NORMATIVE-REFERENCES">
       <title>Non-Normative References</title>
 
-      <bibliolist>
+      <para>TODO</para>
+       <!--
+      <bibliolist>	   
         <bibliomixed id="oasis-spec"><abbrev>oasis-spec</abbrev>
         <citetitle>OASIS Specification Publishing in DocBook XML Version
         &version;. </citetitle> <date>&pubdate;. </date> <releaseinfo>OASIS
@@ -649,12 +657,16 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           </author>. <releaseinfo>W3C Recommendation. </releaseinfo>
         <bibliomisc><ulink
         url="http://www.w3.org/1999/06/REC-xml-stylesheet-19990629">http://www.w3.org/1999/06/REC-xml-stylesheet-19990629</ulink></bibliomisc></bibliomixed>
-      </bibliolist>
+	  </bibliolist>
+        -->
     </section>
   </section>
 
   <section id="S-SECTION-TITLE">
     <title>Overview of the Variability Exchange Language</title>
+
+	<section>
+    <title>Section Prolog</title>
 
     <para>The core of the <emphasis>Variability Exchange Language</emphasis>
     is given by the definition of variation points and their variations
@@ -691,6 +703,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
     aspects of an artifact, but only those. All non-variable facets of the
     artifact are discarded because they are not necessary for our
     purpose.</para>
+
+	</section>
 
     <section id="S-SUB-SECTION-TITLE">
       <title>VariationPoint and Variation</title>
@@ -940,6 +954,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
     <section>
       <title>ArtifactElement &lt; artifact-element-type&gt;</title>
 
+      <section>
+      <title>Section Prolog</title>
+
       <figure>
         <title>UML Diagram for class ArtifactElement</title>
 
@@ -1008,6 +1025,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
       <para id="_Ref394051016">XML Example for artifact-element-type using
       artifact-specific XML elements</para>
+
+      </section>		
 
       <section>
         <title>Description</title>
@@ -1084,6 +1103,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
     <section id="_Ref395705586">
       <title>BindingTime &lt;bindingtime-type&gt;</title>
+
+      <section>
+      <title>Section Prolog</title>
 
       <figure>
         <title>UML Diagram for class BindingTime</title>
@@ -1248,6 +1270,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <para>XML Example for binding-time-type in a
       variationpoint-configuration</para>
 
+      </section>
+
       <section>
         <title>Description</title>
 
@@ -1314,14 +1338,14 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
           <listitem>
             <para>Let <inlineequation>
-                <mml:math display="inline" id="mml_m174b"
+                <mml:math display="inline" id="mml_m174b_1"
                           xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                  <mrow>
-                    <mi>v</mi>
-                  </mrow>
+                  <mml:mrow>
+                    <mml:mi>v</mml:mi>
+                  </mml:mrow>
                 </mml:math>
               </inlineequation> be a VariationPoint and let <inlineequation>
-                <mml:math display="inline" id="mml_m174b"
+                <mml:math display="inline" id="mml_m174b_2"
                           xmlns:mml="http://www.w3.org/1998/Math/MathML">
                   <mml:mrow>
                     <mml:msub>
@@ -1345,7 +1369,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
                 </mml:math>
               </inlineequation> be the values of the selected attributes of
             the BindingTimes of <inlineequation>
-                <mml:math display="inline" id="mml_m174b"
+                <mml:math display="inline" id="mml_m174b_3"
                           xmlns:mml="http://www.w3.org/1998/Math/MathML">
                   <mml:mrow>
                     <mml:mi>v</mml:mi>
@@ -1355,7 +1379,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
             hold:</para>
 
             <orderedlist>
-              <listitem>
+              <listitem><para><inlineequation>
                 <mml:math display="block" id="mml_m174"
                           xmlns:mml="http://www.w3.org/1998/Math/MathML">
                   <mml:apply>
@@ -1388,10 +1412,10 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
                     </mml:condition>
                   </mml:apply>
                 </mml:math>
-              </listitem>
+              </inlineequation></para></listitem>
 
               <listitem>
-                <mml:math display="block" id="mml_m174"
+                <para><inlineequation><mml:math display="block" id="mml_m174_4"
                           xmlns:mml="http://www.w3.org/1998/Math/MathML">
                   <mml:apply>
                     <mml:forall/>
@@ -1431,7 +1455,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
                     </mml:condition>
                   </mml:apply>
                 </mml:math>
-              </listitem>
+              </inlineequation></para></listitem>
             </orderedlist>
           </listitem>
 
@@ -1445,14 +1469,15 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
                   </mml:mrow>
                 </mml:math>
               </inlineequation> and an attribute condition <inlineequation>
-                <mml:math display="inline" id="mml_m174b"
+                <mml:math display="inline" id="mml_m174b_6"
                           xmlns:mml="http://www.w3.org/1998/Math/MathML">
                   <mml:mrow>
                     <mml:mi>c</mml:mi>
                   </mml:mrow>
                 </mml:math>
               </inlineequation>, then the following condition shall hold:
-            <mml:math display="block" id="mml_m174"
+			  <inlineequation>
+            <mml:math display="block" id="mml_m174_5"
                 xmlns:mml="http://www.w3.org/1998/Math/MathML">
                 <mml:apply>
                   <mml:eq/>
@@ -1463,7 +1488,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
                   <mml:ci>s</mml:ci>
                 </mml:apply>
-              </mml:math></para>
+              </mml:math></inlineequation></para>
           </listitem>
         </itemizedlist>
       </section>
@@ -1490,6 +1515,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
     <section>
       <title>BindingTimeEnum &lt;bindingtime-enum&gt;</title>
+
+      <section>
+      <title>Section Prolog</title>
 
       <figure>
         <title>UML Diagram for enumeration BindingTimeEnum</title>
@@ -1537,6 +1565,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <para>&lt;/xs:simpleType&gt;</para>
 
       <para>XML Schema for bindingtime-enum</para>
+
+      </section> 
 
       <section>
         <title>RequirementsTime</title>
@@ -1653,6 +1683,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <title>CalculatedParameterVariationPoint
       &lt;calculated-parameter-variationpoint-type&gt;</title>
 
+      <section>
+      <title>Section Prolog</title>
+
       <figure>
         <title>UML Diagram for class CalculatedParameterVariationPoint</title>
 
@@ -1699,6 +1732,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
       <para>XML Example for calculated-parameter-variationpoint-type</para>
 
+      </section>
+
       <section>
         <title>Description</title>
 
@@ -1729,6 +1764,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
     <section>
       <title>CalculatedVariation &lt;calculated-variation-type&gt;</title>
+
+      <section>
+      <title>Section Prolog</title>
 
       <figure>
         <title>UML Diagram for class CalculatedVariation</title>
@@ -1778,6 +1816,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <para>&lt;/calculated-parameter-variationpoint&gt;</para>
 
       <para>XML Example for calculated-variation-type</para>
+
+      </section>
 
       <section>
         <title>Description</title>
@@ -1836,6 +1876,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
     <section>
       <title>Capability &lt;capability-type&gt;</title>
+
+      <section>
+      <title>Section Prolog</title>
 
       <figure>
         <title>UML Diagram for class Capability</title>
@@ -1900,6 +1943,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
       <para>XML Example for capability-type</para>
 
+      </section>
+
       <section>
         <title>Description</title>
 
@@ -1945,6 +1990,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
     <section id="_Toc393199836">
       <title>Expression &lt;expression-type&gt;</title>
+
+      <section>
+      <title>Section Prolog</title>
 
       <figure>
         <title>[XMLmind] Diagram for class Expression</title>
@@ -2028,6 +2076,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <para>&lt;/xor-structural-variationpoint&gt;</para>
 
       <para id="_Ref403984631">XML Example for expression-type</para>
+
+      </section>
 
       <section>
         <title>Description</title>
@@ -2227,6 +2277,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <section>
         <title>Representation of expressions and features in XML</title>
 
+        <section>
+        <title>Section Prolog</title>
+
         <para>A Feature is a reference to an element in a model that describes
         the variability of an artifact, typically a feature model. The exact
         nature of a feature model is beyond the scope of this document.</para>
@@ -2239,6 +2292,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
             document.</para>
           </listitem>
         </itemizedlist>
+
+        </section> 
 
         <section id="_Ref400711346">
           <title>Syntax [XMLmind] single-feature&ndash;condition</title>
@@ -2289,6 +2344,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
     <section>
       <title>ExpressionTypeEnum &lt;expression-enum&gt;</title>
 
+      <section>
+      <title>Section Prolog</title>
+
       <figure>
         <title>UML Diagram for class ExpressionTypeEnum</title>
 
@@ -2322,6 +2380,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
       <para>XML Schema for expression-enum</para>
 
+      </section>
+
       <section>
         <title>Description</title>
 
@@ -2334,6 +2394,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
     <section>
       <title>Identifiable &lt;identifiable-type&gt;</title>
+
+      <section>
+      <title>Section Prolog</title>
 
       <figure>
         <title>UML Diagram for class Identifiable</title>
@@ -2410,6 +2473,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <para>&lt;/optional-structural-variationpoint&gt;</para>
 
       <para>XML Example for identifable-type (id attribute)</para>
+
+      </section>
 
       <section>
         <title>Description</title>
@@ -2556,6 +2621,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
     <section>
       <title>KeyValuePair &lt;key-value-pair-type&gt;</title>
 
+      <section>
+      <title>Section Prolog</title>
+
       <figure>
         <title>UML Diagram for class KeyValuePair</title>
 
@@ -2638,6 +2706,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <para>&lt;/optional-structural-variationpoint&gt;</para>
 
       <para id="_Ref400962860">XML Example for key-value-pair-type</para>
+
+      </section>
 
       <section>
         <title>Description of [XMLmind] KeyValuePair</title>
@@ -2722,6 +2792,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <title>OptionalStructuralVariationPoint
       &lt;optional-structural-variaton-point-type&gt;</title>
 
+      <section>
+      <title>Section Prolog</title>
+
       <figure>
         <title>UML Diagram for class OptionalStructuralVariatonPoint</title>
 
@@ -2802,6 +2875,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <para>XML Example for optional-structural-variaton-point-type with
       multiple variations</para>
 
+      </section>
+
       <section>
         <title>Description</title>
 
@@ -2824,6 +2899,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
     <section>
       <title>OptionalVariation &lt;optional-variation-type&gt;</title>
+
+      <section>
+      <title>Section Prolog</title>
 
       <figure>
         <title>UML Diagram for class OptionalVariation</title>
@@ -2871,6 +2949,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
       <para>XML Example for optional-variation-type</para>
 
+      </section>
+	  
       <section>
         <title>Description</title>
 
@@ -2931,6 +3011,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <title>ParameterVariationPoint
       &lt;parameter-variationpoint-group&gt;</title>
 
+      <section>
+      <title>Section Prolog</title>
+
       <figure id="_Ref396914104">
         <title>UML Diagram for class ParamaterVariationPoint</title>
 
@@ -2959,6 +3042,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <para>&lt;/xs:group&gt;</para>
 
       <para>XML Schema for parameter-variationpoint-group</para>
+
+      </section>
 
       <section>
         <title>Description</title>
@@ -3016,6 +3101,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
     <section>
       <title>SpecialData &lt;special-data-type&gt;</title>
+
+      <section>
+      <title>Section Prolog</title>
 
       <figure>
         <title>[XMLmind] Diagram for class SpecialData</title>
@@ -3078,6 +3166,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
       <para>XML Example for special-data-type</para>
 
+      </section>
+
       <section>
         <title>Description</title>
 
@@ -3128,6 +3218,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <title>StructuralVariationPoint
       &lt;structural-variationpoint-group&gt;</title>
 
+      <section>
+      <title>Section Prolog</title>
+
       <figure id="_Ref395172805">
         <title>UML Diagram for class StructuralVariationPoint</title>
 
@@ -3157,6 +3250,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
       <para>XML Schema for structural-variationpoint-group</para>
 
+      </section>
+      
       <section>
         <title>Description</title>
 
@@ -3200,6 +3295,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
     <section>
       <title>ValueVariation &lt;value-variation-type&gt;</title>
+
+      <section>
+      <title>Section Prolog</title>		
 
       <figure>
         <title>UML Diagram for class ValueVariation</title>
@@ -3278,6 +3376,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <para>&lt;/xor-parameter-variationpoint&gt;</para>
 
       <para>[XMLmind] Example for value-variation-type</para>
+
+      </section>
 
       <section>
         <title>Description</title>
@@ -3364,6 +3464,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
     <section id="_Ref400958695">
       <title>VariabilityAPI</title>
 
+      <section>
+      <title>Section Prolog</title>
+
       <figure id="_Ref396986103">
         <title>UML Diagram for class VariabilityAPI</title>
 
@@ -3374,6 +3477,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           </imageobject>
         </mediaobject>
       </figure>
+
+      </section>
 
       <section>
         <title>Description</title>
@@ -3515,6 +3620,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <title>VariabilityExchangeModel
       &lt;variability-exchange-model-type&gt;</title>
 
+      <section>
+      <title>Section Prolog</title>
+
       <figure>
         <title>UML Diagram for class VariabilityExchangeModel</title>
 
@@ -3619,6 +3727,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
       <para>XML example for variability-exchange-model-type</para>
 
+      </section>
+
       <section>
         <title>Description</title>
 
@@ -3680,6 +3790,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
     <section>
       <title>VariabilityExchangeModels
       &lt;variability-exchange-models-type&gt;</title>
+
+      <section>
+      <title>Section Prolog</title>
 
       <figure>
         <title>UML Diagram for class VariabilityExchangeModels</title>
@@ -3758,6 +3871,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <para>&lt;/variability-exchange-models&gt;</para>
 
       <para>XML example for variability-exchange-models-type</para>
+
+      </section>
 
       <section>
         <title>Description</title>
@@ -3839,6 +3954,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
     <section>
       <title>VariabilityAPITypeEnum &lt;variability-api-enum&gt;</title>
+ 
+      <section>
+      <title>Section Prolog</title>
 
       <figure>
         <title>UML Diagram for class VariabilityAPITypeEnum</title>
@@ -3908,6 +4026,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
       <para>XML example for variability-api-type-enum</para>
 
+      </section> 
+
       <section>
         <title>Description</title>
 
@@ -3930,6 +4050,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
     <section>
       <title>Variation &lt;variation-type&gt;</title>
+
+      <section>
+      <title>Section Prolog</title> 
 
       <figure>
         <title>[XMLmind] Diagram for class Variation</title>
@@ -3982,6 +4105,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <para>&lt;/xs:complexType&gt;</para>
 
       <para>XML Schema for variation-type</para>
+
+      </section>
 
       <section>
         <title>Description</title>
@@ -4087,6 +4212,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
     <section>
       <title>VariationPoint &lt;variationpoint-type&gt;</title>
 
+      <section>
+      <title>Section Prolog</title>
+
       <figure>
         <title>UML Diagram for class VariationPoint</title>
 
@@ -4141,6 +4269,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <para>&lt;/xs:group&gt;</para>
 
       <para>[XMLmind] Schema for variationpoint-type</para>
+
+      </section>
 
       <section>
         <title>Description</title>
@@ -4232,6 +4362,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <title>VariationPointHierarchy
       &lt;variationpoint-hierarchy-type&gt;</title>
 
+      <section>
+      <title>Section Prolog</title>
+
       <figure>
         <title>UML Diagram for class VariationPointHierarchy</title>
 
@@ -4311,6 +4444,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
       <para>XML Example for variationpoint-hierarchy-type</para>
 
+      </section>
+      
       <section>
         <title>Description</title>
 
@@ -4381,6 +4516,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
     <section>
       <title>VariationDependency &lt;variation-dependency-type&gt;</title>
+
+      <section>
+      <title>Section Prolog</title>
 
       <figure>
         <title>UML Diagram for class VariationDependenxy</title>
@@ -4488,6 +4626,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
       <para>[XMLmind] example for variation-dependency-type</para>
 
+      </section>
+
       <section>
         <title>Description</title>
 
@@ -4546,14 +4686,14 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
             <itemizedlist>
               <listitem>
                 <para>If the attribute type of <inlineequation>
-                    <mml:math display="inline" id="mml_m174b"
+                    <mml:math display="inline" id="mml_m174b_7"
                               xmlns:mml="http://www.w3.org/1998/Math/MathML">
                       <mml:mrow>
                         <mml:mi>d</mml:mi>
                       </mml:mrow>
                     </mml:math>
-                  </inlineequation> is requires, then</para>
-
+                  </inlineequation> is requires, then
+				<inlineequation>
                 <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
                   <mml:mrow>
                     <mml:apply>
@@ -4597,6 +4737,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
                     </mml:apply>
                   </mml:mrow>
                 </mml:math>
+				</inlineequation></para>
               </listitem>
 
               <listitem>
@@ -4607,9 +4748,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
           <listitem>
             <para>Let ??? be [XMLmind] VariationDependency objects contained
-            by a Variation??? is defined as follows:</para>
+            by a Variation??? is defined as follows: ???</para>
 
-             ???
+             
           </listitem>
 
           <listitem>
@@ -4645,6 +4786,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
     <section id="_Capability">
       <title>VariationDependencyEnum &lt;variation-dependency-enum&gt;</title>
 
+      <section>
+      <title>Section Prolog</title>
+
       <figure>
         <title>UML Diagram for class VariationDependenyEnum</title>
 
@@ -4670,6 +4814,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
       <para>XML Schema for variation-dependency-enum</para>
 
+      </section>
+
       <section>
         <title>Description</title>
 
@@ -4694,6 +4840,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
     <section>
       <title>XorParameterVariationPoint &lt;
       xor-parameter-variationpoint-type&gt;</title>
+
+      <section>
+      <title>Section Prolog</title>
 
       <figure>
         <title>UML Diagram for class XorParameterVariationPoint</title>
@@ -4764,6 +4913,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
       <para>XML Example for xor-parameter-variationpoint-type</para>
 
+      </section>
+
       <section>
         <title>Description</title>
 
@@ -4802,6 +4953,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
     <section>
       <title>XorStructuralVariationPoint
       &lt;xor-structural-variationpoint-type&gt;</title>
+   
+      <section>
+      <title>Section Prolog</title>
 
       <figure>
         <title>UML Diagram for XorStructuralVariationPoint</title>
@@ -4865,6 +5019,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
       <para>XML Example for xor-structural-variationpoint-type</para>
 
+      </section>
+
       <section>
         <title>Description</title>
 
@@ -4895,6 +5051,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
     <section>
       <title>XorVariation &lt;xor-variation-type&gt;</title>
+   
+      <section>
+      <title>Section Prolog</title> 
 
       <figure>
         <title>UML Diagram for XorVariation</title>
@@ -4962,6 +5121,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <para>&lt;/xor-structural-variationpoint&gt;</para>
 
       <para>XML Example for xor-variation-type</para>
+
+      </section>
 
       <section>
         <title>Description</title>
