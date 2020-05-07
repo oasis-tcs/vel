@@ -1,0 +1,4 @@
+saxon9he.jar is part of Saxon-HE package.
+Saxon-HE is available under the Mozilla Public License version 2.0.
+The source code of Saxon-HE can be downloaded from
+https://sourceforge.net/projects/saxon/files/Saxon-HE/

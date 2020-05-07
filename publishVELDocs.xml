@@ -1,0 +1,131 @@
+<project default="make">
+
+<target name="make">
+  <!--documentation-->
+  <echo message="stage=${stage}"/>
+  <echo message="version=${version}"/>
+  <echo message="datetimelocal=${datetimelocal}"/>
+
+  <antcall target="-make-docs"/>
+  
+  <antcall target="-package"/>
+</target>
+
+<target name="-check-docs">
+  <uptodate targetfile="VEL-v1.0-csprd01-model.html"
+            property=  "docs-VEL-html-okay">
+    <srcfiles dir=".">
+      <include name="VEL-v1.0-csprd01-model.xml"/>
+    </srcfiles>
+  </uptodate>  
+  <uptodate targetfile="VEL-v1.0-csprd01-model.pdf"
+            property=  "docs-VEL-pdf-okay">
+    <srcfiles dir=".">
+      <include name="VEL-v1.0-csprd01-model.xml"/>
+    </srcfiles>
+  </uptodate>
+  <condition property="docs-VEL-okay">
+    <and>
+      <istrue value="${docs-VEL-html-okay}"/>
+      <istrue value="${docs-VEL-pdf-okay}"/>
+    </and>
+  </condition>
+</target>
+
+<target name="-make-docs" depends="-check-docs" unless="docs-VEL-okay">
+  <!--remove old results-->
+  <delete file="VEL-v1.0-csprd01-model.html"/>
+  <delete file="VEL-v1.0-csprd01-model.pdf"/>
+  <delete file="VEL-v1.0-csprd01-model-pub.zip"/>
+  <!--package inputs-->
+  <zip destfile="VEL-v1.0-csprd01-model-pub.zip">
+    <fileset dir=".">
+      <include name="VEL-v1.0-csprd01-model.xml"/>
+      <include name="Figures/**"/>
+    </fileset>
+  </zip>
+  <!--create outputs-->
+  <echo message="Submitting print job..."/>
+  <ant antfile="SetareServerAnt.xml">
+    <property name="entrypoint" value="OASIS-spec2pdfhtml"/>
+    <property name="fileupload"
+              value="VEL-v1.0-csprd01-model-pub.zip"/>
+    <property name="dateprefix" value="VEL 1.0"/>
+  </ant>
+  <echo message="Check and cleanup..."/>
+  <available property="ready-pdf" file="VEL-v1.0-csprd01-model.pdf"/>
+  <fail unless="ready-pdf" message="PDF not created"/>
+  <available property="ready-html" file="VEL-v1.0-csprd01-model.html"/>
+  <fail unless="ready-html" message="HTML not created"/>
+  <!--these touches are necessary because unzip doesn't preserve time of day-->
+  <touch file="VEL-v1.0-csprd01-model.pdf"/>
+  <touch file="VEL-v1.0-csprd01-model.html"/>
+  <!--intermediate file no longer needed-->
+  <delete file="VEL-v1.0-csprd01-model-pub.zip"/>
+</target>
+
+<target name="-package">
+  <echo message="Checking existence of results..."/>
+  <available property="html-made" file="VEL-v1.0-csprd01-model.html"/>
+  <available property="pdf-made" file="VEL-v1.0-csprd01-model.pdf"/>
+  <condition property="docs-not-made">
+    <not>
+      <and>
+        <istrue value="${html-made}"/>
+        <istrue value="${pdf-made}"/>
+      </and>
+    </not>
+  </condition>
+  <fail if="docs-not-made" message="Problem with creating the documentation"/>
+
+  <delete dir="${dir}hub-VEL-v1.0-csprd01-model-${stage}-${version}"/>
+  <mkdir dir="${dir}hub-VEL-v1.0-csprd01-model-${stage}-${version}"/>
+  <copy todir="${dir}hub-VEL-v1.0-csprd01-model-${stage}-${version}">
+    <fileset dir=".">
+      <include name="VEL-v1.0-csprd01-model.xml"/>
+      <include name="VEL-v1.0-csprd01-model.html"/>
+      <include name="VEL-v1.0-csprd01-model.pdf"/>
+    </fileset>
+  </copy>
+
+  <mkdir dir="${dir}hub-VEL-v1.0-csprd01-model-${stage}-${version}/db"/>
+  <copy todir="${dir}hub-VEL-v1.0-csprd01-model-${stage}-${version}/db">
+    <fileset dir="db/spec-0.8/htmlruntime">
+     <include name="**"/>
+    </fileset>
+  </copy>
+
+  <mkdir dir="${dir}hub-VEL-v1.0-csprd01-model-${stage}-${version}/Figures"/>
+  <copy todir="${dir}hub-VEL-v1.0-csprd01-model-${stage}-${version}/Figures">
+    <fileset dir="Figures"> <!-- TODO: own Figures for HTML -->
+     <include name="*"/>
+    </fileset>
+  </copy>
+  
+  <!--
+  <mkdir dir="${dir}hub-VEL-v1.0-csprd01-model-${stage}-${version}/art/artpdf"/>
+  <copy todir="${dir}hub-VEL-v1.0-csprd01-model-${stage}-${version}/art/artpdf">
+    <fileset dir="art">
+     <include name="*"/>
+    </fileset>
+  </copy> -->
+
+  <delete file="${dir}hub-VEL-v1.0-csprd01-model-${stage}-${version}.zip"/>
+  <touch datetime="${datetimelocal}" pattern="yyyyMMdd-HHmm">
+    <fileset dir="${dir}hub-VEL-v1.0-csprd01-model-${stage}-${version}"/>
+  </touch>
+
+  <zip destfile="${dir}hub-VEL-v1.0-csprd01-model-${stage}-${version}.zip"
+       basedir="${dir}" includes="hub-VEL-v1.0-csprd01-model-${stage}-${version}/**"/>
+  <delete dir="${dir}hub-VEL-v1.0-csprd01-model-${stage}-${version}"/>
+  <unzip src="${dir}hub-VEL-v1.0-csprd01-model-${stage}-${version}.zip" 
+         dest="${dir}"/>
+
+  <touch datetime="${datetimelocal}" pattern="yyyyMMdd-HHmm">
+    <fileset dir="${dir}">
+      <include name="hub-VEL-v1.0-csprd01-model-${stage}-${version}.zip"/>
+    </fileset>
+  </touch>
+</target>
+
+</project>
