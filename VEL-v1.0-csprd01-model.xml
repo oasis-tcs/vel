@@ -1179,7 +1179,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
                             <mml:mn>1</mml:mn>
                           </mml:msub>
 
-                          <mml:mo>,...,</mml:mo>
+                    <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
 
                           <mml:msub>
                             <mml:mrow>
@@ -1207,75 +1207,139 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
                                 xmlns:mml="http://www.w3.org/1998/Math/MathML">
                         <mml:apply>
                           <mml:exists/>
+					<mml:bvar><mml:ci>i</mml:ci></mml:bvar>
+					<mml:apply><mml:and/>
 
-                          <mml:in/>
-
+					<mml:apply><mml:in/>
                           <mml:ci>i</mml:ci>
-
                           <mml:set>
                             <mml:cn>1</mml:cn>
 
-                            <mml:ci>,...,</mml:ci>
+                      <mml:ci>...</mml:ci>
 
                             <mml:ci>n</mml:ci>
                           </mml:set>
+					</mml:apply>
 
-                          <mml:condition>
-                            <mml:apply>
-                              <mml:eq/>
-
-                              <mml:msub>
+					<mml:apply><mml:eq/>
+                    <mml:ci><mml:msub>
                                 <mml:mi>s</mml:mi>
-
                                 <mml:mi>i</mml:mi>
                               </mml:msub>
+					</mml:ci>
 
                               <mml:true/>
                             </mml:apply>
-                          </mml:condition>
+                  </mml:apply>
                         </mml:apply>
                       </mml:math>
                     </inlineequation></para></listitem>
 
                     <listitem>
-                      <para><inlineequation><mml:math display="block" id="mml_m174_4"
+                <para><inlineequation>
+                <mml:math display="block" id="mml_m175"
                                 xmlns:mml="http://www.w3.org/1998/Math/MathML">
                         <mml:apply>
                           <mml:forall/>
+					<mml:bvar><mml:ci>j</mml:ci></mml:bvar>
+					<mml:apply><mml:implies/>
+					<mml:apply><mml:and/>
 
-                          <mml:in/>
-
-                          <mml:ci>i</mml:ci>
-
+					<mml:apply><mml:in/>
+					<mml:ci>j</mml:ci>
                           <mml:set>
                             <mml:cn>1</mml:cn>
 
-                            <mml:ci>,...,</mml:ci>
+                      <mml:ci>...</mml:ci>
 
                             <mml:ci>n</mml:ci>
                           </mml:set>
+					</mml:apply>
+					
+					<mml:apply><mml:neq/>
+                    <mml:ci>j</mml:ci>
+					<mml:ci>i</mml:ci>
+					</mml:apply>
+                  </mml:apply>
+					<mml:apply><mml:eq/>
+                    <mml:ci><mml:msub>
+                         <mml:mi>s</mml:mi>
+                         <mml:mi>j</mml:mi>
+                    </mml:msub>
+					</mml:ci>
 
+                    <mml:false/>
+				  </mml:apply>
+				  </mml:apply>
+				  </mml:apply>
+                </mml:math>
+              </inlineequation></para></listitem>
+			  
+			  <listitem><para><inlineequation>
+                <mml:math display="block" id="mml_m176"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
                           <mml:apply>
-                            <mml:neq/>
+                    <mml:exists/>
+					<mml:bvar><mml:ci>i</mml:ci></mml:bvar>
+					<mml:apply><mml:and/>
 
+					<mml:apply><mml:in/>
                             <mml:ci>i</mml:ci>
+                    <mml:set>
+                      <mml:cn>1</mml:cn>
 
-                            <mml:ci>j</mml:ci>
+                      <mml:ci>...</mml:ci>
+
+                      <mml:ci>n</mml:ci>
+                    </mml:set>
+					</mml:apply>
+					
+					<mml:apply><mml:and/>
+						<mml:apply><mml:eq/>
+						<mml:ci><mml:msub>
+							 <mml:mi>s</mml:mi>
+							 <mml:mi>i</mml:mi>
+						</mml:msub>
+						</mml:ci>
+						<mml:true/>
                           </mml:apply>
 
-                          <mml:condition>
                             <mml:apply>
-                              <mml:eq/>
+                    <mml:forall/>
+					<mml:bvar><mml:ci>j</mml:ci></mml:bvar>
+					<mml:apply><mml:implies/>
+					<mml:apply><mml:and/>
 
-                              <mml:msub>
-                                <mml:mi>s</mml:mi>
+					<mml:apply><mml:in/>
+					<mml:ci>j</mml:ci>
+                    <mml:set>
+                      <mml:cn>1</mml:cn>
 
-                                <mml:mi>i</mml:mi>
+                      <mml:ci>...</mml:ci>
+
+                      <mml:ci>n</mml:ci>
+                    </mml:set>
+					</mml:apply>
+					
+					<mml:apply><mml:neq/>
+                    <mml:ci>j</mml:ci>
+					<mml:ci>i</mml:ci>
+					</mml:apply>
+                  </mml:apply>
+					<mml:apply><mml:eq/>
+                    <mml:ci><mml:msub>
+                         <mml:mi>s</mml:mi>
+                         <mml:mi>j</mml:mi>
                               </mml:msub>
+					</mml:ci>
 
                               <mml:false/>
                             </mml:apply>
-                          </mml:condition>
+				  </mml:apply>
+				  </mml:apply>
+					
+					</mml:apply>
+                  </mml:apply>
                         </mml:apply>
                       </mml:math>
                     </inlineequation></para></listitem>
@@ -1299,19 +1363,19 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
                         </mml:mrow>
                       </mml:math>
                     </inlineequation>, then the following condition shall hold:
-              <inlineequation>
+				
+				<equation>
                   <mml:math display="block" id="mml_m174_5"
                       xmlns:mml="http://www.w3.org/1998/Math/MathML">
                       <mml:apply>
                         <mml:eq/>
 
-                        <mml:ci type="function">eval</mml:ci>
-
-                        <mml:ci>c</mml:ci>
-
+					  <mml:apply><mml:ci type="function">eval</mml:ci><mml:ci>c</mml:ci></mml:apply>
                         <mml:ci>s</mml:ci>
                       </mml:apply>
-                    </mml:math></inlineequation></para>
+				  </mml:math>
+				  </equation>
+			  </para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -1905,14 +1969,103 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         Boolean condition whose literal is a single Feature.</para>
 
         <para>The example in <xref linkend="_Ref403984631"/> translates to the
-        Boolean expression ??? [TODO]</para>
-
-        <para>Formally, if a <type>SingleFeatureCondition</type> references the feature [TODO: f_1], 
-        then this translates into the Boolean expression</para>
-                
-        <para>[TODO: eval(f1)]</para>
+        Boolean expression 
+		<equation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mtext mathvariant="italic">Feature</mml:mtext>
+                      </mml:mrow>
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+				</mml:mrow>
+				</mml:math>
+		</equation></para>
         
-        <para>[TODO: where eval(f1) is true if feature fi is selected, and eval(fi) is fi is not selected]</para>
+        <para>Formally, if a <type>SingleFeatureCondition</type> references the feature 
+		<inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>f</mml:mi>
+                      </mml:mrow>
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+				</mml:mrow>
+				</mml:math>
+		</inlineequation>		
+        then this translates into the Boolean expression
+		<equation>
+				<mml:math display="block" 
+					xmlns:mml="http://www.w3.org/1998/Math/MathML">
+					  <mml:apply><mml:ci type="function">eval</mml:ci>
+					  <mml:ci>
+						<mml:msub>
+							<mml:mrow>
+								<mml:mi>f</mml:mi>
+							</mml:mrow>
+							<mml:mn>i</mml:mn>
+						</mml:msub>
+						</mml:ci>
+					</mml:apply>
+			  </mml:math>
+		</equation> where <inlineequation>
+				<mml:math display="block" 
+					xmlns:mml="http://www.w3.org/1998/Math/MathML">
+					<mml:apply><mml:ci type="function">eval</mml:ci>
+					  <mml:ci>
+						<mml:msub>
+							<mml:mrow>
+								<mml:mi>f</mml:mi>
+							</mml:mrow>
+							<mml:mn>i</mml:mn>
+						</mml:msub>
+						</mml:ci>
+					</mml:apply>
+			  </mml:math>
+		</inlineequation> is <emphasis>true</emphasis> if feature <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>f</mml:mi>
+                      </mml:mrow>
+                      <mml:mn>i</mml:mn>
+                    </mml:msub>
+				</mml:mrow>
+				</mml:math>
+		</inlineequation> is selected, and <inlineequation>
+				<mml:math display="block" 
+					xmlns:mml="http://www.w3.org/1998/Math/MathML">
+					<mml:apply><mml:ci type="function">eval</mml:ci>
+					  <mml:ci>
+						<mml:msub>
+							<mml:mrow>
+								<mml:mi>f</mml:mi>
+							</mml:mrow>
+							<mml:mn>i</mml:mn>
+						</mml:msub>
+						</mml:ci>
+					</mml:apply>
+			  </mml:math>
+		</inlineequation> if <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>f</mml:mi>
+                      </mml:mrow>
+                      <mml:mn>i</mml:mn>
+                    </mml:msub>
+				</mml:mrow>
+				</mml:math>
+		</inlineequation> is not selected.</para>
 
         <para>The datatype for an <type>Expression</type> of type
         <type>SingleFeatureCondition</type> should be Boolean.</para>
@@ -1928,7 +2081,39 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         condition whose literals are features, and which are connected by a
         Boolean <emphasis>AND</emphasis>. The example in <xref
         linkend="_Ref403984631"/> translates to the Boolean expression
-        ??? [TODO formula] </para>
+        <equation>
+				<mml:math display="block" 
+					xmlns:mml="http://www.w3.org/1998/Math/MathML">
+					  <mml:apply><mml:and/>
+					  <mml:ci>
+						<mml:msub>
+							<mml:mrow>
+								<mml:mtext mathvariant="italic">Feature</mml:mtext>
+							</mml:mrow>
+						<mml:mn>2</mml:mn>
+                    </mml:msub>
+					</mml:ci>
+					<mml:apply><mml:and/>
+					<mml:ci>
+						<mml:msub>
+							<mml:mrow>
+								<mml:mtext mathvariant="italic">Feature</mml:mtext>
+							</mml:mrow>
+						<mml:mn>3</mml:mn>
+						</mml:msub>
+						</mml:ci>
+						<mml:ci>
+						<mml:msub>
+							<mml:mrow>
+								<mml:mtext mathvariant="italic">Feature</mml:mtext>
+							</mml:mrow>
+						<mml:mn>4</mml:mn>
+						</mml:msub>
+						</mml:ci>
+					</mml:apply>
+					</mml:apply>
+			  </mml:math>
+		</equation> </para>
 
         <para>The datatype for an <type>Expression</type> of type <type>AndFeatureCondition</type>
         should be Boolean.</para>
@@ -1946,7 +2131,30 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         Boolean condition whose literals are features, and which are connected
         by a Boolean <emphasis>OR</emphasis>. The example in <xref
         linkend="_Ref403984631"/> translates to the Boolean expression
-        ??? [TODO formula]</para>
+        <equation>
+				<mml:math display="block" 
+					xmlns:mml="http://www.w3.org/1998/Math/MathML">
+					  <mml:apply><mml:and/>
+					  <mml:ci>
+						<mml:msub>
+							<mml:mrow>
+								<mml:mtext mathvariant="italic">Feature</mml:mtext>
+							</mml:mrow>
+						<mml:mn>5</mml:mn>
+                    </mml:msub>
+					</mml:ci>
+					
+					<mml:ci>
+						<mml:msub>
+							<mml:mrow>
+								<mml:mtext mathvariant="italic">Feature</mml:mtext>
+							</mml:mrow>
+						<mml:mn>6</mml:mn>
+						</mml:msub>
+						</mml:ci>
+					</mml:apply>
+			  </mml:math>
+		</equation></para>
 
         <para>The datatype for an <type>Expression</type> of type <type>OrFeatureCondition</type>
         should be Boolean.</para>
@@ -2174,7 +2382,115 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
               <para>The value of the attribute <varname>id</varname> of an <type>Identifiable</type> shall
               be unique within a single <emphasis>Variability Exchange
               Language</emphasis> document. That is, the following condition
-              holds: ??? [TODO: formula]</para>
+              holds: </para><itemizedlist>
+			<listitem>
+			<para>Let <inlineequation>
+                <mml:math display="inline" 
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>i</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+					</mml:mrow>
+				</mml:math>
+			</inlineequation> and <inlineequation>
+                <mml:math display="inline" 
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>i</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>2</mml:mn>
+                    </mml:msub>
+					</mml:mrow>
+				</mml:math>
+			</inlineequation> be the values of the id XML attributes of XML elements <inlineequation>
+                <mml:math display="inline" 
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>e</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+					</mml:mrow>
+				</mml:math>
+			</inlineequation> and <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>e</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>2</mml:mn>
+                    </mml:msub>
+					</mml:mrow>
+				</mml:math>
+			</inlineequation> with <inlineequation>
+                <mml:math display="inline" 
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>i</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+					</mml:mrow>
+				</mml:math>
+			</inlineequation> equals <inlineequation>
+                <mml:math display="inline" 
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>i</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>2</mml:mn>
+                    </mml:msub>
+					</mml:mrow>
+				</mml:math>
+			</inlineequation>. Then <inlineequation>
+                <mml:math display="inline" 
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>e</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+					</mml:mrow>
+				</mml:math>
+			</inlineequation> and <inlineequation>
+                <mml:math display="inline" 
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>e</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>2</mml:mn>
+                    </mml:msub>
+					</mml:mrow>
+				</mml:math>
+			</inlineequation> are the same elements.</para>
+			</listitem>
+			</itemizedlist>
 
               <para>This is consistent with the definition of the types <sgmltag class="element">xs:IDREF</sgmltag>
               and <sgmltag class="element">xs:IDREFS</sgmltag> in XML.</para>
@@ -2650,7 +2966,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         that a switch in C or Java first evaluates a Boolean expression
         and then compares the result to a list of constants, while
         XorParameterVariationPoint evaluates a list of Boolean expressions
-        and selects the one which returns ???.</para>  
+        and selects the one which returns <emphasis>true</emphasis>.</para>  
 
         <para>A CalculatedParameterVariatonPoint is a <type>ParameterVariationPoint</type>
         that defines a value for a variation point in an artifact. Unlike
@@ -2852,7 +3168,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         for each XorVariation. As described in section <xref
         linkend="_Ref396825921"/>, it is guaranteed that if all XorVariation
         objects have a condition attribute, then exactly one of those
-        conditions evaluates to ???. The artifact element that corresponds to
+        conditions evaluates to <emphasis>true</emphasis>. The artifact element that corresponds to
         the XorVariation whose attribute condition evaluates to true is then
         removed or set inactive.</para>
       </section>
@@ -2945,10 +3261,195 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         more <type>ValueVariation</type> objects. When a
         <type>XorParameterVariationPoint</type> gets bound, the attribute
         condition of each <type>ValueVariation</type> is evaluated. The condition may
-        evaluate to ??? for only one <type>ValueVariation</type>, and the attribute value
+        evaluate to <emphasis>true</emphasis> for only one <type>ValueVariation</type>, and the attribute value
         of this <type>ValueVariation</type> is then used to provide a value for its
-        <varname>correspondingVariableArtifactElement</varname>.???</para>
+        <varname>correspondingVariableArtifactElement</varname>.</para>
         
+		<para>Let <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> be an <type>XorParameterVariationPoint</type> and let <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>s</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+
+                    <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>s</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>n</mml:mn>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> be the values of the selected attributes of
+            the <type>ValueVariations</type> of <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation>. Then the following conditions shall
+            hold:</para>
+
+            <orderedlist>
+              <listitem><para><inlineequation>
+                <mml:math display="block" 
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:apply>
+                    <mml:exists/>
+					<mml:bvar><mml:ci>i</mml:ci></mml:bvar>
+					<mml:apply><mml:and/>
+					
+					<mml:apply><mml:in/>
+					<mml:ci>i</mml:ci>
+                    <mml:set>
+                      <mml:cn>1</mml:cn>
+
+                      <mml:ci>...</mml:ci>
+
+                      <mml:ci>n</mml:ci>
+                    </mml:set>
+					</mml:apply>
+					
+					<mml:apply><mml:eq/>
+                    <mml:ci><mml:msub>
+                         <mml:mi>s</mml:mi>
+                         <mml:mi>i</mml:mi>
+                    </mml:msub>
+					</mml:ci>
+
+                    <mml:true/>
+					</mml:apply>
+                  </mml:apply>
+				  </mml:apply>
+                </mml:math>
+              </inlineequation></para></listitem>
+
+              <listitem>
+                <para><inlineequation>
+                <mml:math display="block" 
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:apply>
+                    <mml:forall/>
+					<mml:bvar><mml:ci>j</mml:ci></mml:bvar>
+					<mml:apply><mml:implies/>
+					<mml:apply><mml:and/>
+					
+					<mml:apply><mml:in/>
+					<mml:ci>j</mml:ci>
+                    <mml:set>
+                      <mml:cn>1</mml:cn>
+
+                      <mml:ci>...</mml:ci>
+
+                      <mml:ci>n</mml:ci>
+                    </mml:set>
+					</mml:apply>
+					
+					<mml:apply><mml:neq/>
+                    <mml:ci>j</mml:ci>
+					<mml:ci>i</mml:ci>
+					</mml:apply>
+                  </mml:apply>
+					<mml:apply><mml:eq/>
+                    <mml:ci><mml:msub>
+                         <mml:mi>s</mml:mi>
+                         <mml:mi>j</mml:mi>
+                    </mml:msub>
+					</mml:ci>
+
+                    <mml:false/>
+				  </mml:apply>
+				  </mml:apply>
+				  </mml:apply>
+                </mml:math>
+              </inlineequation></para></listitem>
+			  
+			  <listitem><para><inlineequation>
+                <mml:math display="block"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:apply>
+                    <mml:exists/>
+					<mml:bvar><mml:ci>i</mml:ci></mml:bvar>
+					<mml:apply><mml:and/>
+					
+					<mml:apply><mml:in/>
+					<mml:ci>i</mml:ci>
+                    <mml:set>
+                      <mml:cn>1</mml:cn>
+
+                      <mml:ci>...</mml:ci>
+
+                      <mml:ci>n</mml:ci>
+                    </mml:set>
+					</mml:apply>
+					
+					<mml:apply><mml:and/>
+						<mml:apply><mml:eq/>
+						<mml:ci><mml:msub>
+							 <mml:mi>s</mml:mi>
+							 <mml:mi>i</mml:mi>
+						</mml:msub>
+						</mml:ci>
+						<mml:true/>
+						</mml:apply>
+						
+					<mml:apply>
+                    <mml:forall/>
+					<mml:bvar><mml:ci>j</mml:ci></mml:bvar>
+					<mml:apply><mml:implies/>
+					<mml:apply><mml:and/>
+					
+					<mml:apply><mml:in/>
+					<mml:ci>j</mml:ci>
+                    <mml:set>
+                      <mml:cn>1</mml:cn>
+
+                      <mml:ci>...</mml:ci>
+
+                      <mml:ci>n</mml:ci>
+                    </mml:set>
+					</mml:apply>
+					
+					<mml:apply><mml:neq/>
+                    <mml:ci>j</mml:ci>
+					<mml:ci>i</mml:ci>
+					</mml:apply>
+                  </mml:apply>
+					<mml:apply><mml:eq/>
+                    <mml:ci><mml:msub>
+                         <mml:mi>s</mml:mi>
+                         <mml:mi>j</mml:mi>
+                    </mml:msub>
+					</mml:ci>
+
+                    <mml:false/>
+				  </mml:apply>
+				  </mml:apply>
+				  </mml:apply>
+					
+					</mml:apply>
+                  </mml:apply>
+				  </mml:apply>
+                </mml:math>
+              </inlineequation></para></listitem>
+            </orderedlist>
+
         <para>Each CalculatedParameterVariationPoint aggregates a single
         CalculatedVariation. A CalculatedVariation is a <type>Variation</type> that
         determines a value for a CalculatedVariationPoint.</para>
@@ -3027,7 +3528,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         more <type>ValueVariation</type> objects. When a
         <type>XorParameterVariationPoint</type> gets bound, the attribute
         condition of each <type>ValueVariation</type> is evaluated. The condition may
-        evaluate to ??? for only one <type>ValueVariation</type>, and the attribute <varname>value</varname>
+        evaluate to <emphasis>true</emphasis> for only one <type>ValueVariation</type>, and the attribute <varname>value</varname>
         of this <type>ValueVariation</type> is then used to provide a value for its
         <varname>correspondingVariableArtifactElement</varname>.</para>
 
@@ -3405,16 +3906,43 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
               <orderedlist>
                 <listitem>
                   <para>The implementation shall reject the document if
-                  ???</para>
+                  <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:apply>
+					<mml:lt/>
+						<mml:ci> i </mml:ci>
+						<mml:ci> j </mml:ci>
+				</mml:apply>
+                </mml:math>
+              </inlineequation>.</para>
                 </listitem>
 
                 <listitem>
                   <para>The implementation shall accept the document if
-                  ???</para>
+                  <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:apply>
+					<mml:eq/>
+						<mml:ci> i </mml:ci>
+						<mml:ci> j </mml:ci>
+				</mml:apply>
+                </mml:math>
+              </inlineequation>.</para>
                 </listitem>
 
                 <listitem>
-                  <para>The implementation may accept the document if ???</para>
+                  <para>The implementation may accept the document if <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:apply>
+					<mml:gt/>
+						<mml:ci> i </mml:ci>
+						<mml:ci> j </mml:ci>
+				</mml:apply>
+                </mml:math>
+              </inlineequation>.</para>
                 </listitem>
               </orderedlist>
 
@@ -3569,35 +4097,119 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <varlistentry id="_Toc367432890">
             <term>Attribute <varname>selected</varname></term>
             <listitem>
-              <para>If the attribute type of a <type>VariabilityExchangeModel</type> has the
-              value VariationPointConfiguration, then the attribute
-              <varname>selected</varname> of a <type>Variation</type> ??? is contained in the
-              variation point configuration which is defined by the
-              <type>VariabilityExchangeModel</type> which contains ???</para>
+            <para>If the attribute <varname>type</varname>
+            of a <type>VariabilityExchangeModel</type> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                        <mml:ci>M</mml:ci>
+                </mml:math>
+              </inlineequation> has the
+            value <type>VariationPointDescription</type>, then no
+            <type>Variation</type> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> in <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                        <mml:ci>M</mml:ci>
+                </mml:math>
+              </inlineequation> shall have an
+            attribute <varname>selected</varname>.</para>
 
-              <para>If the attribute <varname>type</varname>
-              of a <type>VariabilityExchangeModel</type> ??? has the
-              value <type>VariationPointDescription</type>, then no
-              <type>Variation</type> ??? shall have an
-              attribute <varname>selected</varname>.</para>
-       
-              <para>If the attribute <varname>type</varname>
-              of a <type>VariabilityExchangeModel</type> ?? has the
-              value <type>VariationPointConfiguration</type>, then
-              every <type>Variation</type> ??? shall
-              have an attribute <varname>selected</varname>.</para>
-          
-              <para>If the attribute type of a <type>VariabilityExchangeModel</type> ??? has
-              the value VariationPointConfiguration, and the attribute
-              <varname>selected</varname> of a <type>Variation</type> ?? is a member of the
-              variation point configuration defined by ????</para>
+            <para>If the attribute <varname>type</varname>
+            of a <type>VariabilityExchangeModel</type> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                        <mml:ci>M</mml:ci>
+                </mml:math>
+              </inlineequation> has the
+            value <type>VariationPointConfiguration</type>, then
+            every <type>Variation</type> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> in <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                        <mml:ci>M</mml:ci>
+                </mml:math>
+              </inlineequation> shall
+            have an attribute <varname>selected</varname>.</para>
          
-              <para>If the attribute <varname>type</varname>
-              of a <type>VariabilityExchangeModel</type> ??? has the
-              value <type>VariationPointConfiguration</type>, and the
-              attribute <varname>selected</varname> of a
-              <type>Variation</type>??? is not a member
-              of the variation point configuration defined by ???.</para>
+            <para>If the attribute type of a VariabilityExchangeModel <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                        <mml:ci>M</mml:ci>
+                </mml:math>
+              </inlineequation> has
+              the value <type>VariationPointConfiguration</type>, and the attribute
+            <varname>selected</varname> of a <type>Variation</type> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> contained by <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                        <mml:ci>M</mml:ci>
+                </mml:math>
+              </inlineequation> has the value <emphasis>true</emphasis>, then <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> is a member of the variation point configuration defined by <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                        <mml:ci>M</mml:ci>
+                </mml:math>
+              </inlineequation></para>
+         
+            <para>If the attribute <varname>type</varname>
+            of a <type>VariabilityExchangeModel</type> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                        <mml:ci>M</mml:ci>
+                </mml:math>
+              </inlineequation> has the
+            value <type>VariationPointConfiguration</type>, and the
+            attribute <varname>selected</varname> of a
+            <type>Variation</type> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> contained by <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                        <mml:ci>M</mml:ci>
+                </mml:math>
+              </inlineequation> has the value <emphasis>false</emphasis>, then <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> is not a member of the variation point configuration defined by <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                        <mml:ci>M</mml:ci>
+                </mml:math>
+              </inlineequation>.</para>
             </listitem>
           </varlistentry>
         
@@ -3605,14 +4217,113 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
             <term>Attribute <varname>correspondingVariableArtifactElement</varname></term>
             <listitem>
               <para>The attribute <varname>correspondingVariableArtifactElement</varname> of a
-              <type>Variation</type> ??? implements a reference to the artifact elements which
-              correspond to???</para>
+        <type>Variation</type> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> implements a reference to the artifact elements which
+        correspond to <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation>.</para>
 
               <para>The attribute <varname>correspondingVariableArtifactElement</varname> is
               optional.</para>
 
-              <para>If a <type>Variation</type> ??? has more than one
-              <varname>correspondingVariableArtifactElement</varname>s ???</para>
+              <para>If a <type>Variation</type> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> has more than one
+            correspondingVariableArtifactElements <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+
+                    <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mi>n</mml:mi>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> the the URIs of <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+
+                    <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mi>n</mml:mi>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> do not need to point to the same artifacts. That is, the URI attributes of <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+
+                    <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+                      <mml:mi>n</mml:mi>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> may have different values for each <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+                      <mml:mi>i</mml:mi>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation></para>
             </listitem>
           </varlistentry>
 
@@ -3733,15 +4444,130 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
               decides which binding time is used in the actual binding
               process.</para>
           
-              <para>If the <type>VariabilityExchangeModel</type> ??? which contains a
-              <type>VariationPoint</type> ??? has the type VariationPointConfiguration, then
-              let ??? be the values of the attribute <varname>selected</varname> of the <type>BindingTime</type>
-              attributes of ???. Then the following conditions must hold:</para>
+                          <para>If the <type>VariabilityExchangeModel</type> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                        <mml:ci>M</mml:ci>
+                </mml:math>
+              </inlineequation> which contains a
+            <type>VariationPoint</type> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> has the type <type>VariationPointConfiguration</type>, then
+            let <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>s</mml:mi>
+                      </mml:mrow>
+          
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+      
+                    <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>s</mml:mi>
+                      </mml:mrow>
+                      <mml:mn>n</mml:mn>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> be the values of the attribute selected of the <type>BindingTime</type> attributes of <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation>. Then the following conditions must hold:</para>
+			  <orderedlist>
+              <listitem><para><inlineequation>
+                <mml:math display="block" 
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:apply>
+                    <mml:exists/>
+					<mml:bvar><mml:ci>i</mml:ci></mml:bvar>
+					<mml:apply><mml:and/>
+					
+					<mml:apply><mml:in/>
+					<mml:ci>i</mml:ci>
+                    <mml:set>
+                      <mml:cn>1</mml:cn>
+
+                      <mml:ci>...</mml:ci>
+
+                      <mml:ci>n</mml:ci>
+                    </mml:set>
+					</mml:apply>
+					
+					<mml:apply><mml:eq/>
+                    <mml:apply><mml:ci type="function">eval</mml:ci><mml:ci><mml:msub>
+                      <mml:mrow>
+                        <mml:mi>s</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>i</mml:mn>
+                    </mml:msub></mml:ci></mml:apply>
+					  <mml:true/>
+					</mml:apply>
+                  </mml:apply>
+				  </mml:apply>
+                </mml:math>
+              </inlineequation></para></listitem>
+
+              <listitem>
+                <para><inlineequation>
+                <mml:math display="block" 
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:apply>
+                    <mml:forall/>
+					<mml:bvar><mml:ci>j</mml:ci></mml:bvar>
+					<mml:apply><mml:implies/>
+					<mml:apply><mml:and/>
+					
+					<mml:apply><mml:in/>
+					<mml:ci>j</mml:ci>
+                    <mml:set>
+                      <mml:cn>1</mml:cn>
+
+                      <mml:ci>...</mml:ci>
+                      <mml:ci>n</mml:ci>
+                    </mml:set>
+					</mml:apply>
+					
+					<mml:apply><mml:neq/>
+                    <mml:ci>j</mml:ci>
+					<mml:ci>i</mml:ci>
+					</mml:apply>
+                  </mml:apply>
+					<mml:apply><mml:eq/>
+                    <mml:apply><mml:ci type="function">eval</mml:ci><mml:ci><mml:msub>
+                      <mml:mrow>
+                        <mml:mi>s</mml:mi>
+                      </mml:mrow>
+                      <mml:mn>j</mml:mn>
+                    </mml:msub></mml:ci></mml:apply>
+					  <mml:false/>
+				  </mml:apply>
+				  </mml:apply>
+				  </mml:apply>
+                </mml:math>
+              </inlineequation></para>
+			  </listitem>
+            </orderedlist>
 
               <para>A consequence of the above condition is that if a
-              <type>VariationPoint</type> in a VariationPointConfiguration has only a single
-              <type>BindingTime</type> attribute ???, then the attribute <varname>selected</varname> of ???
-              shall have the value ???</para>
+            <type>VariationPoint</type> in a <type>VariationPointConfiguration</type> has only a single
+            <type>BindingTime</type> attribute <emphasis>b</emphasis>, then the attribute selected of <emphasis>b</emphasis>
+            shall have the value <emphasis>true</emphasis></para>
 
               <para>How and when a value for the attribute <varname>selected</varname> is
               determined is beyond the scope of this document.</para>
@@ -3751,23 +4577,126 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <varlistentry>
             <term>Attribute <varname>correspondingVariableArtifactElement</varname></term>
             <listitem>
-              <para>The attribute <varname>correspondingVariableArtifactElement</varname> of a
-              <type>VariationPoint</type> ??? implements a reference to the artifact elements
-              which correspond to ???</para>
+                      <para>The attribute <varname>correspondingVariableArtifactElement</varname> of a
+        VariationPoint <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> implements a reference to the artifact elements
+        which correspond to <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation></para>
 
               <para>Not all VariationPoints have a
               <varname>correspondingVariableArtifactElement</varname>.</para>
           
-              <para>If a <type>VariationPoint</type> ??? has more than one
-              <varname>correspondingVariableArtifactElement</varname>s ??? do not need to point to
-              the same artifacts. That is, the URI attributes of ??? may have
-              different values for each ???</para>
+                          <para>If a <type>VariationPoint</type> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> has more than one
+            correspondingVariableArtifactElements  <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+
+                    <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>n</mml:mn>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation>, then the URIs of the <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+
+                    <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>n</mml:mn>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> do not need to point to
+            the same artifacts. That is, the URI attributes of <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+
+                    <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>n</mml:mn>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> may have
+            different values for each <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mi>i</mml:mi>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation></para>
             </listitem>
           </varlistentry>
         </variablelist>
 
       </section>
-      
+
     </section>
 
     <section>
@@ -3780,15 +4709,49 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         <type>VariationPointHierarchy</type> establishes a hierarchy among <type>VariationPoint</type>s
         and <type>Variation</type>s.</para>
 
-        <para>The hierarchy is a graph ??? defined as follows:</para>
+        <para>The hierarchy is a graph <inlineequation>
+                <mml:math display="block" 
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                <mml:apply><mml:eq/>
+						<mml:ci>G</mml:ci>
+						<mml:vector><mml:ci>V</mml:ci><mml:ci>E</mml:ci></mml:vector>
+				</mml:apply>
+				</mml:math>
+				</inlineequation> defined as follows:</para>
 
         <itemizedlist>
           <listitem>
-            <para>??? is a <type>VariationPoint</type> in a <emphasis>Variability Exchange
+            <para><inlineequation>
+                <mml:math display="block" 
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                <mml:apply><mml:eq/>
+						<mml:ci>V</mml:ci>
+						<mml:apply><mml:set>
+						<mml:ci><mml:msub><mml:ci>v</mml:ci><mml:ci>1</mml:ci></mml:msub></mml:ci>
+						<mml:ci>,...,</mml:ci>
+						<mml:ci><mml:msub><mml:ci>v</mml:ci><mml:ci>n</mml:ci></mml:msub></mml:ci>
+						</mml:set>
+						</mml:apply>
+				</mml:apply>
+				</mml:math>
+				</inlineequation> where <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mi>i</mml:mi>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> is a <type>VariationPoint</type> in a <emphasis>Variability Exchange
             Language</emphasis> document<footnote id="__FN6__">
-                <para><phrase>Strictly speaking, </phrase>???<phrase> would be
+                <para><phrase>Strictly speaking, <emphasis>V</emphasis> would be
                 a set of nodes and there is bijective mapping between
-                </phrase>???<phrase> and the set of elements of type
+                <emphasis>V</emphasis> and the set of elements of type
                 </phrase>variationpoint-type in the DOM of the Variability
                 Exchange Language document. We use a simplified language for
                 the sake of clarity here.</para>
@@ -3796,20 +4759,207 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           </listitem>
 
           <listitem>
-            <para>Let??? be a <type>VariationPoint</type> which contains a <type>Variation</type> which
-            contains a <type>VariationPointHierarchy</type> whose attribute ref refers to a
-            <type>VariationPoint</type> ???</para>
+            <para>Let <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mi>i</mml:mi>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> be a <type>VariationPoint</type> which contains a <type>Variation</type> which
+            contains a <type>ariationPointHierarchy</type> whose attribute <varname>ref</varname> refers to a
+            <type>VariationPoint</type> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mi>j</mml:mi>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation>. Then <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:apply><mml:in/>
+							<mml:vector><mml:ci><mml:msub>
+                      <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                      </mml:mrow>
+        
+                      <mml:mi>i</mml:mi>
+                    </mml:msub></mml:ci><mml:ci><mml:msub>
+                      <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                      </mml:mrow>
+            
+                      <mml:mi>j</mml:mi>
+                    </mml:msub></mml:ci></mml:vector>
+						<mml:ci>E</mml:ci>
+				</mml:apply>
+                </mml:math>
+              </inlineequation>. </para>
           </listitem>
 
           <listitem>
             <para>No two <type>VariationPointHierarchy</type> elements may refer to the
-            same VariationPoints. Formally, the following condition shall
-            hold: ??? must not contain cycles, that is, there cannot be a
-            sequence. Formally, the following condition shall hold:</para>
+            same <type>VariationPoint</type>s. Formally, the following condition shall
+            hold: <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:apply><mml:implies/>
+				  <mml:apply><mml:in/>
+				  <mml:vector><mml:ci><mml:msub>
+                      <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mi>i</mml:mi>
+                    </mml:msub></mml:ci><mml:ci><mml:msub>
+                      <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mi>j</mml:mi>
+                    </mml:msub></mml:ci></mml:vector>
+						<mml:ci>E</mml:ci>
+				  </mml:apply>
+				  <mml:apply>
+                    <mml:forall/>
+					<mml:bvar><mml:ci>k</mml:ci></mml:bvar>
+					<mml:apply><mml:implies/>
+						<mml:apply><mml:neq/>
+							<mml:ci>k</mml:ci>
+							<mml:ci>i</mml:ci>
+						</mml:apply>
+						<mml:apply><mml:notin/>
+				  <mml:vector><mml:ci><mml:msub>
+                      <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mi>k</mml:mi>
+                    </mml:msub></mml:ci><mml:ci><mml:msub>
+                      <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mi>j</mml:mi>
+                    </mml:msub></mml:ci></mml:vector>
+						<mml:ci>E</mml:ci>
+				  </mml:apply>
+				  </mml:apply>
+					</mml:apply>
+				</mml:apply>
+                </mml:math>
+              </inlineequation></para></listitem>
+			<listitem>
+            <para><emphasis>E</emphasis> must not contain cycles, that is, there cannot be a
+            sequence. Formally, the following condition shall hold:
+			<inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+					<mml:vector><mml:ci><mml:msub>
+                        <mml:ci>v</mml:ci>
+						<mml:ci><mml:msub>
+							<mml:mi>i</mml:mi>
+							<mml:mi>1</mml:mi>
+						</mml:msub></mml:ci>
+                    </mml:msub></mml:ci>
+					<mml:ci><mml:msub>
+                        <mml:ci>v</mml:ci>                   
+						<mml:ci><mml:msub>                      
+							<mml:ci>i</mml:ci>
+							<mml:ci>2</mml:ci>
+                    </mml:msub></mml:ci>
+                    </mml:msub></mml:ci></mml:vector>
+					
+					<mml:vector><mml:ci><mml:msub>
+                        <mml:ci>v</mml:ci>
+						<mml:ci><mml:msub>
+							<mml:mi>i</mml:mi>
+							<mml:mi>3</mml:mi>
+						</mml:msub></mml:ci>
+                    </mml:msub></mml:ci>
+					<mml:ci><mml:msub>
+                        <mml:ci>v</mml:ci>                   
+						<mml:ci><mml:msub>                      
+							<mml:ci>i</mml:ci>
+							<mml:ci>4</mml:ci>
+                    </mml:msub></mml:ci>
+                    </mml:msub></mml:ci></mml:vector>
+					
+					<mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+					
+					<mml:vector><mml:ci><mml:msub>
+                        <mml:ci>v</mml:ci>
+						<mml:ci><mml:msub>
+							<mml:mi>i</mml:mi>
+							<mml:mi>k-2</mml:mi>
+						</mml:msub></mml:ci>
+                    </mml:msub></mml:ci>
+					<mml:ci><mml:msub>
+                        <mml:ci>v</mml:ci>                   
+						<mml:ci><mml:msub>                      
+							<mml:ci>i</mml:ci>
+							<mml:ci>k-1</mml:ci>
+                    </mml:msub></mml:ci>
+                    </mml:msub></mml:ci></mml:vector>
+					
+					<mml:apply><mml:in/>
+					<mml:vector><mml:ci><mml:msub>
+                        <mml:ci>v</mml:ci>
+						<mml:ci><mml:msub>
+							<mml:mi>i</mml:mi>
+							<mml:mi>k-1</mml:mi>
+						</mml:msub></mml:ci>
+                    </mml:msub></mml:ci>
+					<mml:ci><mml:msub>
+                        <mml:ci>v</mml:ci>                   
+						<mml:ci><mml:msub>                      
+							<mml:ci>i</mml:ci>
+							<mml:ci>k</mml:ci>
+                    </mml:msub></mml:ci>
+                    </mml:msub></mml:ci></mml:vector>
+					<mml:ci>E</mml:ci>
+					</mml:apply>
+				</mml:math>
+              </inlineequation> with 
+			  <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+				<mml:apply><mml:eq/>
+					<mml:ci><mml:msub>
+                      <mml:mrow>
+                        <mml:mi>i</mml:mi>
+                      </mml:mrow>
+                      <mml:mi>1</mml:mi>
+                    </mml:msub></mml:ci>
+					
+					<mml:ci><mml:msub>
+                      <mml:mrow>
+                        <mml:mi>i</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mi>k</mml:mi>
+                    </mml:msub></mml:ci>
+				</mml:apply>
+				</mml:math>
+              </inlineequation>
+			</para>
           </listitem>
         </itemizedlist>
 
-        <para>These conditions make sure that ??? is a tree or a set of
+        <para>These conditions make sure that <emphasis>G</emphasis> is a tree or a set of
         trees.</para>
         
         <para>The class <type>VariationPointHierarchy</type> inherits from
@@ -3999,83 +5149,291 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
         <itemizedlist>
           <listitem>
-            <para>Let ??? be the <type>Variation</type> to which the attribute <varname>variation</varname> of
-            ??? is defined as follows:</para>
+            <para>Let <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> be a <type>Variation</type> which contains a <type>VariationDependency</type> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>d</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation>, and let <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+
+                    <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>k</mml:mn>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> be the <type>Variation</type> to which the attribute <varname>variation</varname> of <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>d</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> refers, and let <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>t</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> be the value of the attribute <varname>type</varname> of <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>d</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation>. Furthermore, let <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> be the content of the attribute <varname>condition</varname> of <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation></para>
+			  
+			  <para>Then, the condition of the <type>VariationDependency</type> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>d</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation>, <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+					<mml:apply><mml:ci type="function">condition</mml:ci><mml:ci>d</mml:ci></mml:apply>
+                </mml:math>
+              </inlineequation>, is defined as follows:
+			  </para>
 
             <itemizedlist>
               <listitem>
-                <para>If the attribute type of <inlineequation>
+                <para>If the attribute <varname>type</varname> of <inlineequation>
                     <mml:math display="inline" id="mml_m174b_7"
                               xmlns:mml="http://www.w3.org/1998/Math/MathML">
                       <mml:mrow>
                         <mml:mi>d</mml:mi>
                       </mml:mrow>
                     </mml:math>
-                  </inlineequation> is requires, then
+                  </inlineequation> is required, then
         <inlineequation>
                 <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                  <mml:mrow>
-                    <mml:apply>
-                      <mml:eq/>
+				<mml:apply><mml:eq/>
+					<mml:apply><mml:ci type="function">condition</mml:ci><mml:ci>d</mml:ci></mml:apply>
+					<mml:apply><mml:implies/>
+						<mml:ci>v</mml:ci>
+						<mml:apply><mml:and/>
+							<mml:ci>c</mml:ci>
+							<mml:apply><mml:or/>
+								<mml:ci>
+									<mml:msub>
+										<mml:ci>v</mml:ci>
+										<mml:ci>1</mml:ci>
+									</mml:msub>
+								</mml:ci>
 
-                      <mml:apply>
-                        <mml:ci type="function">condition</mml:ci>
-
-                        <mml:ci>d</mml:ci>
+								<mml:apply><mml:or/>
+								<mml:ci>,...,</mml:ci>
+								<mml:ci>
+									<mml:msub>
+										<mml:ci>v</mml:ci>
+										<mml:ci>k</mml:ci>
+									</mml:msub>
+								</mml:ci>
+								</mml:apply>
+							</mml:apply>
                       </mml:apply>
-
-                      <mml:apply>
-                        <mml:implies/>
-
-                        <mml:ci>v</mml:ci>
-
-                        <mml:apply>
-                          <mml:and/>
-
-                          <mml:ci>c</mml:ci>
-
-                          <mml:apply>
-                            <mml:or/>
-
-                            <mml:msub>
-                              <mml:mi>v</mml:mi>
-
-                              <mml:mn>1</mml:mn>
-                            </mml:msub>
-
-                            <mml:mtext>,...,</mml:mtext>
-
-                            <mml:msub>
-                              <mml:mi>v</mml:mi>
-
-                              <mml:mn>1</mml:mn>
-                            </mml:msub>
-                          </mml:apply>
-                        </mml:apply>
-                      </mml:apply>
-                    </mml:apply>
-                  </mml:mrow>
+					</mml:apply>
+				</mml:apply>
                 </mml:math>
-        </inlineequation></para>
+				</inlineequation></para>
               </listitem>
 
               <listitem>
-                <para>If the attribute type of ??? is conflicts, then</para>
+                <para>If the attribute <varname>type</varname> of <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>d</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> is <emphasis role="underline">conflicts</emphasis>, then
+				<inlineequation>
+                <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+				<mml:apply><mml:eq/>
+					<mml:apply><mml:ci type="function">condition</mml:ci><mml:ci>d</mml:ci></mml:apply>
+					<mml:apply><mml:implies/>
+						<mml:ci>v</mml:ci>
+						<mml:apply><mml:and/>
+							<mml:ci>c</mml:ci>
+							<mml:apply><mml:and/>
+
+									<mml:apply><mml:not/>
+									<mml:ci>
+									<mml:msub>
+                        <mml:ci>v</mml:ci>
+										<mml:ci>1</mml:ci>
+									</mml:msub>
+									</mml:ci>
+									</mml:apply>
+
+
+								<mml:apply><mml:and/>
+								<mml:ci>,...,</mml:ci>
+
+									<mml:apply><mml:not/>
+									<mml:ci>
+									<mml:msub>
+										<mml:ci>v</mml:ci>
+										<mml:ci>k</mml:ci>
+									</mml:msub>
+									</mml:ci>
+									</mml:apply>
+
+								</mml:apply>
+							</mml:apply>
+						</mml:apply>
+					</mml:apply>
+				</mml:apply>
+                </mml:math>
+				</inlineequation>
+			  </para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
-            <para>Let ??? be the <type>VariationDependency</type> objects contained
-            by a <type>Variation</type>??? is defined as follows: ???</para>
+            <para>Let <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                            <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>d</mml:mi>
+                      </mml:mrow>
 
-             
+                              <mml:mn>1</mml:mn>
+                            </mml:msub>
+
+                    <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+
+                            <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>d</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>n</mml:mn>
+                            </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> be the <type>VariationDependency</type> objects contained
+            by a <type>Variation</type> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>d</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation>. Then the condition of <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation>, <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+					<mml:apply><mml:ci type="function">condition</mml:ci><mml:ci>d</mml:ci></mml:apply>
+                </mml:math>
+              </inlineequation>, is defined as follows: <equation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+					<mml:apply><mml:eq/>
+						<mml:apply><mml:ci type="function">condition</mml:ci><mml:ci>d</mml:ci></mml:apply>
+						<mml:apply><mml:and/>
+							<mml:apply><mml:ci type="function">condition</mml:ci><mml:ci><mml:msub><mml:ci>d</mml:ci><mml:ci>1</mml:ci></mml:msub></mml:ci></mml:apply>
+							<mml:apply><mml:and/>
+								<mml:ci>,...,</mml:ci>
+								<mml:apply><mml:ci type="function">condition</mml:ci><mml:ci><mml:msub><mml:ci>d</mml:ci><mml:ci>n</mml:ci></mml:msub></mml:ci></mml:apply>
+                          </mml:apply>
+                        </mml:apply>
+                      </mml:apply>
+                </mml:math>
+              </equation></para>             
           </listitem>
 
           <listitem>
-            <para>Let ??? be the conditions of all <type>Variation</type> objects in a
+            <para>Let <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+                    <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+             
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>n</mml:mn>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> be the conditions of all <type>Variation</type> objects in a
             <emphasis>Variability Exchange Language</emphasis>. Then the
-            following condition shall hold:</para>
+            following condition shall hold: 
+			<equation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+						  <mml:apply><mml:and/>
+							<mml:ci><mml:msub><mml:ci>c</mml:ci><mml:ci>1</mml:ci></mml:msub></mml:ci>	
+							<mml:apply><mml:and/>
+								<mml:ci>,...,</mml:ci>
+								<mml:ci><mml:msub><mml:ci>c</mml:ci><mml:ci>n</mml:ci></mml:msub></mml:ci>	
+							</mml:apply>
+						</mml:apply>
+				</mml:math>
+			</equation>
+				</para>
           </listitem>
         </itemizedlist>
       </section>
