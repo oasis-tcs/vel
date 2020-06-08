@@ -30,7 +30,7 @@
 			<xs:extension base="Identifiable">
 				<xs:sequence>
 					<xs:element name="bindingtime" type="BindingTime" minOccurs="0" maxOccurs="unbounded"/>
-					<xs:element name="corresponding-variable-artifact-element" type="ArtifactElement" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="variable-artifact" type="ArtifactElement" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
 				<xs:attribute name="type" type="VariationPointTypeEnum" use="required"/>
 			</xs:extension>
@@ -75,7 +75,6 @@
 				<xs:sequence>
 					<xs:element name="hierarchy" type="VariationPointHierarchy" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="dependency" type="VariationDependency" minOccurs="0" maxOccurs="unbounded"/>
-					<xs:element name="corresponding-variable-artifact-element" type="ArtifactElement" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="condition" type="Expression" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 				<xs:attribute name="selected" type="xs:boolean" use="optional"/>
@@ -114,6 +113,9 @@
 	<xs:complexType name="StructuralVariation">
 		<xs:complexContent>
 			<xs:extension base="Variation">
+				<xs:sequence>
+					<xs:element name="variable-artifact" type="ArtifactElement" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
