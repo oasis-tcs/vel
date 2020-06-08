@@ -4,16 +4,16 @@
 	<variability-exchange-model type="variationpoint-configuration" id="model">
 		<structural-variationpoint id="vp1" type="optional">
 			<variation id="vp1v1">
-				<corresponding-variable-artifact-element uri="file:///C:/SPES/file1.c"/>
 				<condition type="single-feature-condition">Feature1</condition>
+				<variable-artifact uri="file:///C:/SPES/file1.c"/>
 			</variation>
 		</structural-variationpoint>
 		<structural-variationpoint id="vp2" type="optional">
 			<variation id="vp2v1">
-				<corresponding-variable-artifact-element type="simulink">
-					<simulink-id>12</simulink-id>
-				</corresponding-variable-artifact-element>
 				<condition type="single-feature-condition">Feature1</condition>
+				<variable-artifact type="simulink">
+					<simulink-id>12</simulink-id>
+				</variable-artifact>
 			</variation>
 		</structural-variationpoint>
 	</variability-exchange-model>
