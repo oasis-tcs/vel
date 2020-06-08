@@ -687,7 +687,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <mediaobject>
         <imageobject>
           <imagedata contentdepth="777" contentwidth="605"
-                     fileref="Figures/image2.png"/>
+                     fileref="Figures/VariabilityExchangeModel.svg"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -970,7 +970,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="121" contentwidth="284"
-                         fileref="Figures/image3.png"/>
+                         fileref="Figures/ArtifactElement.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -1110,7 +1110,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="121" contentwidth="183"
-                         fileref="Figures/image4.png"/>
+                         fileref="Figures/BindingTime.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -1497,7 +1497,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="254" contentwidth="172"
-                         fileref="Figures/image5.png"/>
+                         fileref="Figures/BindingTimeEnum.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -1722,7 +1722,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="111" contentwidth="188"
-                         fileref="Figures/image8.png"/>
+                         fileref="Figures/Expression.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -1857,7 +1857,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="164" contentwidth="172"
-                         fileref="Figures/image9.png"/>
+                         fileref="Figures/ExpressionTypeEnum.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -2190,7 +2190,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="306" contentwidth="430"
-                         fileref="Figures/image10.png"/>
+                         fileref="Figures/AuxiliaryClasses.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -2462,7 +2462,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="306" contentwidth="430"
-                         fileref="Figures/image10.png"/>
+                         fileref="Figures/AuxiliaryClasses.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -2607,7 +2607,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="607" contentwidth="415"
-                         fileref="Figures/image6.png"/>
+                         fileref="Figures/ParameterVariationPoint.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -2894,7 +2894,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="306" contentwidth="431"
-                         fileref="Figures/image12.png"/>
+                         fileref="Figures/AuxiliaryClasses.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -2997,7 +2997,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="614" contentwidth="420"
-                         fileref="Figures/image11.png"/>
+                         fileref="Figures/StructuralVariationPoint.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -3055,7 +3055,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="614" contentwidth="420"
-                         fileref="Figures/image11.png"/>
+                         fileref="Figures/StructuralVariationPoint.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -3196,7 +3196,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="607" contentwidth="415"
-                         fileref="Figures/image6.png"/>
+                         fileref="Figures/ParameterVariationPoint.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -3341,7 +3341,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="344" contentwidth="407"
-                         fileref="Figures/image14.png"/>
+                         fileref="Figures/VariabilityExchangeModel.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -3446,7 +3446,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="344" contentwidth="407"
-                         fileref="Figures/image14.png"/>
+                         fileref="Figures/VariabilityExchangeModel.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -3616,7 +3616,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="117" contentwidth="284"
-                         fileref="Figures/image15.png"/>
+                         fileref="Figures/VariabilityExchangeModelTypeEnum.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -3679,7 +3679,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="614" contentwidth="420"
-                         fileref="Figures/image11.png"/>
+                         fileref="Figures/StructuralVariationPoint.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -4104,7 +4104,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="344" contentwidth="407"
-                         fileref="Figures/image16.png"/>
+                         fileref="Figures/VariationPoint.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -4475,7 +4475,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="111" contentwidth="284"
-                         fileref="Figures/image19.png"/>
+                         fileref="Figures/VariationPointTypeEnum.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -4801,7 +4801,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="607" contentwidth="605"
-                         fileref="Figures/image17.png"/>
+                         fileref="Figures/VariationPointHierarchy.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -4906,7 +4906,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="233" contentwidth="407"
-                         fileref="Figures/image18.png"/>
+                         fileref="Figures/VariationDependency.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -5344,7 +5344,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="111" contentwidth="284"
-                         fileref="Figures/image19.png"/>
+                         fileref="Figures/VariationDependencyEnum.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
