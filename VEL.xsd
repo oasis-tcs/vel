@@ -63,7 +63,7 @@
 		<xs:complexContent>
 			<xs:extension base="VariationPoint">
 				<xs:sequence>
-					<xs:element name="variation" type="ValueVariation" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element name="variation" type="ParameterVariation" minOccurs="1" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -119,7 +119,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:complexType name="ValueVariation">
+	<xs:complexType name="ParameterVariation">
 		<xs:complexContent>
 			<xs:extension base="Variation">
 				<xs:sequence>
