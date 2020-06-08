@@ -826,7 +826,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <para>In a <classname>ParameterVariationPoint</classname>, the Variation determines a value
           for the associated artifact element. This is done either by
           computing it (CalculatedVariation) or selecting from one of several
-          values (<classname>ValueVariation</classname>).</para>
+          values (<classname>ParameterVariation</classname>).</para>
         </listitem>
       </itemizedlist>
 
@@ -2619,10 +2619,10 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         linkend="fig_uml_parametervariationpoint"/>)</para>
 
         <para>Each <classname>ParameterVariationPoint</classname> object contains one or more
-        <classname>ValueVariation</classname> objects, representing possible values.
+        <classname>ParameterVariation</classname> objects, representing possible values.
         During the binding process, the attribute
-        <varname>condition</varname> of each <classname>ValueVariation</classname> object is
-        evaluated. The condition may evaluate to <emphasis>true</emphasis> for only one <classname>ValueVariation</classname>:</para>
+        <varname>condition</varname> of each <classname>ParameterVariation</classname> object is
+        evaluated. The condition may evaluate to <emphasis>true</emphasis> for only one <classname>ParameterVariation</classname>:</para>
 
         <para>[TODO: Is only xor allowed here?]</para>
 
@@ -2657,7 +2657,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
             </mml:mrow>
           </mml:math>
         </inlineequation> be the values of the <varname>selected</varname> attributes of
-        the <classname>ValueVariation</classname> objects of <inlineequation>
+        the <classname>ParameterVariation</classname> objects of <inlineequation>
           <mml:math display="inline"
                     xmlns:mml="http://www.w3.org/1998/Math/MathML">
             <mml:mrow>
@@ -2829,7 +2829,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 &#x9;&lt;xs:complexContent&gt;
 &#x9;&#x9;&lt;xs:extension base=&quot;VariationPoint&quot;&gt;
 &#x9;&#x9;&#x9;&lt;xs:sequence&gt;
-&#x9;&#x9;&#x9;&#x9;&lt;xs:element name=&quot;variation&quot; type=&quot;ValueVariation&quot;
+&#x9;&#x9;&#x9;&#x9;&lt;xs:element name=&quot;variation&quot; type=&quot;ParameterVariation&quot;
 &#x9;&#x9;&#x9;&#x9;&#x9;minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot;/&gt;
 &#x9;&#x9;&#x9;&lt;/xs:sequence&gt;
 &#x9;&#x9;&lt;/xs:extension&gt;
@@ -3144,13 +3144,13 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
     </section>
 
-    <section id="sec_valuevariation">
-      <title>ValueVariation</title>
+    <section id="sec_ParameterVariation">
+      <title>ParameterVariation</title>
 
       <section>
         <title>Description</title>
 
-        <para>A <classname>ValueVariation</classname> defines a value for the corresponding artifact
+        <para>A <classname>ParameterVariation</classname> defines a value for the corresponding artifact
         element of a <classname>ParameterVariationPoint</classname>. The artifact
         element in question is referenced by its attribute
         <varname>correspondingVariableArtifactElement</varname> (see <xref
@@ -3180,18 +3180,18 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
         <!--
         , and the attribute value
-        of this <classname>ValueVariation</classname> is then used to provide a value for its
+        of this <classname>ParameterVariation</classname> is then used to provide a value for its
         <varname>correspondingVariableArtifactElement</varname>.</para> -->
 
-        <para>The class <classname>ValueVariation</classname> inherits from the abstract class
+        <para>The class <classname>ParameterVariation</classname> inherits from the abstract class
         <classname>Variation</classname>.</para>
       </section>
 
-      <section id="sec_valuevariation_spec">
+      <section id="sec_ParameterVariation_spec">
       <title>Specification</title>
 
         <figure>
-          <title>UML Diagram for class <classname>ValueVariation</classname></title>
+          <title>UML Diagram for class <classname>ParameterVariation</classname></title>
 
           <mediaobject>
             <imageobject>
@@ -3205,11 +3205,11 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <varlistentry>
             <term>Attribute <varname>expression</varname></term>
             <listitem>
-              <para>The optional attribute <varname>expression</varname> of a <classname>ValueVariation</classname>
+              <para>The optional attribute <varname>expression</varname> of a <classname>ParameterVariation</classname>
               specifies the expression that is used to compute the value of a
-              <classname>ValueVariation</classname>.</para>
+              <classname>ParameterVariation</classname>.</para>
 
-              <para>The attribute <varname>expression</varname> of a <classname>ValueVariation</classname>
+              <para>The attribute <varname>expression</varname> of a <classname>ParameterVariation</classname>
               may evaluate to an arbitrary value. Which values are allowed, depends on the
               artifact elements which are referenced by the attribute
               <varname>correspondingVariableArtifactElement</varname> (see <xref
@@ -3223,13 +3223,13 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <varlistentry>
             <term>Attribute <varname>value</varname></term>
             <listitem>
-              <para>The attribute <varname>value</varname> of a <classname>ValueVariation</classname> is a constant, not
+              <para>The attribute <varname>value</varname> of a <classname>ParameterVariation</classname> is a constant, not
               an expression.</para>
 
               <para>The data type (e.g. Boolean, Integer, Floating Point, or an
               enumeration) and range (e.g. 1&mldr;10) that is allowed for the
-              attribute <varname>value</varname> of a <classname>ValueVariation</classname> is defined by the artifact
-              element that is associated with <classname>ValueVariation</classname> (see
+              attribute <varname>value</varname> of a <classname>ParameterVariation</classname> is defined by the artifact
+              element that is associated with <classname>ParameterVariation</classname> (see
               <varname>correspondingVariableArtifactElement</varname>, <xref
               linkend="attr_variation_corvarartifactelement"/>).</para>
 
@@ -3256,8 +3256,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <title>XML Schema</title>
 
           <figure>
-            <title>XML Schema for <classname>ValueVariation</classname></title>
-            <programlisting>&lt;xs:complexType name=&quot;ValueVariation&quot;&gt;
+            <title>XML Schema for <classname>ParameterVariation</classname></title>
+            <programlisting>&lt;xs:complexType name=&quot;ParameterVariation&quot;&gt;
 &#x9;&lt;xs:complexContent&gt;
 &#x9;&#x9;&lt;xs:extension base=&quot;Variation&quot;&gt;
 &#x9;&#x9;&#x9;&lt;xs:sequence&gt;
@@ -3276,7 +3276,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         <section>
           <title>Examples</title>
           <example>
-            <title>XML example for <classname>ValueVariation</classname> with alternative constant values</title>
+            <title>XML example for <classname>ParameterVariation</classname> with alternative constant values</title>
             <programlisting>&lt;parameter-variationpoint id=&quot;vp1&quot; type=&quot;xor&quot;&gt;
 &#x9;&lt;variation id=&quot;vp1v1&quot;&gt;
 &#x9;&#x9;&lt;condition type=&quot;single-feature-condition&quot;&gt;Feature1&lt;/condition&gt;
@@ -3294,7 +3294,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           </example>
 
           <example>
-            <title>XML example for <classname>ValueVariation</classname> with a calculation expression</title>
+            <title>XML example for <classname>ParameterVariation</classname> with a calculation expression</title>
             <programlisting>&lt;parameter-variationpoint id=&quot;vp1&quot; type=&quot;optional&quot;&gt;
 &#x9;&lt;variation id=&quot;vp1v1&quot;&gt;
 &#x9;&#x9;&lt;expression type=&quot;x:pvscl&quot;&gt;6*9&lt;/expression&gt;
@@ -3663,7 +3663,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         one or more instances of the class <classname>Variation</classname>.</para>
 
         <para>There are two classes that derive from <classname>Variation</classname>, namely
-        <classname>StructuralVariation</classname> and <classname>ValueVariation</classname>.</para>
+        <classname>StructuralVariation</classname> and <classname>ParameterVariation</classname>.</para>
 
         <para>The class <classname>Variation</classname> inherits from the class
             <classname>Identifiable</classname>.</para>
