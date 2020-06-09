@@ -762,7 +762,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       discarded.</para>
 
       <para>Both <classname>Variation</classname>s and <classname>VariationPoint</classname>s may refer to artifact elements
-      (<varname>correspondingVariableArtifactElement</varname>), for example the Simulink block
+      (<varname>variableArtifact</varname>), for example the Simulink block
       or the line of code which correspond to the <classname>VariationPoint</classname> respectively
       Variation.</para>
 
@@ -2570,6 +2570,170 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
     </section>
 
+    <section id="sec_ParameterVariation">
+      <title>ParameterVariation</title>
+
+      <section>
+        <title>Description</title>
+
+        <para>A <classname>ParameterVariation</classname> defines a value for the corresponding artifact
+        element of a <classname>ParameterVariationPoint</classname>. The artifact
+        element in question is referenced by its attribute
+        <varname>variableArtifact</varname> (see <xref
+        linkend="attr_variation_corvarartifactelement"/>).</para>
+
+        <para>The value is defined either using a constant or a calculation <classname>Expression</classname>.</para>
+
+        <!--
+
+        <para>[TODO: value and expression behavior.]</para>
+
+        <para>[TODO] Each CalculatedParameterVariationPoint aggregates a single
+        CalculatedVariation. A CalculatedVariation is a <classname>Variation</classname> that
+        determines a value for a CalculatedVariationPoint.</para>
+
+
+        <para>A CalculatedParameterVariatonPoint is a <classname>ParameterVariationPoint</classname>
+        that defines a value for a variation point in an artifact. Unlike
+        a XorParameterVariationPoint, which picks one value from a number of
+        choices, a CalculatedParameterVariatonPoint uses an expression to
+        define the value.</para>
+
+        <para>A CalculatedParameterVariatonPoint contains a single
+        CalculatedVariation whose attribute expression defines the expression
+        that is used to calculate the value for the associated variation
+        point.</para> -->
+
+        <!--
+        , and the attribute value
+        of this <classname>ParameterVariation</classname> is then used to provide a value for its
+        <varname>variableArtifact</varname>.</para> -->
+
+        <para>The class <classname>ParameterVariation</classname> inherits from the abstract class
+        <classname>Variation</classname>.</para>
+      </section>
+
+      <section id="sec_ParameterVariation_spec">
+      <title>Specification</title>
+
+        <figure>
+          <title>UML Diagram for class <classname>ParameterVariation</classname></title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata contentdepth="607" contentwidth="415"
+                         fileref="Figures/ParameterVariationPoint.svg"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+
+        <variablelist>
+          <varlistentry>
+            <term>Attribute <varname>expression</varname></term>
+            <listitem>
+              <para>The optional attribute <varname>expression</varname> of a <classname>ParameterVariation</classname>
+              specifies the expression that is used to compute the value of a
+              <classname>ParameterVariation</classname>.</para>
+
+              <para>The attribute <varname>expression</varname> of a <classname>ParameterVariation</classname>
+              may evaluate to an arbitrary value. Which values are allowed, depends on the
+              artifact elements which are referenced by the attribute
+              <varname>variableArtifact</varname> (see <xref
+              linkend="attr_variation_corvarartifactelement"/>).</para>
+
+              <para>[TODO: Roles of expression in description, configuration, partial config]</para>
+
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term>Attribute <varname>value</varname></term>
+            <listitem>
+              <para>The attribute <varname>value</varname> of a <classname>ParameterVariation</classname> is a constant, not
+              an expression.</para>
+
+              <para>The data type (e.g. Boolean, Integer, Floating Point, or an
+              enumeration) and range (e.g. 1&mldr;10) that is allowed for the
+              attribute <varname>value</varname> of a <classname>ParameterVariation</classname> is defined by the artifact
+              element that is associated with <classname>ParameterVariation</classname> (see
+              <varname>variableArtifact</varname>, <xref
+              linkend="attr_variation_corvarartifactelement"/>).</para>
+
+              <para>[TODO: Roles of value in description, configuration, partial config]</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+
+        <!--
+        <para>When a CalculatedParameterVariationPoint is bound, the
+        expression of its CalculatedVariation is evaluated. The result of the
+        evaluation gets assigned to the artifact element(s) which are
+        referenced by the attribute <varname>variableArtifact</varname> (see
+        <xref linkend="attr_variation_corvarartifactelement"/>).</para>
+
+        <para>A CalculatedParameterVariationPoint can only be bound when
+        its CalculatedVariation has an attribute <varname>expression</varname>.</para> -->
+      </section>
+
+      <section>
+        <title>XML Serialization</title>
+
+        <section>
+          <title>XML Schema</title>
+
+          <figure>
+            <title>XML Schema for <classname>ParameterVariation</classname></title>
+            <programlisting>&lt;xs:complexType name=&quot;ParameterVariation&quot;&gt;
+&#x9;&lt;xs:complexContent&gt;
+&#x9;&#x9;&lt;xs:extension base=&quot;Variation&quot;&gt;
+&#x9;&#x9;&#x9;&lt;xs:sequence&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;xs:element name=&quot;expression&quot; type=&quot;Expression&quot;
+&#x9;&#x9;&#x9;&#x9;&#x9;minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;/&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;xs:element name=&quot;value&quot; type=&quot;xs:string&quot;
+&#x9;&#x9;&#x9;&#x9;&#x9;minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;/&gt;
+&#x9;&#x9;&#x9;&lt;/xs:sequence&gt;
+&#x9;&#x9;&lt;/xs:extension&gt;
+&#x9;&lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;</programlisting>
+          </figure>
+
+        </section>
+
+        <section>
+          <title>Examples</title>
+          <example>
+            <title>XML example for <classname>ParameterVariation</classname> with alternative constant values</title>
+            <programlisting>&lt;parameter-variationpoint id=&quot;vp1&quot; type=&quot;xor&quot;&gt;
+&#x9;&lt;variation id=&quot;vp1v1&quot;&gt;
+&#x9;&#x9;&lt;condition type=&quot;single-feature-condition&quot;&gt;Feature1&lt;/condition&gt;
+&#x9;&#x9;&lt;value&gt;1&lt;/value&gt;
+&#x9;&lt;/variation&gt;
+&#x9;&lt;variation id=&quot;vp1v2&quot;&gt;
+&#x9;&#x9;&lt;condition type=&quot;single-feature-condition&quot;&gt;Feature2&lt;/condition&gt;
+&#x9;&#x9;&lt;value&gt;2&lt;/value&gt;
+&#x9;&lt;/variation&gt;
+&#x9;&lt;variation id=&quot;vp1v3&quot;&gt;
+&#x9;&#x9;&lt;condition type=&quot;single-feature-condition&quot;&gt;Feature3&lt;/condition&gt;
+&#x9;&#x9;&lt;value&gt;3&lt;/value&gt;
+&#x9;&lt;/variation&gt;
+&lt;/parameter-variationpoint&gt;</programlisting>
+          </example>
+
+          <example>
+            <title>XML example for <classname>ParameterVariation</classname> with a calculation expression</title>
+            <programlisting>&lt;parameter-variationpoint id=&quot;vp1&quot; type=&quot;optional&quot;&gt;
+&#x9;&lt;variation id=&quot;vp1v1&quot;&gt;
+&#x9;&#x9;&lt;expression type=&quot;x:pvscl&quot;&gt;6*9&lt;/expression&gt;
+&#x9;&lt;/variation&gt;
+&lt;/parameter-variationpoint&gt;</programlisting>
+          </example>
+
+        </section>
+
+      </section>
+
+    </section>
+
     <section id="sec_parametervariationpoint">
       <title>ParameterVariationPoint</title>
 
@@ -2613,8 +2777,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         </figure>
 
         <para>The artifact elements are referenced by the attribute
-        <varname>correspondingVariableArtifactElement</varname> of the <classname>VariationPoint</classname>
-        and the attribute <varname>correspondingVariableArtifactElement</varname> of its
+        <varname>variableArtifact</varname> of the <classname>VariationPoint</classname>
+        and the attribute <varname>variableArtifact</varname> of its
         <classname>Variation</classname> objects (see the classes <classname>VariationPoint</classname> and <classname>Variation</classname> in <xref
         linkend="fig_uml_parametervariationpoint"/>)</para>
 
@@ -3001,6 +3165,123 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
             </imageobject>
           </mediaobject>
         </figure>
+        <variablelist>
+           <varlistentry id="attr_variation_corvarartifactelement">
+            <term>Attribute <varname>variableArtifact</varname></term>
+            <listitem>
+              <para>The attribute <varname>variableArtifact</varname> of a
+              <classname>Variation</classname> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> implements a reference to the artifact elements which
+              correspond to <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation>.</para>
+
+              <para>The attribute <varname>variableArtifact</varname> is
+              optional.</para>
+
+              <para>If a <classname>Variation</classname> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> has more than one
+              <varname>variableArtifact</varname>s <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+
+                    <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mi>n</mml:mi>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> the the URIs of <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+
+                    <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mi>n</mml:mi>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> do not need to point to the same artifacts. That is, the URI attributes of <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+                      <mml:mn>1</mml:mn>
+                    </mml:msub>
+
+                    <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+                      <mml:mi>n</mml:mi>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> may have different values for each <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+                      <mml:mi>i</mml:mi>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation>.</para>
+            </listitem>
+          </varlistentry>
+
+ 
+        </variablelist>
 
       </section>
 
@@ -3015,6 +3296,11 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
             <programlisting>&lt;xs:complexType name=&quot;StructuralVariation&quot;&gt;
 &#x9;&lt;xs:complexContent&gt;
 &#x9;&#x9;&lt;xs:extension base=&quot;Variation&quot;&gt;
+&#x9;&#x9;&#x9;&lt;xs:sequence&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;xs:element name=&quot;variable-artifact&quot;
+&#x9;&#x9;&#x9;&#x9;&#x9;type=&quot;ArtifactElement&quot;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;
+&#x9;&#x9;&#x9;&lt;/xs:sequence&gt;
 &#x9;&#x9;&lt;/xs:extension&gt;
 &#x9;&lt;/xs:complexContent&gt;
 &lt;/xs:complexType&gt;</programlisting>
@@ -3030,7 +3316,6 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       </section>
 
     </section>
-
 
     <section id="sec_structuralvariationpoint">
       <title>StructuralVariationPoint</title>
@@ -3061,8 +3346,8 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         </figure>
 
         <para>The artifact elements are referenced by the attribute
-        <varname>correspondingVariableArtifactElement</varname> of the <classname>VariationPoint</classname>
-        and the attribute <varname>correspondingVariableArtifactElement</varname> of its
+        <varname>variableArtifact</varname> of the <classname>VariationPoint</classname>
+        and the attribute <varname>variableArtifact</varname> of its
         <classname>Variation</classname> objects (see the classes <classname>VariationPoint</classname> and <classname>Variation</classname> in <xref
         linkend="fig_uml_structuralvariationpoint"/>)</para>
 
@@ -3138,170 +3423,6 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 &#x9;&lt;/variation&gt;
 &lt;/structural-variationpoint&gt;</programlisting>
           </example>
-        </section>
-
-      </section>
-
-    </section>
-
-    <section id="sec_ParameterVariation">
-      <title>ParameterVariation</title>
-
-      <section>
-        <title>Description</title>
-
-        <para>A <classname>ParameterVariation</classname> defines a value for the corresponding artifact
-        element of a <classname>ParameterVariationPoint</classname>. The artifact
-        element in question is referenced by its attribute
-        <varname>correspondingVariableArtifactElement</varname> (see <xref
-        linkend="attr_variation_corvarartifactelement"/>).</para>
-
-        <para>The value is defined either using a constant or a calculation <classname>Expression</classname>.</para>
-
-        <!--
-
-        <para>[TODO: value and expression behavior.]</para>
-
-        <para>[TODO] Each CalculatedParameterVariationPoint aggregates a single
-        CalculatedVariation. A CalculatedVariation is a <classname>Variation</classname> that
-        determines a value for a CalculatedVariationPoint.</para>
-
-
-        <para>A CalculatedParameterVariatonPoint is a <classname>ParameterVariationPoint</classname>
-        that defines a value for a variation point in an artifact. Unlike
-        a XorParameterVariationPoint, which picks one value from a number of
-        choices, a CalculatedParameterVariatonPoint uses an expression to
-        define the value.</para>
-
-        <para>A CalculatedParameterVariatonPoint contains a single
-        CalculatedVariation whose attribute expression defines the expression
-        that is used to calculate the value for the associated variation
-        point.</para> -->
-
-        <!--
-        , and the attribute value
-        of this <classname>ParameterVariation</classname> is then used to provide a value for its
-        <varname>correspondingVariableArtifactElement</varname>.</para> -->
-
-        <para>The class <classname>ParameterVariation</classname> inherits from the abstract class
-        <classname>Variation</classname>.</para>
-      </section>
-
-      <section id="sec_ParameterVariation_spec">
-      <title>Specification</title>
-
-        <figure>
-          <title>UML Diagram for class <classname>ParameterVariation</classname></title>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata contentdepth="607" contentwidth="415"
-                         fileref="Figures/ParameterVariationPoint.svg"/>
-            </imageobject>
-          </mediaobject>
-        </figure>
-
-        <variablelist>
-          <varlistentry>
-            <term>Attribute <varname>expression</varname></term>
-            <listitem>
-              <para>The optional attribute <varname>expression</varname> of a <classname>ParameterVariation</classname>
-              specifies the expression that is used to compute the value of a
-              <classname>ParameterVariation</classname>.</para>
-
-              <para>The attribute <varname>expression</varname> of a <classname>ParameterVariation</classname>
-              may evaluate to an arbitrary value. Which values are allowed, depends on the
-              artifact elements which are referenced by the attribute
-              <varname>correspondingVariableArtifactElement</varname> (see <xref
-              linkend="attr_variation_corvarartifactelement"/>).</para>
-
-              <para>[TODO: Roles of expression in description, configuration, partial config]</para>
-
-            </listitem>
-          </varlistentry>
-
-          <varlistentry>
-            <term>Attribute <varname>value</varname></term>
-            <listitem>
-              <para>The attribute <varname>value</varname> of a <classname>ParameterVariation</classname> is a constant, not
-              an expression.</para>
-
-              <para>The data type (e.g. Boolean, Integer, Floating Point, or an
-              enumeration) and range (e.g. 1&mldr;10) that is allowed for the
-              attribute <varname>value</varname> of a <classname>ParameterVariation</classname> is defined by the artifact
-              element that is associated with <classname>ParameterVariation</classname> (see
-              <varname>correspondingVariableArtifactElement</varname>, <xref
-              linkend="attr_variation_corvarartifactelement"/>).</para>
-
-              <para>[TODO: Roles of value in description, configuration, partial config]</para>
-            </listitem>
-          </varlistentry>
-        </variablelist>
-
-        <!--
-        <para>When a CalculatedParameterVariationPoint is bound, the
-        expression of its CalculatedVariation is evaluated. The result of the
-        evaluation gets assigned to the artifact element(s) which are
-        referenced by the attribute <varname>correspondingVariableArtifactElement</varname> (see
-        <xref linkend="attr_variation_corvarartifactelement"/>).</para>
-
-        <para>A CalculatedParameterVariationPoint can only be bound when
-        its CalculatedVariation has an attribute <varname>expression</varname>.</para> -->
-      </section>
-
-      <section>
-        <title>XML Serialization</title>
-
-        <section>
-          <title>XML Schema</title>
-
-          <figure>
-            <title>XML Schema for <classname>ParameterVariation</classname></title>
-            <programlisting>&lt;xs:complexType name=&quot;ParameterVariation&quot;&gt;
-&#x9;&lt;xs:complexContent&gt;
-&#x9;&#x9;&lt;xs:extension base=&quot;Variation&quot;&gt;
-&#x9;&#x9;&#x9;&lt;xs:sequence&gt;
-&#x9;&#x9;&#x9;&#x9;&lt;xs:element name=&quot;expression&quot; type=&quot;Expression&quot;
-&#x9;&#x9;&#x9;&#x9;&#x9;minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;/&gt;
-&#x9;&#x9;&#x9;&#x9;&lt;xs:element name=&quot;value&quot; type=&quot;xs:string&quot;
-&#x9;&#x9;&#x9;&#x9;&#x9;minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;/&gt;
-&#x9;&#x9;&#x9;&lt;/xs:sequence&gt;
-&#x9;&#x9;&lt;/xs:extension&gt;
-&#x9;&lt;/xs:complexContent&gt;
-&lt;/xs:complexType&gt;</programlisting>
-          </figure>
-
-        </section>
-
-        <section>
-          <title>Examples</title>
-          <example>
-            <title>XML example for <classname>ParameterVariation</classname> with alternative constant values</title>
-            <programlisting>&lt;parameter-variationpoint id=&quot;vp1&quot; type=&quot;xor&quot;&gt;
-&#x9;&lt;variation id=&quot;vp1v1&quot;&gt;
-&#x9;&#x9;&lt;condition type=&quot;single-feature-condition&quot;&gt;Feature1&lt;/condition&gt;
-&#x9;&#x9;&lt;value&gt;1&lt;/value&gt;
-&#x9;&lt;/variation&gt;
-&#x9;&lt;variation id=&quot;vp1v2&quot;&gt;
-&#x9;&#x9;&lt;condition type=&quot;single-feature-condition&quot;&gt;Feature2&lt;/condition&gt;
-&#x9;&#x9;&lt;value&gt;2&lt;/value&gt;
-&#x9;&lt;/variation&gt;
-&#x9;&lt;variation id=&quot;vp1v3&quot;&gt;
-&#x9;&#x9;&lt;condition type=&quot;single-feature-condition&quot;&gt;Feature3&lt;/condition&gt;
-&#x9;&#x9;&lt;value&gt;3&lt;/value&gt;
-&#x9;&lt;/variation&gt;
-&lt;/parameter-variationpoint&gt;</programlisting>
-          </example>
-
-          <example>
-            <title>XML example for <classname>ParameterVariation</classname> with a calculation expression</title>
-            <programlisting>&lt;parameter-variationpoint id=&quot;vp1&quot; type=&quot;optional&quot;&gt;
-&#x9;&lt;variation id=&quot;vp1v1&quot;&gt;
-&#x9;&#x9;&lt;expression type=&quot;x:pvscl&quot;&gt;6*9&lt;/expression&gt;
-&#x9;&lt;/variation&gt;
-&lt;/parameter-variationpoint&gt;</programlisting>
-          </example>
-
         </section>
 
       </section>
@@ -3446,7 +3567,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="344" contentwidth="407"
-                         fileref="Figures/VariabilityExchangeModel.svg"/>
+                         fileref="Figures/VariabilityExchangeModels.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -3679,7 +3800,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <mediaobject>
             <imageobject>
               <imagedata contentdepth="614" contentwidth="420"
-                         fileref="Figures/StructuralVariationPoint.svg"/>
+                         fileref="Figures/Variation.svg"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -3864,120 +3985,6 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
             </listitem>
           </varlistentry>
 
-          <varlistentry id="attr_variation_corvarartifactelement">
-            <term>Attribute <varname>correspondingVariableArtifactElement</varname></term>
-            <listitem>
-              <para>The attribute <varname>correspondingVariableArtifactElement</varname> of a
-              <classname>Variation</classname> <inlineequation>
-                <mml:math display="inline"
-                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                  <mml:mrow>
-                        <mml:mi>v</mml:mi>
-                  </mml:mrow>
-                </mml:math>
-              </inlineequation> implements a reference to the artifact elements which
-              correspond to <inlineequation>
-                <mml:math display="inline"
-                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                  <mml:mrow>
-                        <mml:mi>v</mml:mi>
-                  </mml:mrow>
-                </mml:math>
-              </inlineequation>.</para>
-
-              <para>The attribute <varname>correspondingVariableArtifactElement</varname> is
-              optional.</para>
-
-              <para>If a <classname>Variation</classname> <inlineequation>
-                <mml:math display="inline"
-                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                  <mml:mrow>
-                        <mml:mi>v</mml:mi>
-                  </mml:mrow>
-                </mml:math>
-              </inlineequation> has more than one
-              <varname>correspondingVariableArtifactElement</varname>s <inlineequation>
-                <mml:math display="inline"
-                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                  <mml:mrow>
-                    <mml:msub>
-                      <mml:mrow>
-                        <mml:mi>c</mml:mi>
-                      </mml:mrow>
-
-                      <mml:mn>1</mml:mn>
-                    </mml:msub>
-
-                    <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
-
-                    <mml:msub>
-                      <mml:mrow>
-                        <mml:mi>c</mml:mi>
-                      </mml:mrow>
-
-                      <mml:mi>n</mml:mi>
-                    </mml:msub>
-                  </mml:mrow>
-                </mml:math>
-              </inlineequation> the the URIs of <inlineequation>
-                <mml:math display="inline"
-                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                  <mml:mrow>
-                    <mml:msub>
-                      <mml:mrow>
-                        <mml:mi>c</mml:mi>
-                      </mml:mrow>
-
-                      <mml:mn>1</mml:mn>
-                    </mml:msub>
-
-                    <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
-
-                    <mml:msub>
-                      <mml:mrow>
-                        <mml:mi>c</mml:mi>
-                      </mml:mrow>
-
-                      <mml:mi>n</mml:mi>
-                    </mml:msub>
-                  </mml:mrow>
-                </mml:math>
-              </inlineequation> do not need to point to the same artifacts. That is, the URI attributes of <inlineequation>
-                <mml:math display="inline"
-                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                  <mml:mrow>
-                    <mml:msub>
-                      <mml:mrow>
-                        <mml:mi>c</mml:mi>
-                      </mml:mrow>
-                      <mml:mn>1</mml:mn>
-                    </mml:msub>
-
-                    <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
-                    <mml:msub>
-                      <mml:mrow>
-                        <mml:mi>c</mml:mi>
-                      </mml:mrow>
-                      <mml:mi>n</mml:mi>
-                    </mml:msub>
-                  </mml:mrow>
-                </mml:math>
-              </inlineequation> may have different values for each <inlineequation>
-                <mml:math display="inline"
-                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                  <mml:mrow>
-                    <mml:msub>
-                      <mml:mrow>
-                        <mml:mi>c</mml:mi>
-                      </mml:mrow>
-                      <mml:mi>i</mml:mi>
-                    </mml:msub>
-                  </mml:mrow>
-                </mml:math>
-              </inlineequation>.</para>
-            </listitem>
-          </varlistentry>
-
           <varlistentry>
             <term>Attribute <varname>condition</varname></term>
             <listitem>
@@ -4041,6 +4048,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           </varlistentry>
 
         </variablelist>
+
       </section>
 
       <section>
@@ -4059,9 +4067,6 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 &#x9;&#x9;&#x9;&#x9;&#x9;minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;/&gt;
 &#x9;&#x9;&#x9;&#x9;&lt;xs:element name=&quot;dependency&quot; type=&quot;VariationDependency&quot;
 &#x9;&#x9;&#x9;&#x9;&#x9;minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;
-&#x9;&#x9;&#x9;&#x9;&lt;xs:element name=&quot;corresponding-variable-artifact-element&quot;
-&#x9;&#x9;&#x9;&#x9;&#x9;type=&quot;ArtifactElement&quot;
-&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;
 &#x9;&#x9;&#x9;&#x9;&lt;xs:element name=&quot;condition&quot; type=&quot;Expression&quot;
 &#x9;&#x9;&#x9;&#x9;&#x9;minOccurs=&quot;0&quot; maxOccurs=&quot;1&quot;/&gt;
 &#x9;&#x9;&#x9;&lt;/xs:sequence&gt;
@@ -4071,807 +4076,6 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 &#x9;&lt;/xs:complexContent&gt;
 &lt;/xs:complexType&gt;</programlisting>
           </figure>
-
-        </section>
-
-      </section>
-
-    </section>
-
-    <section id="sec_variationpoint">
-      <title>VariationPoint</title>
-
-      <section>
-        <title>Description</title>
-
-        <para>The abstract class <classname>VariationPoint</classname> describes a variation point in
-        an artifact.</para>
-
-        <para>The class <classname>VariationPoint</classname> inherits from the class
-            <classname>Identifiable</classname>.</para>
-
-        <para>The classes <classname>StructuralVariationPoint</classname> and
-            <classname>ParameterVariationPoint</classname> inherit from the class
-            <classname>VariationPoint</classname>.</para>
-      </section>
-
-      <section>
-        <title>Specification</title>
-
-        <figure>
-          <title>UML Diagram for class <classname>VariationPoint</classname></title>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata contentdepth="344" contentwidth="407"
-                         fileref="Figures/VariationPoint.svg"/>
-            </imageobject>
-          </mediaobject>
-        </figure>
-
-        <variablelist>
-          <varlistentry id="attr_variationpoint_type">
-            <term>Attribute <varname>type</varname></term>
-            <listitem>
-              <para>The attribute <varname>type</varname> restricts the number of
-                <classname>Variation</classname> objects, which may be set during the binding process.
-                Currently, three types are defined:</para>
-
-              <variablelist>
-                <varlistentry>
-                  <term><constant>Optional</constant></term>
-                  <listitem>
-                    <para>Any number of <classname>Variation</classname> objects may be set to this <classname>VariationPoint</classname>.</para>
-                  </listitem>
-                </varlistentry>
-
-                <varlistentry>
-                  <term><constant>Or</constant></term>
-                  <listitem>
-                    <para>At least one <classname>Variation</classname> object shall be set to this <classname>VariationPoint</classname>.</para>
-                  </listitem>
-                </varlistentry>
-
-                <varlistentry>
-                  <term><constant>Xor</constant></term>
-                  <listitem>
-                    <para>Exactly one <classname>Variation</classname> object shall be set to this <classname>VariationPoint</classname>.</para>
-                  </listitem>
-                </varlistentry>
-              </variablelist>
-
-            </listitem>
-          </varlistentry>
-
-          <varlistentry>
-            <term>Attribute <varname>bindingTime</varname></term>
-            <listitem>
-              <para>The attribute <varname>bindingTime</varname> defines the binding time of a
-                <classname>VariationPoint</classname>. For more information on the concept of binding times,
-                see <xref linkend="sec_bindingtime"/>.</para>
-
-              <para>If a <classname>VariationPoint</classname> does not declare a <classname>BindingTime</classname>, then it
-                is up to the binding process to define which binding time to use.
-                For example, a process that uses a single binding time may not
-                state an explicit binding time for its variation points.</para>
-
-              <para>A <classname>VariationPoint</classname> may define more than one binding time. In
-                this case, the attribute <varname>selected</varname> of the <classname>BindingTime</classname> elements
-                decides which binding time is used in the actual binding
-                process.</para>
-
-              <para>If the <classname>VariabilityExchangeModel</classname> <inlineequation>
-                  <mml:math display="inline"
-                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                    <mml:ci>M</mml:ci>
-                  </mml:math>
-                </inlineequation> which contains a
-                <classname>VariationPoint</classname> <inlineequation>
-                  <mml:math display="inline"
-                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                    <mml:mrow>
-                      <mml:mi>v</mml:mi>
-                    </mml:mrow>
-                  </mml:math>
-                </inlineequation> has the type <constant>VariationPointConfiguration</constant>, then
-                let <inlineequation>
-                  <mml:math display="inline"
-                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                    <mml:mrow>
-                      <mml:msub>
-                        <mml:mrow>
-                          <mml:mi>s</mml:mi>
-                        </mml:mrow>
-                        <mml:mn>1</mml:mn>
-                      </mml:msub>
-                      <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
-                      <mml:msub>
-                        <mml:mrow>
-                          <mml:mi>s</mml:mi>
-                        </mml:mrow>
-                        <mml:mn>n</mml:mn>
-                      </mml:msub>
-                    </mml:mrow>
-                  </mml:math>
-                </inlineequation> be the values of the attribute <varname>selected</varname> of the <classname>BindingTime</classname> attributes of <inlineequation>
-                  <mml:math display="inline"
-                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                    <mml:mrow>
-                      <mml:mi>v</mml:mi>
-                    </mml:mrow>
-                  </mml:math>
-                </inlineequation>. Then the following conditions must hold:</para>
-			
-              <orderedlist>
-                <listitem>
-                  <para><inlineequation>
-                    <mml:math display="block"
-                              xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                      <mml:apply>
-                        <mml:exists/>
-                        <mml:bvar><mml:ci>i</mml:ci></mml:bvar>
-                        <mml:apply><mml:and/>
-                          <mml:apply><mml:in/>
-                            <mml:ci>i</mml:ci>
-                              <mml:set>
-                                <mml:cn>1</mml:cn>
-                                <mml:ci>...</mml:ci>
-                                <mml:ci>n</mml:ci>
-                              </mml:set>
-                          </mml:apply>
-
-                          <mml:apply><mml:eq/>
-                            <mml:apply><mml:ci type="function">eval</mml:ci><mml:ci><mml:msub>
-                              <mml:mrow>
-                                <mml:mi>s</mml:mi>
-                              </mml:mrow>
-                              <mml:mn>i</mml:mn>
-                              </mml:msub></mml:ci></mml:apply>
-                            <mml:true/>
-                          </mml:apply>
-                        </mml:apply>
-                      </mml:apply>
-                    </mml:math>
-                  </inlineequation></para>
-                </listitem>
-
-                <listitem>
-                  <para><inlineequation>
-                    <mml:math display="block"
-                        xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                      <mml:apply>
-                        <mml:forall/>
-                        <mml:bvar><mml:ci>j</mml:ci></mml:bvar>
-                        <mml:apply><mml:implies/>
-                          <mml:apply><mml:and/>
-
-                            <mml:apply><mml:in/>
-                              <mml:ci>j</mml:ci>
-                                <mml:set>
-                                  <mml:cn>1</mml:cn>
-
-                                  <mml:ci>...</mml:ci>
-                                  <mml:ci>n</mml:ci>
-                                </mml:set>
-                            </mml:apply>
-
-                            <mml:apply><mml:neq/>
-                              <mml:ci>j</mml:ci>
-                              <mml:ci>i</mml:ci>
-                            </mml:apply>
-                          </mml:apply>
-                          <mml:apply><mml:eq/>
-                            <mml:apply><mml:ci type="function">eval</mml:ci><mml:ci><mml:msub>
-                              <mml:mrow>
-                                <mml:mi>s</mml:mi>
-                              </mml:mrow>
-                              <mml:mn>j</mml:mn>
-                              </mml:msub></mml:ci></mml:apply>
-                            <mml:false/>
-                          </mml:apply>
-                        </mml:apply>
-                      </mml:apply>
-                    </mml:math>
-                  </inlineequation></para>
-                </listitem>
-              </orderedlist>
-
-              <para>A consequence of the above condition is that if a
-                <classname>VariationPoint</classname> in a <constant>VariationPointConfiguration</constant> has only a single
-                <classname>BindingTime</classname> attribute <emphasis>b</emphasis>, then the attribute <varname>selected</varname> of <emphasis>b</emphasis>
-                shall have the value <emphasis>true</emphasis>.</para>
-
-              <para>How and when a value for the attribute <varname>selected</varname> is
-                determined is beyond the scope of this document.</para>
-            </listitem>
-          </varlistentry>
-
-          <varlistentry>
-            <term>Attribute <varname>correspondingVariableArtifactElement</varname></term>
-            <listitem>
-              <para>The attribute <varname>correspondingVariableArtifactElement</varname> of a
-                <classname>VariationPoint</classname> <inlineequation>
-                  <mml:math display="inline"
-                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                    <mml:mrow>
-                      <mml:mi>v</mml:mi>
-                    </mml:mrow>
-                  </mml:math>
-                </inlineequation> implements a reference to the artifact elements
-                which correspond to <inlineequation>
-                  <mml:math display="inline"
-                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                    <mml:mrow>
-                      <mml:mi>v</mml:mi>
-                    </mml:mrow>
-                  </mml:math>
-                </inlineequation>.</para>
-
-              <para>Not all <classname>VariationPoint</classname>s have a
-                <varname>correspondingVariableArtifactElement</varname>.</para>
-
-              <para>If a <classname>VariationPoint</classname> <inlineequation>
-                <mml:math display="inline"
-                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                  <mml:mrow>
-                    <mml:mi>v</mml:mi>
-                  </mml:mrow>
-                </mml:math>
-                </inlineequation> has more than one <varname>correspondingVariableArtifactElement</varname>s <inlineequation>
-                  <mml:math display="inline"
-                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                    <mml:mrow>
-                      <mml:msub>
-                        <mml:mrow>
-                          <mml:mi>c</mml:mi>
-                        </mml:mrow>
-
-                        <mml:mn>1</mml:mn>
-                      </mml:msub>
-
-                      <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
-
-                      <mml:msub>
-                        <mml:mrow>
-                          <mml:mi>c</mml:mi>
-                        </mml:mrow>
-
-                        <mml:mn>n</mml:mn>
-                      </mml:msub>
-                    </mml:mrow>
-                  </mml:math>
-                </inlineequation>, then the URIs of the <inlineequation>
-                  <mml:math display="inline"
-                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                    <mml:mrow>
-                      <mml:msub>
-                        <mml:mrow>
-                          <mml:mi>c</mml:mi>
-                        </mml:mrow>
-
-                        <mml:mn>1</mml:mn>
-                      </mml:msub>
-
-                      <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
-
-                      <mml:msub>
-                        <mml:mrow>
-                          <mml:mi>c</mml:mi>
-                        </mml:mrow>
-
-                        <mml:mn>n</mml:mn>
-                      </mml:msub>
-                    </mml:mrow>
-                  </mml:math>
-                </inlineequation> do not need to point to
-                the same artifacts. That is, the URI attributes of <inlineequation>
-                  <mml:math display="inline"
-                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                    <mml:mrow>
-                      <mml:msub>
-                        <mml:mrow>
-                          <mml:mi>c</mml:mi>
-                        </mml:mrow>
-
-                        <mml:mn>1</mml:mn>
-                      </mml:msub>
-
-                      <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
-
-                      <mml:msub>
-                        <mml:mrow>
-                          <mml:mi>c</mml:mi>
-                        </mml:mrow>
-
-                        <mml:mn>n</mml:mn>
-                      </mml:msub>
-                    </mml:mrow>
-                  </mml:math>
-                </inlineequation> may have
-                different values for each <inlineequation>
-                  <mml:math display="inline"
-                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                    <mml:mrow>
-                      <mml:msub>
-                        <mml:mrow>
-                          <mml:mi>c</mml:mi>
-                        </mml:mrow>
-
-                        <mml:mi>i</mml:mi>
-                      </mml:msub>
-                    </mml:mrow>
-                  </mml:math>
-                </inlineequation></para>
-            </listitem>
-          </varlistentry>
-        </variablelist>
-
-      </section>
-
-      <section>
-        <title>XML Serialization</title>
-
-        <section>
-          <title>XML Schema</title>
-
-          <figure>
-            <title>XML Schema for <classname>VariationPoint</classname></title>
-            <programlisting>&lt;xs:complexType name=&quot;VariationPoint&quot; abstract=&quot;true&quot;&gt;
-&#x9;&lt;xs:complexContent&gt;
-&#x9;&#x9;&lt;xs:extension base=&quot;Identifiable&quot;&gt;
-&#x9;&#x9;&#x9;&lt;xs:sequence&gt;
-&#x9;&#x9;&#x9;&#x9;&lt;xs:element name=&quot;bindingtime&quot; type=&quot;BindingTime&quot;
-&#x9;&#x9;&#x9;&#x9;&#x9;minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;
-&#x9;&#x9;&#x9;&#x9;&lt;xs:element name=&quot;corresponding-variable-artifact-element&quot;
-&#x9;&#x9;&#x9;&#x9;&#x9;type=&quot;ArtifactElement&quot;
-&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;
-&#x9;&#x9;&#x9;&lt;/xs:sequence&gt;
-&#x9;&#x9;&#x9;&lt;xs:attribute name=&quot;type&quot; type=&quot;VariationPointTypeEnum&quot;
-&#x9;&#x9;&#x9;&#x9;use=&quot;required&quot;/&gt;
-&#x9;&#x9;&lt;/xs:extension&gt;
-&#x9;&lt;/xs:complexContent&gt;
-&lt;/xs:complexType&gt;</programlisting>
-          </figure>
-
-        </section>
-
-      </section>
-
-    </section>
-
-    <section id="sec_variationpointtypeenum">
-      <title>VariationPointTypeEnum</title>
-
-      <section>
-        <title>Description</title>
-
-        <para>The enumeration <classname>VariationPointTypeEnum</classname> defines which values are
-        allowed for the attribute <varname>type</varname> of <classname>VariationPoint</classname>. Currently, this
-        enumeration defines three values:</para>
-
-        <itemizedlist>
-          <listitem>
-            <para>optional</para>
-          </listitem>
-
-          <listitem>
-            <para>or</para>
-          </listitem>
-
-          <listitem>
-            <para>xor</para>
-          </listitem>
-        </itemizedlist>
-
-        <para>For more information see <classname>VariationPoint</classname>.</para>
-      </section>
-
-      <section>
-        <title>Specification</title>
-
-        <figure>
-          <title>UML Diagram for class <classname>VariationPointTypeEnum</classname></title>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata contentdepth="111" contentwidth="284"
-                         fileref="Figures/VariationPointTypeEnum.svg"/>
-            </imageobject>
-          </mediaobject>
-        </figure>
-
-      </section>
-
-      <section>
-        <title>XML Serialization</title>
-
-        <section>
-          <title>XML Schema</title>
-
-          <figure>
-            <title>XML Schema for <classname>VariationDependencyEnum</classname></title>
-            <programlisting>&lt;xs:simpleType name=&quot;VariationPointTypeEnum&quot;&gt;
-&#x9;&lt;xs:restriction base=&quot;xs:string&quot;&gt;
-&#x9;&#x9;&lt;xs:enumeration value=&quot;optional&quot;/&gt;
-&#x9;&#x9;&lt;xs:enumeration value=&quot;or&quot;/&gt;
-&#x9;&#x9;&lt;xs:enumeration value=&quot;xor&quot;/&gt;
-&#x9;&lt;/xs:restriction&gt;
-&lt;/xs:simpleType&gt;</programlisting>
-          </figure>
-
-        </section>
-
-      </section>
-
-    </section>
-
-    <section id="sec_variationpointhierarchy">
-      <title>VariationPointHierarchy</title>
-
-      <section>
-        <title>Description</title>
-
-        <para>Each <classname>Variation</classname> may contain a <classname>VariationPointHierarchy</classname> object.
-        <classname>VariationPointHierarchy</classname> establishes a hierarchy among <classname>VariationPoint</classname>s
-        and <classname>Variation</classname>s.</para>
-
-        <para>The hierarchy is a graph <inlineequation>
-          <mml:math display="block"
-              xmlns:mml="http://www.w3.org/1998/Math/MathML">
-            <mml:apply><mml:eq/>
-              <mml:ci>G</mml:ci>
-              <mml:vector><mml:ci>V</mml:ci><mml:ci>E</mml:ci></mml:vector>
-            </mml:apply>
-          </mml:math>
-          </inlineequation> defined as follows:</para>
-
-        <itemizedlist>
-          <listitem>
-            <para><inlineequation>
-              <mml:math display="block"
-                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                <mml:apply><mml:eq/>
-                  <mml:ci>V</mml:ci>
-                  <mml:apply>
-                    <mml:set>
-                      <mml:ci><mml:msub><mml:ci>v</mml:ci><mml:ci>1</mml:ci></mml:msub></mml:ci>
-                      <mml:ci>,...,</mml:ci>
-                      <mml:ci><mml:msub><mml:ci>v</mml:ci><mml:ci>n</mml:ci></mml:msub></mml:ci>
-                    </mml:set>
-                  </mml:apply>
-                </mml:apply>
-              </mml:math>
-              </inlineequation> where <inlineequation>
-                <mml:math display="inline"
-                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                  <mml:mrow>
-                    <mml:msub>
-                      <mml:mrow>
-                        <mml:mi>v</mml:mi>
-                      </mml:mrow>
-
-                      <mml:mi>i</mml:mi>
-                    </mml:msub>
-                  </mml:mrow>
-                </mml:math>
-              </inlineequation> is a <classname>VariationPoint</classname> in a <emphasis>Variability Exchange
-              Language</emphasis> document<footnote id="__FN6__">
-              <para>Strictly speaking, <emphasis>V</emphasis> would be
-              a set of nodes and there is a bijective mapping between
-              <emphasis>V</emphasis> and the set of elements of type
-              <classname>VariationPoint</classname> in the [FIXME] DOM of the Variability
-              Exchange Language document. We use a simplified language for
-              the sake of clarity here.</para>
-              </footnote>.</para>
-          </listitem>
-
-          <listitem>
-            <para>Let <inlineequation>
-              <mml:math display="inline"
-                        xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                <mml:mrow>
-                  <mml:msub>
-                    <mml:mrow>
-                      <mml:mi>v</mml:mi>
-                    </mml:mrow>
-
-                    <mml:mi>i</mml:mi>
-                  </mml:msub>
-                </mml:mrow>
-              </mml:math>
-              </inlineequation> be a <classname>VariationPoint</classname> which contains a <classname>Variation</classname> which
-              contains a <classname>VariationPointHierarchy</classname> whose attribute <varname>ref</varname> refers to a
-              <classname>VariationPoint</classname> <inlineequation>
-                <mml:math display="inline"
-                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                  <mml:mrow>
-                    <mml:msub>
-                      <mml:mrow>
-                        <mml:mi>v</mml:mi>
-                      </mml:mrow>
-
-                      <mml:mi>j</mml:mi>
-                    </mml:msub>
-                  </mml:mrow>
-                </mml:math>
-              </inlineequation>. Then <inlineequation>
-                <mml:math display="inline"
-                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                  <mml:apply><mml:in/>
-                    <mml:vector>
-                      <mml:ci><mml:msub>
-                        <mml:mrow>
-                          <mml:mi>v</mml:mi>
-                        </mml:mrow>
-
-                        <mml:mi>i</mml:mi>
-                      </mml:msub></mml:ci>
-                      <mml:ci><mml:msub>
-                        <mml:mrow>
-                          <mml:mi>v</mml:mi>
-                        </mml:mrow>
-
-                        <mml:mi>j</mml:mi>
-                      </mml:msub></mml:ci>
-                    </mml:vector>
-                    <mml:ci>E</mml:ci>
-                  </mml:apply>
-                </mml:math>
-              </inlineequation>.</para>
-          </listitem>
-
-          <listitem>
-            <para>No two <classname>VariationPointHierarchy</classname> elements may refer to the
-            same <classname>VariationPoint</classname>s. Formally, the following condition shall
-            hold: <inlineequation>
-              <mml:math display="inline"
-                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                <mml:apply><mml:implies/>
-                  <mml:apply><mml:in/>
-                    <mml:vector>
-                      <mml:ci><mml:msub>
-                        <mml:mrow>
-                          <mml:mi>v</mml:mi>
-                        </mml:mrow>
-
-                        <mml:mi>i</mml:mi>
-                      </mml:msub></mml:ci>
-                      <mml:ci><mml:msub>
-                        <mml:mrow>
-                          <mml:mi>v</mml:mi>
-                        </mml:mrow>
-
-                        <mml:mi>j</mml:mi>
-                      </mml:msub></mml:ci>
-                    </mml:vector>
-                    <mml:ci>E</mml:ci>
-                  </mml:apply>
-                  <mml:apply>
-                    <mml:forall/>
-                      <mml:bvar><mml:ci>k</mml:ci></mml:bvar>
-                      <mml:apply><mml:implies/>
-                        <mml:apply><mml:neq/>
-                          <mml:ci>k</mml:ci>
-                          <mml:ci>i</mml:ci>
-                        </mml:apply>
-                        <mml:apply><mml:notin/>
-                          <mml:vector>
-                            <mml:ci><mml:msub>
-                              <mml:mrow>
-                                <mml:mi>v</mml:mi>
-                              </mml:mrow>
-
-                              <mml:mi>k</mml:mi>
-                            </mml:msub></mml:ci>
-                            <mml:ci><mml:msub>
-                              <mml:mrow>
-                                <mml:mi>v</mml:mi>
-                              </mml:mrow>
-
-                              <mml:mi>j</mml:mi>
-                            </mml:msub></mml:ci>
-                          </mml:vector>
-                          <mml:ci>E</mml:ci>
-                        </mml:apply>
-                      </mml:apply>
-                    </mml:apply>
-                  </mml:apply>
-                </mml:math>
-              </inlineequation></para>
-          </listitem>
-          <listitem>
-            <para><emphasis>E</emphasis> must not contain cycles, that is, there cannot be a
-              sequence. Formally, the following condition shall hold:
-              <inlineequation>
-                <mml:math display="inline"
-                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                  <mml:vector>
-                    <mml:ci><mml:msub>
-                      <mml:ci>v</mml:ci>
-                      <mml:ci><mml:msub>
-                        <mml:mi>i</mml:mi>
-                        <mml:mi>1</mml:mi>
-                      </mml:msub></mml:ci>
-                    </mml:msub></mml:ci>
-                    <mml:ci><mml:msub>
-                      <mml:ci>v</mml:ci>
-                      <mml:ci><mml:msub>
-                        <mml:ci>i</mml:ci>
-                        <mml:ci>2</mml:ci>
-                      </mml:msub></mml:ci>
-                    </mml:msub></mml:ci>
-                  </mml:vector>
-                  <mml:mo>,</mml:mo>
-                  <mml:vector>
-                    <mml:ci><mml:msub>
-                      <mml:ci>v</mml:ci>
-                      <mml:ci><mml:msub>
-                        <mml:mi>i</mml:mi>
-                        <mml:mi>3</mml:mi>
-                      </mml:msub></mml:ci>
-                    </mml:msub></mml:ci>
-                    <mml:ci><mml:msub>
-                      <mml:ci>v</mml:ci>
-                      <mml:ci><mml:msub>
-                        <mml:ci>i</mml:ci>
-                        <mml:ci>4</mml:ci>
-                      </mml:msub></mml:ci>
-                    </mml:msub></mml:ci>
-                  </mml:vector>
-					
-                  <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
-					
-                  <mml:vector>
-                    <mml:ci><mml:msub>
-                      <mml:ci>v</mml:ci>
-                      <mml:ci><mml:msub>
-                        <mml:mi>i</mml:mi>
-                        <mml:mi>k-2</mml:mi>
-                      </mml:msub></mml:ci>
-                    </mml:msub></mml:ci>
-                    <mml:ci><mml:msub>
-                      <mml:ci>v</mml:ci>
-                      <mml:ci><mml:msub>
-                        <mml:ci>i</mml:ci>
-                        <mml:ci>k-1</mml:ci>
-                      </mml:msub></mml:ci>
-                    </mml:msub></mml:ci>
-                  </mml:vector>
-                  <mml:mo>,</mml:mo>
-                  <mml:apply><mml:in/>
-                    <mml:vector>
-                      <mml:ci><mml:msub>
-                        <mml:ci>v</mml:ci>
-                        <mml:ci><mml:msub>
-                          <mml:mi>i</mml:mi>
-                          <mml:mi>k-1</mml:mi>
-                        </mml:msub></mml:ci>
-                      </mml:msub></mml:ci>
-                      <mml:ci><mml:msub>
-                        <mml:ci>v</mml:ci>
-                        <mml:ci><mml:msub>
-                          <mml:ci>i</mml:ci>
-                          <mml:ci>k</mml:ci>
-                        </mml:msub></mml:ci>
-                      </mml:msub></mml:ci>
-                    </mml:vector>
-                    <mml:ci>E</mml:ci>
-                  </mml:apply>
-                </mml:math>
-              </inlineequation> with
-              <inlineequation>
-                <mml:math display="inline"
-                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
-                  <mml:apply><mml:eq/>
-                    <mml:ci><mml:msub>
-                      <mml:mrow>
-                        <mml:mi>i</mml:mi>
-                      </mml:mrow>
-                      <mml:mi>1</mml:mi>
-                    </mml:msub></mml:ci>
-					
-                    <mml:ci><mml:msub>
-                      <mml:mrow>
-                        <mml:mi>i</mml:mi>
-                      </mml:mrow>
-
-                      <mml:mi>k</mml:mi>
-                    </mml:msub></mml:ci>
-                  </mml:apply>
-                </mml:math>
-              </inlineequation>
-            </para>
-          </listitem>
-        </itemizedlist>
-
-        <para>These conditions make sure that <emphasis>G</emphasis> is a tree or a set of
-          trees.</para>
-
-        <para>The class <classname>VariationPointHierarchy</classname> inherits from
-            <classname>Identifiable</classname>.</para>
-
-      </section>
-
-      <section>
-        <title>Specification</title>
-
-        <figure>
-          <title>UML Diagram for class <classname>VariationPointHierarchy</classname></title>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata contentdepth="607" contentwidth="605"
-                         fileref="Figures/VariationPointHierarchy.svg"/>
-            </imageobject>
-          </mediaobject>
-        </figure>
-
-        <variablelist>
-          <varlistentry>
-            <term>Attribute <varname>variationPoint</varname></term>
-            <listitem>
-              <para>The attribute <varname>variationPoint</varname> of a <classname>VariationPointHierarchy</classname>
-              identifies the endpoint of a variation-point hierarchy relation.</para>
-            </listitem>
-          </varlistentry>
-        </variablelist>
-
-      </section>
-
-      <section>
-        <title>XML Serialization</title>
-
-        <section>
-          <title>XML Schema</title>
-
-          <figure>
-            <title>XML Schema for <classname>VariationPointHierarchy</classname></title>
-            <programlisting>&lt;xs:complexType name=&quot;VariationPointHierarchy&quot;&gt;
-&#x9;&lt;xs:complexContent&gt;
-&#x9;&#x9;&lt;xs:extension base=&quot;Identifiable&quot;&gt;
-&#x9;&#x9;&#x9;&lt;xs:sequence&gt;
-&#x9;&#x9;&#x9;&#x9;&lt;xs:element name=&quot;variationpoint&quot;
-&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot;&gt;
-&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xs:complexType&gt;
-&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xs:attribute name=&quot;ref&quot; type=&quot;xs:IDREF&quot;
-&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;use=&quot;required&quot;/&gt;
-&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xs:complexType&gt;
-&#x9;&#x9;&#x9;&#x9;&lt;/xs:element&gt;
-&#x9;&#x9;&#x9;&lt;/xs:sequence&gt;
-&#x9;&#x9;&lt;/xs:extension&gt;
-&#x9;&lt;/xs:complexContent&gt;
-&lt;/xs:complexType&gt;</programlisting>
-          </figure>
-
-          <para>In the XML Schema, the attribute <varname>variationPoint</varname> of
-            <classname>VariationPointHierarchy</classname> is not implemented as a XML attribute but
-            as a separate XML element named <sgmltag class="element">variationpoint</sgmltag> with an XML attribute
-            <sgmltag class="attribute">ref</sgmltag> that implements the actual reference. This is because
-            <sgmltag class="element">variationpoint</sgmltag> has an upper multiplicity greater than one, but XML
-            attributes are restricted to an upper multiplicity of 1.</para>
-
-        </section>
-
-        <section>
-          <title>Examples</title>
-          <example>
-            <title>XML Example for <classname>VariationPointHierarchy</classname></title>
-            <programlisting>&lt;variability-exchange-model type=&quot;variationpoint-description&quot; id=&quot;model&quot;&gt;
-&#x9;&lt;structural-variationpoint id=&quot;<emphasis role="strong">vp1</emphasis>&quot; type=&quot;optional&quot;&gt;
-&#x9;&#x9;&lt;variation id=&quot;vp1v1&quot;&gt;
-&#x9;&#x9;&#x9;&lt;condition type=&quot;single-feature-condition&quot;&gt;Feature1&lt;/condition&gt;
-&#x9;&#x9;&lt;/variation&gt;
-&#x9;&lt;/structural-variationpoint&gt;
-&#x9;&lt;structural-variationpoint id=&quot;vp2&quot; type=&quot;optional&quot;&gt;
-&#x9;&#x9;&lt;variation id=&quot;vp2v1&quot;&gt;
-&#x9;&#x9;&#x9;<emphasis role="strong">&lt;hierarchy id=&quot;vp2h1&quot;&gt;
-&#x9;&#x9;&#x9;&#x9;&lt;variationpoint ref=&quot;vp1&quot;/&gt;
-&#x9;&#x9;&#x9;&lt;/hierarchy&gt;</emphasis>
-&#x9;&#x9;&#x9;&lt;condition type=&quot;single-feature-condition&quot;&gt;Feature1&lt;/condition&gt;
-&#x9;&#x9;&lt;/variation&gt;
-&#x9;&lt;/structural-variationpoint&gt;
-&lt;/variability-exchange-model&gt;</programlisting>
-          </example>
 
         </section>
 
@@ -5382,9 +4586,808 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
     </section>
 
+    <section id="sec_variationpoint">
+      <title>VariationPoint</title>
+
+      <section>
+        <title>Description</title>
+
+        <para>The abstract class <classname>VariationPoint</classname> describes a variation point in
+        an artifact.</para>
+
+        <para>The class <classname>VariationPoint</classname> inherits from the class
+            <classname>Identifiable</classname>.</para>
+
+        <para>The classes <classname>StructuralVariationPoint</classname> and
+            <classname>ParameterVariationPoint</classname> inherit from the class
+            <classname>VariationPoint</classname>.</para>
+      </section>
+
+      <section>
+        <title>Specification</title>
+
+        <figure>
+          <title>UML Diagram for class <classname>VariationPoint</classname></title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata contentdepth="344" contentwidth="407"
+                         fileref="Figures/VariationPoint.svg"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+
+        <variablelist>
+          <varlistentry id="attr_variationpoint_type">
+            <term>Attribute <varname>type</varname></term>
+            <listitem>
+              <para>The attribute <varname>type</varname> restricts the number of
+                <classname>Variation</classname> objects, which may be set during the binding process.
+                Currently, three types are defined:</para>
+
+              <variablelist>
+                <varlistentry>
+                  <term><constant>Optional</constant></term>
+                  <listitem>
+                    <para>Any number of <classname>Variation</classname> objects may be set to this <classname>VariationPoint</classname>.</para>
+                  </listitem>
+                </varlistentry>
+
+                <varlistentry>
+                  <term><constant>Or</constant></term>
+                  <listitem>
+                    <para>At least one <classname>Variation</classname> object shall be set to this <classname>VariationPoint</classname>.</para>
+                  </listitem>
+                </varlistentry>
+
+                <varlistentry>
+                  <term><constant>Xor</constant></term>
+                  <listitem>
+                    <para>Exactly one <classname>Variation</classname> object shall be set to this <classname>VariationPoint</classname>.</para>
+                  </listitem>
+                </varlistentry>
+              </variablelist>
+
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term>Attribute <varname>bindingTime</varname></term>
+            <listitem>
+              <para>The attribute <varname>bindingTime</varname> defines the binding time of a
+                <classname>VariationPoint</classname>. For more information on the concept of binding times,
+                see <xref linkend="sec_bindingtime"/>.</para>
+
+              <para>If a <classname>VariationPoint</classname> does not declare a <classname>BindingTime</classname>, then it
+                is up to the binding process to define which binding time to use.
+                For example, a process that uses a single binding time may not
+                state an explicit binding time for its variation points.</para>
+
+              <para>A <classname>VariationPoint</classname> may define more than one binding time. In
+                this case, the attribute <varname>selected</varname> of the <classname>BindingTime</classname> elements
+                decides which binding time is used in the actual binding
+                process.</para>
+
+              <para>If the <classname>VariabilityExchangeModel</classname> <inlineequation>
+                  <mml:math display="inline"
+                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                    <mml:ci>M</mml:ci>
+                  </mml:math>
+                </inlineequation> which contains a
+                <classname>VariationPoint</classname> <inlineequation>
+                  <mml:math display="inline"
+                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                    <mml:mrow>
+                      <mml:mi>v</mml:mi>
+                    </mml:mrow>
+                  </mml:math>
+                </inlineequation> has the type <constant>VariationPointConfiguration</constant>, then
+                let <inlineequation>
+                  <mml:math display="inline"
+                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>s</mml:mi>
+                        </mml:mrow>
+                        <mml:mn>1</mml:mn>
+                      </mml:msub>
+                      <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>s</mml:mi>
+                        </mml:mrow>
+                        <mml:mn>n</mml:mn>
+                      </mml:msub>
+                    </mml:mrow>
+                  </mml:math>
+                </inlineequation> be the values of the attribute <varname>selected</varname> of the <classname>BindingTime</classname> attributes of <inlineequation>
+                  <mml:math display="inline"
+                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                    <mml:mrow>
+                      <mml:mi>v</mml:mi>
+                    </mml:mrow>
+                  </mml:math>
+                </inlineequation>. Then the following conditions must hold:</para>
+			
+              <orderedlist>
+                <listitem>
+                  <para><inlineequation>
+                    <mml:math display="block"
+                              xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                      <mml:apply>
+                        <mml:exists/>
+                        <mml:bvar><mml:ci>i</mml:ci></mml:bvar>
+                        <mml:apply><mml:and/>
+                          <mml:apply><mml:in/>
+                            <mml:ci>i</mml:ci>
+                              <mml:set>
+                                <mml:cn>1</mml:cn>
+                                <mml:ci>...</mml:ci>
+                                <mml:ci>n</mml:ci>
+                              </mml:set>
+                          </mml:apply>
+
+                          <mml:apply><mml:eq/>
+                            <mml:apply><mml:ci type="function">eval</mml:ci><mml:ci><mml:msub>
+                              <mml:mrow>
+                                <mml:mi>s</mml:mi>
+                              </mml:mrow>
+                              <mml:mn>i</mml:mn>
+                              </mml:msub></mml:ci></mml:apply>
+                            <mml:true/>
+                          </mml:apply>
+                        </mml:apply>
+                      </mml:apply>
+                    </mml:math>
+                  </inlineequation></para>
+                </listitem>
+
+                <listitem>
+                  <para><inlineequation>
+                    <mml:math display="block"
+                        xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                      <mml:apply>
+                        <mml:forall/>
+                        <mml:bvar><mml:ci>j</mml:ci></mml:bvar>
+                        <mml:apply><mml:implies/>
+                          <mml:apply><mml:and/>
+
+                            <mml:apply><mml:in/>
+                              <mml:ci>j</mml:ci>
+                                <mml:set>
+                                  <mml:cn>1</mml:cn>
+
+                                  <mml:ci>...</mml:ci>
+                                  <mml:ci>n</mml:ci>
+                                </mml:set>
+                            </mml:apply>
+
+                            <mml:apply><mml:neq/>
+                              <mml:ci>j</mml:ci>
+                              <mml:ci>i</mml:ci>
+                            </mml:apply>
+                          </mml:apply>
+                          <mml:apply><mml:eq/>
+                            <mml:apply><mml:ci type="function">eval</mml:ci><mml:ci><mml:msub>
+                              <mml:mrow>
+                                <mml:mi>s</mml:mi>
+                              </mml:mrow>
+                              <mml:mn>j</mml:mn>
+                              </mml:msub></mml:ci></mml:apply>
+                            <mml:false/>
+                          </mml:apply>
+                        </mml:apply>
+                      </mml:apply>
+                    </mml:math>
+                  </inlineequation></para>
+                </listitem>
+              </orderedlist>
+
+              <para>A consequence of the above condition is that if a
+                <classname>VariationPoint</classname> in a <constant>VariationPointConfiguration</constant> has only a single
+                <classname>BindingTime</classname> attribute <emphasis>b</emphasis>, then the attribute <varname>selected</varname> of <emphasis>b</emphasis>
+                shall have the value <emphasis>true</emphasis>.</para>
+
+              <para>How and when a value for the attribute <varname>selected</varname> is
+                determined is beyond the scope of this document.</para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term>Attribute <varname>variableArtifact</varname></term>
+            <listitem>
+              <para>The attribute <varname>variableArtifact</varname> of a
+                <classname>VariationPoint</classname> <inlineequation>
+                  <mml:math display="inline"
+                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                    <mml:mrow>
+                      <mml:mi>v</mml:mi>
+                    </mml:mrow>
+                  </mml:math>
+                </inlineequation> implements a reference to the artifact elements
+                which correspond to <inlineequation>
+                  <mml:math display="inline"
+                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                    <mml:mrow>
+                      <mml:mi>v</mml:mi>
+                    </mml:mrow>
+                  </mml:math>
+                </inlineequation>.</para>
+
+              <para>Not all <classname>VariationPoint</classname>s have a
+                <varname>variableArtifact</varname>.</para>
+
+              <para>If a <classname>VariationPoint</classname> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:mi>v</mml:mi>
+                  </mml:mrow>
+                </mml:math>
+                </inlineequation> has more than one <varname>variableArtifact</varname>s <inlineequation>
+                  <mml:math display="inline"
+                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>c</mml:mi>
+                        </mml:mrow>
+
+                        <mml:mn>1</mml:mn>
+                      </mml:msub>
+
+                      <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>c</mml:mi>
+                        </mml:mrow>
+
+                        <mml:mn>n</mml:mn>
+                      </mml:msub>
+                    </mml:mrow>
+                  </mml:math>
+                </inlineequation>, then the URIs of the <inlineequation>
+                  <mml:math display="inline"
+                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>c</mml:mi>
+                        </mml:mrow>
+
+                        <mml:mn>1</mml:mn>
+                      </mml:msub>
+
+                      <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>c</mml:mi>
+                        </mml:mrow>
+
+                        <mml:mn>n</mml:mn>
+                      </mml:msub>
+                    </mml:mrow>
+                  </mml:math>
+                </inlineequation> do not need to point to
+                the same artifacts. That is, the URI attributes of <inlineequation>
+                  <mml:math display="inline"
+                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>c</mml:mi>
+                        </mml:mrow>
+
+                        <mml:mn>1</mml:mn>
+                      </mml:msub>
+
+                      <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>c</mml:mi>
+                        </mml:mrow>
+
+                        <mml:mn>n</mml:mn>
+                      </mml:msub>
+                    </mml:mrow>
+                  </mml:math>
+                </inlineequation> may have
+                different values for each <inlineequation>
+                  <mml:math display="inline"
+                            xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>c</mml:mi>
+                        </mml:mrow>
+
+                        <mml:mi>i</mml:mi>
+                      </mml:msub>
+                    </mml:mrow>
+                  </mml:math>
+                </inlineequation></para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+
+      </section>
+
+      <section>
+        <title>XML Serialization</title>
+
+        <section>
+          <title>XML Schema</title>
+
+          <figure>
+            <title>XML Schema for <classname>VariationPoint</classname></title>
+            <programlisting>&lt;xs:complexType name=&quot;VariationPoint&quot; abstract=&quot;true&quot;&gt;
+&#x9;&lt;xs:complexContent&gt;
+&#x9;&#x9;&lt;xs:extension base=&quot;Identifiable&quot;&gt;
+&#x9;&#x9;&#x9;&lt;xs:sequence&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;xs:element name=&quot;bindingtime&quot; type=&quot;BindingTime&quot;
+&#x9;&#x9;&#x9;&#x9;&#x9;minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;xs:element name=&quot;variable-artifact&quot;
+&#x9;&#x9;&#x9;&#x9;&#x9;type=&quot;ArtifactElement&quot;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;/&gt;
+&#x9;&#x9;&#x9;&lt;/xs:sequence&gt;
+&#x9;&#x9;&#x9;&lt;xs:attribute name=&quot;type&quot; type=&quot;VariationPointTypeEnum&quot;
+&#x9;&#x9;&#x9;&#x9;use=&quot;required&quot;/&gt;
+&#x9;&#x9;&lt;/xs:extension&gt;
+&#x9;&lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;</programlisting>
+          </figure>
+
+        </section>
+
+      </section>
+
+    </section>
+
+    <section id="sec_variationpointhierarchy">
+      <title>VariationPointHierarchy</title>
+
+      <section>
+        <title>Description</title>
+
+        <para>Each <classname>Variation</classname> may contain a <classname>VariationPointHierarchy</classname> object.
+        <classname>VariationPointHierarchy</classname> establishes a hierarchy among <classname>VariationPoint</classname>s
+        and <classname>Variation</classname>s.</para>
+
+        <para>The hierarchy is a graph <inlineequation>
+          <mml:math display="block"
+              xmlns:mml="http://www.w3.org/1998/Math/MathML">
+            <mml:apply><mml:eq/>
+              <mml:ci>G</mml:ci>
+              <mml:vector><mml:ci>V</mml:ci><mml:ci>E</mml:ci></mml:vector>
+            </mml:apply>
+          </mml:math>
+          </inlineequation> defined as follows:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para><inlineequation>
+              <mml:math display="block"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                <mml:apply><mml:eq/>
+                  <mml:ci>V</mml:ci>
+                  <mml:apply>
+                    <mml:set>
+                      <mml:ci><mml:msub><mml:ci>v</mml:ci><mml:ci>1</mml:ci></mml:msub></mml:ci>
+                      <mml:ci>,...,</mml:ci>
+                      <mml:ci><mml:msub><mml:ci>v</mml:ci><mml:ci>n</mml:ci></mml:msub></mml:ci>
+                    </mml:set>
+                  </mml:apply>
+                </mml:apply>
+              </mml:math>
+              </inlineequation> where <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mi>i</mml:mi>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation> is a <classname>VariationPoint</classname> in a <emphasis>Variability Exchange
+              Language</emphasis> document<footnote id="__FN6__">
+              <para>Strictly speaking, <emphasis>V</emphasis> would be
+              a set of nodes and there is a bijective mapping between
+              <emphasis>V</emphasis> and the set of elements of type
+              <classname>VariationPoint</classname> in the [FIXME] DOM of the Variability
+              Exchange Language document. We use a simplified language for
+              the sake of clarity here.</para>
+              </footnote>.</para>
+          </listitem>
+
+          <listitem>
+            <para>Let <inlineequation>
+              <mml:math display="inline"
+                        xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                <mml:mrow>
+                  <mml:msub>
+                    <mml:mrow>
+                      <mml:mi>v</mml:mi>
+                    </mml:mrow>
+
+                    <mml:mi>i</mml:mi>
+                  </mml:msub>
+                </mml:mrow>
+              </mml:math>
+              </inlineequation> be a <classname>VariationPoint</classname> which contains a <classname>Variation</classname> which
+              contains a <classname>VariationPointHierarchy</classname> whose attribute <varname>ref</varname> refers to a
+              <classname>VariationPoint</classname> <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:mrow>
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>v</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mi>j</mml:mi>
+                    </mml:msub>
+                  </mml:mrow>
+                </mml:math>
+              </inlineequation>. Then <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:apply><mml:in/>
+                    <mml:vector>
+                      <mml:ci><mml:msub>
+                        <mml:mrow>
+                          <mml:mi>v</mml:mi>
+                        </mml:mrow>
+
+                        <mml:mi>i</mml:mi>
+                      </mml:msub></mml:ci>
+                      <mml:ci><mml:msub>
+                        <mml:mrow>
+                          <mml:mi>v</mml:mi>
+                        </mml:mrow>
+
+                        <mml:mi>j</mml:mi>
+                      </mml:msub></mml:ci>
+                    </mml:vector>
+                    <mml:ci>E</mml:ci>
+                  </mml:apply>
+                </mml:math>
+              </inlineequation>.</para>
+          </listitem>
+
+          <listitem>
+            <para>No two <classname>VariationPointHierarchy</classname> elements may refer to the
+            same <classname>VariationPoint</classname>s. Formally, the following condition shall
+            hold: <inlineequation>
+              <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                <mml:apply><mml:implies/>
+                  <mml:apply><mml:in/>
+                    <mml:vector>
+                      <mml:ci><mml:msub>
+                        <mml:mrow>
+                          <mml:mi>v</mml:mi>
+                        </mml:mrow>
+
+                        <mml:mi>i</mml:mi>
+                      </mml:msub></mml:ci>
+                      <mml:ci><mml:msub>
+                        <mml:mrow>
+                          <mml:mi>v</mml:mi>
+                        </mml:mrow>
+
+                        <mml:mi>j</mml:mi>
+                      </mml:msub></mml:ci>
+                    </mml:vector>
+                    <mml:ci>E</mml:ci>
+                  </mml:apply>
+                  <mml:apply>
+                    <mml:forall/>
+                      <mml:bvar><mml:ci>k</mml:ci></mml:bvar>
+                      <mml:apply><mml:implies/>
+                        <mml:apply><mml:neq/>
+                          <mml:ci>k</mml:ci>
+                          <mml:ci>i</mml:ci>
+                        </mml:apply>
+                        <mml:apply><mml:notin/>
+                          <mml:vector>
+                            <mml:ci><mml:msub>
+                              <mml:mrow>
+                                <mml:mi>v</mml:mi>
+                              </mml:mrow>
+
+                              <mml:mi>k</mml:mi>
+                            </mml:msub></mml:ci>
+                            <mml:ci><mml:msub>
+                              <mml:mrow>
+                                <mml:mi>v</mml:mi>
+                              </mml:mrow>
+
+                              <mml:mi>j</mml:mi>
+                            </mml:msub></mml:ci>
+                          </mml:vector>
+                          <mml:ci>E</mml:ci>
+                        </mml:apply>
+                      </mml:apply>
+                    </mml:apply>
+                  </mml:apply>
+                </mml:math>
+              </inlineequation></para>
+          </listitem>
+          <listitem>
+            <para><emphasis>E</emphasis> must not contain cycles, that is, there cannot be a
+              sequence. Formally, the following condition shall hold:
+              <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:vector>
+                    <mml:ci><mml:msub>
+                      <mml:ci>v</mml:ci>
+                      <mml:ci><mml:msub>
+                        <mml:mi>i</mml:mi>
+                        <mml:mi>1</mml:mi>
+                      </mml:msub></mml:ci>
+                    </mml:msub></mml:ci>
+                    <mml:ci><mml:msub>
+                      <mml:ci>v</mml:ci>
+                      <mml:ci><mml:msub>
+                        <mml:ci>i</mml:ci>
+                        <mml:ci>2</mml:ci>
+                      </mml:msub></mml:ci>
+                    </mml:msub></mml:ci>
+                  </mml:vector>
+                  <mml:mo>,</mml:mo>
+                  <mml:vector>
+                    <mml:ci><mml:msub>
+                      <mml:ci>v</mml:ci>
+                      <mml:ci><mml:msub>
+                        <mml:mi>i</mml:mi>
+                        <mml:mi>3</mml:mi>
+                      </mml:msub></mml:ci>
+                    </mml:msub></mml:ci>
+                    <mml:ci><mml:msub>
+                      <mml:ci>v</mml:ci>
+                      <mml:ci><mml:msub>
+                        <mml:ci>i</mml:ci>
+                        <mml:ci>4</mml:ci>
+                      </mml:msub></mml:ci>
+                    </mml:msub></mml:ci>
+                  </mml:vector>
+					
+                  <mml:mo>,</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>.</mml:mo><mml:mo>,</mml:mo>
+					
+                  <mml:vector>
+                    <mml:ci><mml:msub>
+                      <mml:ci>v</mml:ci>
+                      <mml:ci><mml:msub>
+                        <mml:mi>i</mml:mi>
+                        <mml:mi>k-2</mml:mi>
+                      </mml:msub></mml:ci>
+                    </mml:msub></mml:ci>
+                    <mml:ci><mml:msub>
+                      <mml:ci>v</mml:ci>
+                      <mml:ci><mml:msub>
+                        <mml:ci>i</mml:ci>
+                        <mml:ci>k-1</mml:ci>
+                      </mml:msub></mml:ci>
+                    </mml:msub></mml:ci>
+                  </mml:vector>
+                  <mml:mo>,</mml:mo>
+                  <mml:apply><mml:in/>
+                    <mml:vector>
+                      <mml:ci><mml:msub>
+                        <mml:ci>v</mml:ci>
+                        <mml:ci><mml:msub>
+                          <mml:mi>i</mml:mi>
+                          <mml:mi>k-1</mml:mi>
+                        </mml:msub></mml:ci>
+                      </mml:msub></mml:ci>
+                      <mml:ci><mml:msub>
+                        <mml:ci>v</mml:ci>
+                        <mml:ci><mml:msub>
+                          <mml:ci>i</mml:ci>
+                          <mml:ci>k</mml:ci>
+                        </mml:msub></mml:ci>
+                      </mml:msub></mml:ci>
+                    </mml:vector>
+                    <mml:ci>E</mml:ci>
+                  </mml:apply>
+                </mml:math>
+              </inlineequation> with
+              <inlineequation>
+                <mml:math display="inline"
+                          xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                  <mml:apply><mml:eq/>
+                    <mml:ci><mml:msub>
+                      <mml:mrow>
+                        <mml:mi>i</mml:mi>
+                      </mml:mrow>
+                      <mml:mi>1</mml:mi>
+                    </mml:msub></mml:ci>
+					
+                    <mml:ci><mml:msub>
+                      <mml:mrow>
+                        <mml:mi>i</mml:mi>
+                      </mml:mrow>
+
+                      <mml:mi>k</mml:mi>
+                    </mml:msub></mml:ci>
+                  </mml:apply>
+                </mml:math>
+              </inlineequation>
+            </para>
+          </listitem>
+        </itemizedlist>
+
+        <para>These conditions make sure that <emphasis>G</emphasis> is a tree or a set of
+          trees.</para>
+
+        <para>The class <classname>VariationPointHierarchy</classname> inherits from
+            <classname>Identifiable</classname>.</para>
+
+      </section>
+
+      <section>
+        <title>Specification</title>
+
+        <figure>
+          <title>UML Diagram for class <classname>VariationPointHierarchy</classname></title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata contentdepth="607" contentwidth="605"
+                         fileref="Figures/VariationPointHierarchy.svg"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+
+        <variablelist>
+          <varlistentry>
+            <term>Attribute <varname>variationPoint</varname></term>
+            <listitem>
+              <para>The attribute <varname>variationPoint</varname> of a <classname>VariationPointHierarchy</classname>
+              identifies the endpoint of a variation-point hierarchy relation.</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+
+      </section>
+
+      <section>
+        <title>XML Serialization</title>
+
+        <section>
+          <title>XML Schema</title>
+
+          <figure>
+            <title>XML Schema for <classname>VariationPointHierarchy</classname></title>
+            <programlisting>&lt;xs:complexType name=&quot;VariationPointHierarchy&quot;&gt;
+&#x9;&lt;xs:complexContent&gt;
+&#x9;&#x9;&lt;xs:extension base=&quot;Identifiable&quot;&gt;
+&#x9;&#x9;&#x9;&lt;xs:sequence&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;xs:element name=&quot;variationpoint&quot;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot;&gt;
+&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xs:complexType&gt;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;xs:attribute name=&quot;ref&quot; type=&quot;xs:IDREF&quot;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;use=&quot;required&quot;/&gt;
+&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/xs:complexType&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;/xs:element&gt;
+&#x9;&#x9;&#x9;&lt;/xs:sequence&gt;
+&#x9;&#x9;&lt;/xs:extension&gt;
+&#x9;&lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;</programlisting>
+          </figure>
+
+          <para>In the XML Schema, the attribute <varname>variationPoint</varname> of
+            <classname>VariationPointHierarchy</classname> is not implemented as a XML attribute but
+            as a separate XML element named <sgmltag class="element">variationpoint</sgmltag> with an XML attribute
+            <sgmltag class="attribute">ref</sgmltag> that implements the actual reference. This is because
+            <sgmltag class="element">variationpoint</sgmltag> has an upper multiplicity greater than one, but XML
+            attributes are restricted to an upper multiplicity of 1.</para>
+
+        </section>
+
+        <section>
+          <title>Examples</title>
+          <example>
+            <title>XML Example for <classname>VariationPointHierarchy</classname></title>
+            <programlisting>&lt;variability-exchange-model type=&quot;variationpoint-description&quot; id=&quot;model&quot;&gt;
+&#x9;&lt;structural-variationpoint id=&quot;<emphasis role="strong">vp1</emphasis>&quot; type=&quot;optional&quot;&gt;
+&#x9;&#x9;&lt;variation id=&quot;vp1v1&quot;&gt;
+&#x9;&#x9;&#x9;&lt;condition type=&quot;single-feature-condition&quot;&gt;Feature1&lt;/condition&gt;
+&#x9;&#x9;&lt;/variation&gt;
+&#x9;&lt;/structural-variationpoint&gt;
+&#x9;&lt;structural-variationpoint id=&quot;vp2&quot; type=&quot;optional&quot;&gt;
+&#x9;&#x9;&lt;variation id=&quot;vp2v1&quot;&gt;
+&#x9;&#x9;&#x9;<emphasis role="strong">&lt;hierarchy id=&quot;vp2h1&quot;&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;variationpoint ref=&quot;vp1&quot;/&gt;
+&#x9;&#x9;&#x9;&lt;/hierarchy&gt;</emphasis>
+&#x9;&#x9;&#x9;&lt;condition type=&quot;single-feature-condition&quot;&gt;Feature1&lt;/condition&gt;
+&#x9;&#x9;&lt;/variation&gt;
+&#x9;&lt;/structural-variationpoint&gt;
+&lt;/variability-exchange-model&gt;</programlisting>
+          </example>
+
+        </section>
+
+      </section>
+
+    </section>
+
+    <section id="sec_variationpointtypeenum">
+      <title>VariationPointTypeEnum</title>
+
+      <section>
+        <title>Description</title>
+
+        <para>The enumeration <classname>VariationPointTypeEnum</classname> defines which values are
+        allowed for the attribute <varname>type</varname> of <classname>VariationPoint</classname>. Currently, this
+        enumeration defines three values:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>optional</para>
+          </listitem>
+
+          <listitem>
+            <para>or</para>
+          </listitem>
+
+          <listitem>
+            <para>xor</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>For more information see <classname>VariationPoint</classname>.</para>
+      </section>
+
+      <section>
+        <title>Specification</title>
+
+        <figure>
+          <title>UML Diagram for class <classname>VariationPointTypeEnum</classname></title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata contentdepth="111" contentwidth="284"
+                         fileref="Figures/VariationPointTypeEnum.svg"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+
+      </section>
+
+      <section>
+        <title>XML Serialization</title>
+
+        <section>
+          <title>XML Schema</title>
+
+          <figure>
+            <title>XML Schema for <classname>VariationDependencyEnum</classname></title>
+            <programlisting>&lt;xs:simpleType name=&quot;VariationPointTypeEnum&quot;&gt;
+&#x9;&lt;xs:restriction base=&quot;xs:string&quot;&gt;
+&#x9;&#x9;&lt;xs:enumeration value=&quot;optional&quot;/&gt;
+&#x9;&#x9;&lt;xs:enumeration value=&quot;or&quot;/&gt;
+&#x9;&#x9;&lt;xs:enumeration value=&quot;xor&quot;/&gt;
+&#x9;&lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;</programlisting>
+          </figure>
+
+        </section>
+
+      </section>
+
+    </section>
+
   </section>
-
-
 
   <appendix id="A-AN-ANNEX">
     <title>An Annex</title>
