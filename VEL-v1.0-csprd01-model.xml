@@ -687,7 +687,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
       <mediaobject>
         <imageobject>
           <imagedata contentdepth="777" contentwidth="605"
-                     fileref="Figures/VariabilityExchangeModel.svg"/>
+                     fileref="Figures/VEL-Overview.svg"/>
         </imageobject>
       </mediaobject>
     </figure>
@@ -979,14 +979,17 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <varlistentry>
             <term>Attribute <varname>uri</varname></term>
             <listitem>
-              <para>The optional attribute <varname>uri</varname> is a reference to the artifact. The
-                content of the attribute <varname>uri</varname> is a Uniform Resource Identifier (URI).</para>
-              <para>The URI of an <classname>ArtifactElement</classname> should conform to
-                the definition of Uniform Resource Locators as specified in
+              <para>The optional attribute <varname>uri</varname> is a reference to the artifact. The content of the attribute <varname>uri</varname>is a Uniform Resource Identifier (URI). [Question: Shall we always use a para environment for each sentence?]</para>
+             <itemizedlist>
+              <listitem override='triangle'>
+              <para>The URI of an <classname>ArtifactElement</classname> should conform to the definition of Uniform Resource Locators as specified in
                 ??? [FIXME].</para>
-              <para>Although the URI of <classname>ArtifactElement</classname> is optional,
-                it is recommended to supply an URI instead of additional
-                attributes whenever possible.</para>
+              </listitem>
+              <listitem override='emdash'>
+              <para>Although the URI of <classname>ArtifactElement</classname>is optional, it is recommended to supply an URI instead of additional
+                attributes whenever possible. [Question: Why do we recommend this?]</para>
+              </listitem>
+             </itemizedlist>
             </listitem>
           </varlistentry>
           <varlistentry>
@@ -995,10 +998,10 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
               <para>The optional attribute <varname>type</varname> specifies the type of artifact that
               is addressed by this <classname>ArtifactElement</classname>.</para>
 
-              <para>The attribute <varname>type</varname> is a string, so any user-defined type identifiers can be used.</para>
+              <para>The attribute <varname>type</varname>is a string, so any user-defined type identifier can be used.</para>
 
               <para>Although the attribute <varname>type</varname> of an <classname>ArtifactElement</classname> is defined
-                as optional, it is recommended to supply a type.</para>
+                as optional, it is recommended to supply a type. [Question: Why do we recommend this?]</para>
             </listitem>
           </varlistentry>
         </variablelist>
@@ -1041,8 +1044,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
             <title>Example for <classname>ArtifactElement</classname> using URIs</title>
             <programlisting>&lt;structural-variationpoint id=&quot;vp1&quot; type=&quot;optional&quot;&gt;
 &#x9;&lt;variation id=&quot;vp1v1&quot;&gt;
-&#x9;&#x9;<emphasis role="strong">&lt;corresponding-variable-artifact-element
-&#x9;&#x9;&#x9;uri=&quot;file:///C:/SPES/file1.c&quot;/&gt;</emphasis>
+&#x9;&#x9;<emphasis role="strong">&lt;variable-artifact uri=&quot;file:///C:/SRC/file1.c&quot;/&gt;</emphasis>
 &#x9;&#x9;&lt;condition type=&quot;single-feature-condition&quot;&gt;Feature1&lt;/condition&gt;
 &#x9;&lt;/variation&gt;
 &lt;/structural-variationpoint&gt;</programlisting>
@@ -1051,9 +1053,9 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
             <title>Example for <classname>ArtifactElement</classname> using artifact-specific XML elements</title>
             <programlisting>&lt;structural-variationpoint id=&quot;vp2&quot; type=&quot;optional&quot;&gt;
 &#x9;&lt;variation id=&quot;vp2v1&quot;&gt;
-&#x9;&#x9;<emphasis role="strong">&lt;corresponding-variable-artifact-element type=&quot;simulink&quot;&gt;
+&#x9;&#x9;<emphasis role="strong">&lt;variable-artifact type=&quot;simulink&quot;&gt;
 &#x9;&#x9;&#x9;&lt;simulink-id&gt;12&lt;/simulink-id&gt;
-&#x9;&#x9;&lt;/corresponding-variable-artifact-element&gt;</emphasis>
+&#x9;&#x9;&lt;/variable-artifact&gt;</emphasis>
 &#x9;&#x9;&lt;condition type=&quot;single-feature-condition&quot;&gt;Feature1&lt;/condition&gt;
 &#x9;&lt;/variation&gt;
 &lt;/structural-variationpoint&gt;</programlisting>
@@ -1089,7 +1091,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
             <para>A variation point is set to
             &OpenCurlyDoubleQuote;inactive&CloseCurlyDoubleQuote;. For
             example, an <code>if</code> statement may prevent certain code sections from
-            being executed. This is typically used if the binding comes too
+            being executed. This is typically used if the binding comes 
             late in the process and the code cannot be removed.</para>
           </listitem>
           <listitem>
@@ -1098,7 +1100,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
         </itemizedlist>
 
         <para>What exactly happens when a variation point is bound is
-        implementation specific, and beyond the scope this document.</para>
+        implementation specific, and beyond the scope of the VEL.</para>
       </section>
 
       <section>
@@ -1127,25 +1129,32 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
               during startup (binding time <classname>PostBuild</classname>). This decision is
               made at some time during the build process.</para>
 
+              <para>[Added by MS: Conditions that should hold? / Constraints / Requirement]</para>
               <itemizedlist>
                 <listitem>
                   <para>The attribute <varname>selected</varname> of a <classname>BindingTime</classname> shall be present if
                   the <classname>VariabilityExchangeModel</classname>, which contains the <classname>BindingTime</classname>, is of
-                  type <classname>VariationPointSelection</classname>.</para>
+                  type <classname>VariationPointConfiguration</classname>.</para>
+                </listitem>
+
+                <listitem>
+                  <para>[Added by MS]
+                  The attribute <varname>selected</varname> of a <classname>BindingTime</classname> shall be present
+                  for bounded <classname>VariationPoints</classname> if the <classname>VariabilityExchangeModel</classname>,
+                  which contains the <classname>BindingTime</classname>, is of type <classname>VariationPointPartialConfiguration</classname>.</para>
                 </listitem>
 
                 <listitem>
                   <para>The attribute <varname>selected</varname> has no effect if the type of the
                   <classname>VariabilityExchangeModel</classname> is of type <constant>VariationPointDescription</constant> and
                   thus shall be omitted.</para>
+                </listitem>
 
+                <listitem>
                   <para>If a <classname>VariationPoint</classname> has more than one <varname>bindingTime</varname> attribute,
                   then the attribute <varname>selected</varname> is used to designate exactly one of
                   the binding times as the binding time that is actually used for
                   the binding:</para>
-                </listitem>
-
-                <listitem>
                   <para>Let <inlineequation>
                       <mml:math display="inline" id="mml_m174b_1"
                                 xmlns:mml="http://www.w3.org/1998/Math/MathML">
@@ -1184,11 +1193,11 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
                           <mml:mi>v</mml:mi>
                         </mml:mrow>
                       </mml:math>
-                    </inlineequation> . Then the following conditions shall
+                    </inlineequation>. Then the following condition shall
                   hold:</para>
 
-                  <orderedlist>
-                    <listitem><para><inlineequation>
+                  <itemizedlist>
+                    <!-- listitem><para><inlineequation>
                       <mml:math display="block" id="mml_m174"
                                 xmlns:mml="http://www.w3.org/1998/Math/MathML">
                         <mml:apply>
@@ -1259,7 +1268,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 				  </mml:apply>
 				  </mml:apply>
                 </mml:math>
-              </inlineequation></para></listitem>
+              </inlineequation></para></listitem -->
 			
 			  <listitem><para><inlineequation>
                 <mml:math display="block" id="mml_m176"
@@ -1329,7 +1338,7 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
                         </mml:apply>
                       </mml:math>
                     </inlineequation></para></listitem>
-                  </orderedlist>
+                  </itemizedlist>
                 </listitem>
 
                 <listitem>
@@ -1376,6 +1385,18 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
           <varlistentry>
             <term>Attribute <varname>condition</varname></term>
             <listitem>
+              <para>If a <classname>VariationPoint</classname> <inlineequation>
+                      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                        <mml:mrow><mml:mi>v</mml:mi></mml:mrow>
+                      </mml:math>
+                    </inlineequation> has multiple <classname>BindingTime</classname>s, 
+              then the attribute <varname>condition</varname> may be used to select one <classname>BindingTime</classname> 
+              as the actual BindingTime for <inlineequation>
+                      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                        <mml:mrow><mml:mi>v</mml:mi></mml:mrow>
+                      </mml:math>
+                    </inlineequation>.</para>
+              
               <para>[TODO: Text with formulas missing]</para>
 
               <para>In other words, if a <classname>VariationPoint</classname> has more than one
