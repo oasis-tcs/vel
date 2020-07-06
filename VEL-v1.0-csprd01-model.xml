@@ -2694,6 +2694,55 @@ href="file:///Users/admin/z/oasis/spec-0.8/stylesheets/oasis-specification-html-
 
         <para>A CalculatedParameterVariationPoint can only be bound when
         its CalculatedVariation has an attribute <varname>expression</varname>.</para> -->
+        
+        <table>
+          <title>Semantics of <varname>expression</varname> and <varname>value</varname></title>
+          <tgroup cols="5">
+            <colspec colname="c1"/>
+            <colspec colname="c2"/>
+            <colspec colname="c3"/>
+            <colspec colname="c4"/>
+            <colspec colname="c5"/>
+            <thead>
+              <row>
+                <entry></entry>
+                <entry namest="c2" nameend="c3" align="center">Use case <emphasis>Constant value</emphasis></entry>
+                <entry namest="c4" nameend="c5" align="center">Use case <emphasis>Calculated value</emphasis></entry>
+              </row>
+              <row>
+                <entry>VariabilityExchangeModel type</entry>
+                <entry>expression</entry>
+                <entry>value</entry>
+                <entry>expression</entry>
+                <entry>value</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>VariationPointDescription</entry>
+                <entry>not set</entry>
+                <entry>a constant value</entry>
+                <entry>an expression to be calculated</entry>
+                <entry>not set</entry>
+              </row>
+              <row>
+                <entry>VariationPointConfiguration</entry>
+                <entry>not set</entry>
+                <entry>the constant value set in VariationPointDescription</entry>
+                <entry>optionally the expression set in VariationPointDescription</entry>
+                <entry>the calculated value</entry>
+              </row>
+              <row>
+                <entry>VariationPointPartialConfiguration</entry>
+                <entry>not set</entry>
+                <entry>the constant value set in VariationPointDescription</entry>
+                <entry>if the value could be calculated, optionally the expression set in VariationPointDescription, otherwise a potentially rewritten expression</entry>
+                <entry>if the value could be calculated, the calculated value, otherwise not set</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+        
       </section>
 
       <section>
