@@ -29,7 +29,6 @@
 		<xs:complexContent>
 			<xs:extension base="Identifiable">
 				<xs:sequence>
-					<xs:element name="bindingtime" type="BindingTime" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="variable-artifact" type="ArtifactElement" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
 				<xs:attribute name="type" type="VariationPointTypeEnum" use="required"/>
@@ -42,13 +41,6 @@
 			<xs:element name="parameter-variationpoint" type="ParameterVariationPoint"/>
 		</xs:choice>
 	</xs:group>
-	<xs:complexType name="BindingTime">
-		<xs:sequence>
-			<xs:element name="name" type="BindingTimeEnum"/>
-			<xs:element name="condition" type="Expression" minOccurs="0" maxOccurs="1"/>
-		</xs:sequence>
-		<xs:attribute name="selected" type="xs:boolean" use="optional"/>
-	</xs:complexType>
 	<!--Individual variation points-->
 	<xs:complexType name="StructuralVariationPoint">
 		<xs:complexContent>
@@ -189,27 +181,6 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="BindingTimeBaseEnum">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="requirements-time"/>
-			<xs:enumeration value="blueprint-derivation-time"/>
-			<xs:enumeration value="model-construction-time"/>
-			<xs:enumeration value="model-simulation-time"/>
-			<xs:enumeration value="code-generation-time"/>
-			<xs:enumeration value="preprocessor-time"/>
-			<xs:enumeration value="compile-time"/>
-			<xs:enumeration value="link-time"/>
-			<xs:enumeration value="flash-time"/>
-			<xs:enumeration value="post-build"/>
-			<xs:enumeration value="post-build-loadable-time"/>
-			<xs:enumeration value="post-build-selectable-time"/>
-			<xs:enumeration value="run-time"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="BindingTimeEnum">
-		<xs:union memberTypes="BindingTimeBaseEnum EnumerationExtension"/>
-	</xs:simpleType>
-	
 	<xs:simpleType name="VariationDependencyBaseEnum">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="requires"/>

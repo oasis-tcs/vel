@@ -41,12 +41,13 @@
   <zip destfile="VEL-v1.0-csprd01-model-pub.zip">
     <fileset dir=".">
       <include name="VEL-v1.0-csprd01-model.xml"/>
+      <include name="realta-docbook-parameters.xsl"/>
       <include name="Figures/**"/>
     </fileset>
   </zip>
   <!--create outputs-->
   <echo message="Submitting print job..."/>
-  <ant antfile="SetareServerAnt.xml">
+  <ant antfile="RealtaServerAnt.xml">
     <property name="entrypoint" value="OASIS-spec2pdfhtml"/>
     <property name="fileupload"
               value="VEL-v1.0-csprd01-model-pub.zip"/>

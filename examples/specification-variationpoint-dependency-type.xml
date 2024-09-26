@@ -12,13 +12,13 @@
 				<dependency type="conflicts" id="vp2d1">
 					<variation ref="vp1v1"/>
 				</dependency>
-				<condition type="single-feature-condition">Feature1</condition>
-			</variation>
-			<variation id="vp2v2">
 				<condition type="single-feature-condition">Feature2</condition>
 			</variation>
-			<variation id="vp2v3">
+			<variation id="vp2v2">
 				<condition type="single-feature-condition">Feature3</condition>
+			</variation>
+			<variation id="vp2v3">
+				<condition type="single-feature-condition">Feature4</condition>
 			</variation>
 		</structural-variationpoint>
 	</variability-exchange-model>
